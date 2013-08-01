@@ -130,7 +130,6 @@ void remollMagneticField::ReadFieldMap(){
     int nread;
     G4int cidx;
 
-
 #ifdef __USE_BOOST_IOSTREAMS
     // Create Boost istream
     boost::iostreams::filtering_istream inputfile;
@@ -214,8 +213,6 @@ void remollMagneticField::ReadFieldMap(){
     // Sanity check on header data
 
     if( !( fMin[kR] >= 0.0 && fMin[kR] < fMax[kR] &&
-	 	-180.0 < fMin[kPhi] && fMin[kPhi] < 180.0 && 
-	 	-180.0 < fMax[kPhi] && fMax[kPhi] < 180.0 && 
 	 	fMin[kPhi]  < fMax[kPhi] &&
 		fMin[kZ] < fMax[kZ] &&
 		fN[kR] > 0 && fN[kPhi] > 0 && fN[kZ] > 0 &&
@@ -243,9 +240,16 @@ void remollMagneticField::ReadFieldMap(){
 
     fMin[kPhi] += fPhiMapOffset;
     fMax[kPhi] += fPhiMapOffset;
+
+
     // Put between -180 and 180
-    fMin[kPhi] = fmodf(fMin[kPhi] + pi/2.0, pi) - pi/2.0;
-    fMax[kPhi] = fmodf(fMax[kPhi] + pi/2.0, pi) - pi/2.0;
+    fMin[kPhi] = fmodf(fMin[kPhi] + 3.0*pi, 2.0*pi) -pi;
+
+    if( fabs(fMax[kPhi] - pi)>eps ){
+	fMax[kPhi] = fmodf(fMax[kPhi] + 3.0*pi, 2.0*pi) - pi;
+    } else {
+	fMax[kPhi] = pi;
+    }
 
     double mapphirange = fMax[kPhi] - fMin[kPhi];
 
@@ -258,16 +262,17 @@ void remollMagneticField::ReadFieldMap(){
 
     ///////////////////////////////////
 
-
-    if( !( fMin[kPhi] >= -pi && fMin[kPhi] <= pi ) ){
+    /*
+    if( !( fMin[kPhi] > -pi && fMin[kPhi] < pi ) ){
 	G4cerr << "Error " << __FILE__ << " line " << __LINE__ 
 	    << ": File " << fFilename << " header contains invalid phi range.  Aborting" << G4endl;
 	exit(1);
     }
+    */
 
     if( mapphirange < fxtantSize ){
 	G4cerr << "Warning " << __FILE__ << " line " << __LINE__ 
-	    << ": File " << fFilename << " header contains too narrow phi range for given xtants." << G4endl <<  "Warning:   Proceeding assuming null field in non-described regions" << G4endl << (fMax[kPhi] - fMin[kPhi])/degree << " deg range < " <<  fxtantSize/degree << " deg xtant" << G4endl;
+	    << ": File " << fFilename << " header contains too narrow phi range for given xtants." << G4endl <<  "Warning:   Proceeding assuming interpolated field in non-described regions" << G4endl << (fMax[kPhi] - fMin[kPhi])/degree << " deg range < " <<  fxtantSize/degree << " deg xtant" << G4endl;
     }
 
 
@@ -421,27 +426,44 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     // before interpolation.  If it is outside, the field is zero
 
     if( r >= fMax[kR] || r < fMin[kR] ||
-	    lphi >= fFileMax[kPhi] || lphi < fFileMin[kPhi] ||
 	    z    >= fMax[kZ]   || z    < fMin[kZ] ) {
 
 	Bfield[0] = 0.0;
 	Bfield[1] = 0.0;
 	Bfield[2] = 0.0;
 
+	printf("OUTSIDE %f %f %f  ->  %f %f %f\n", Point[0]/m, Point[1]/m, Point[2]/m, Bfield[0]/tesla, Bfield[1]/tesla, Bfield[2]/tesla );
+
 	return;
+    }
+
+    // Check if in dead phi area
+    bool deadphi = false;
+
+    if( lphi >= fFileMax[kPhi] || lphi < fFileMin[kPhi] ){
+	printf("Dead phi!\n");
+	deadphi = true;
     }
 
     // Ensure we're going to get our grid indices correct
     assert( fMin[kR]   <= r    &&    r < fMax[kR] );
-    assert( fFileMin[kPhi] <= lphi && lphi < fFileMax[kPhi] );
+//    assert( fFileMin[kPhi] <= lphi && lphi < fFileMax[kPhi] );
     assert( fMin[kZ]   <= z    &&    z < fMax[kZ] );
 
     int cidx;
 
+
     // Get interoplation variables
     // the N-1 here is fencepost problem
     x[kR]   = modf( ( r - fMin[kR] )*(fN[kR]-1)/( fMax[kR] - fMin[kR] ),            &(didx[kR])   );
-    x[kPhi] = modf( ( lphi - fFileMin[kPhi] )*(fN[kPhi]-1)/( fFileMax[kPhi] - fFileMin[kPhi] ), &(didx[kPhi]) );
+
+    if( !deadphi ){
+	x[kPhi] = modf( ( lphi - fFileMin[kPhi] )*(fN[kPhi]-1)/( fFileMax[kPhi] - fFileMin[kPhi] ), &(didx[kPhi]) );
+    } else {
+	x[kPhi] = modf( ( lphi - fFileMax[kPhi] )/( fxtantSize - (fFileMax[kPhi] - fFileMin[kPhi]) ), &(didx[kPhi]) );
+	didx[kPhi] = 0.0;
+    }
+
     x[kZ]   = modf( ( z - fMin[kZ] )*(fN[kZ]-1)/( fMax[kZ] - fMin[kZ] ),            &(didx[kZ])   );
 
     // Cast these to integers for indexing and check
@@ -459,14 +481,26 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
 
     for( cidx = 0; cidx < __NDIM; cidx++ ){ 
 
-	c00 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
-	    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
-	c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]]*(1.0-x[kR])
-	    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]]*x[kR];
-	c01 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
-	    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
-	c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]+1]*(1.0-x[kR])
-	    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]+1]*x[kR];
+	if( !deadphi ){
+	    c00 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
+	    c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]]*x[kR];
+	    c01 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
+	    c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]+1]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]+1]*x[kR];
+	} else {
+	    // Interpolate for dead phi areas
+	    c00 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]]*x[kR];
+	    c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
+	    c01 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]+1]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]+1]*x[kR];
+	    c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
+		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
+	}
 
 	c0  = c00*(1.0-x[kPhi]) + c10*x[kPhi];
 	c1  = c01*(1.0-x[kPhi]) + c11*x[kPhi];
@@ -482,6 +516,10 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     Bfield[0] = Bcart.x()*fFieldScale;
     Bfield[1] = Bcart.y()*fFieldScale;
     Bfield[2] = Bcart.z()*fFieldScale;
+
+    printf("%f %f %f  ->  %f %f %f\n", Point[0]/m, Point[1]/m, Point[2]/m, Bfield[0]/tesla, Bfield[1]/tesla, Bfield[2]/tesla );
+
+    return;
 } 
 
 
