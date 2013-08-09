@@ -1,0 +1,5 @@
+To generate files, execute them as you would a python script
+and redirect the output to the correct file.  For example:
+
+./gencerenkov.py > cerenkov.gdml
+
