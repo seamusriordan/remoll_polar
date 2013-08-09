@@ -54,7 +54,7 @@ void remollGenFlat::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
-	                     G4ThreeVector( ene*sin(th)*cos(ph), ene*sin(th)*sin(ph), ene*cos(ph) ),
+	                     G4ThreeVector( ene*sin(th)*cos(ph), ene*sin(th)*sin(ph), ene*cos(th) ),
 			     "e-" );
 
     return;
