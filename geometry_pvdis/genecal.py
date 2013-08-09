@@ -156,7 +156,7 @@ print """	         <volume name="logicecalleadscint">
 		      <solidref ref ="ecalleadscint"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
-		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
 	        </volume>""" % preshowerdetno
 
@@ -171,7 +171,7 @@ print """	         <volume name="logicecalblockscint">
 		      <solidref ref ="ecalblockscint"/>
 		      <auxiliary auxtype="Visibility" auxvalue="false"/>
 <!--		      <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
-		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
 	        </volume>""" % showerdetno
 

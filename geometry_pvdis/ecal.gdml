@@ -88,7 +88,7 @@
 		      <solidref ref ="ecalleadscint"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
-		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="8000"/>
 	        </volume>
 	         <volume name="logicecalgap">
@@ -101,7 +101,7 @@
 		      <solidref ref ="ecalblockscint"/>
 		      <auxiliary auxtype="Visibility" auxvalue="false"/>
 <!--		      <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
-		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="9000"/>
 	        </volume>
 	         <volume name="logicecalblock">

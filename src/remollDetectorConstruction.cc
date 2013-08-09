@@ -2,6 +2,7 @@
 
 #include "remollDetectorConstruction.hh"
 #include "remollGenericDetector.hh"
+#include "remollCalDetector.hh"
 #include "remollBeamTarget.hh"
 #include "remollGlobalField.hh"
 #include "remollRun.hh"
@@ -290,7 +291,13 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
 //		if( thisdet == 0 ) {
 		if( neednewdet) {
-		    thisdet = new remollGenericDetector(detectorname, det_no);
+
+
+		    if ((*vit).value == "Cal"){
+			thisdet = new remollCalDetector(detectorname, det_no);
+		    } else {
+			thisdet = new remollGenericDetector(detectorname, det_no);
+		    }
 		    /*
 		    G4cout << "  Creating sensitive detector " << det_type
 			<< " for volume " << myvol->GetName()
