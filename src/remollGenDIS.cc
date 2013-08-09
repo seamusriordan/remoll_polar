@@ -1,7 +1,5 @@
 #include "remollGenDIS.hh"
 
-#include "christy_bosted_inelastic.h"
-
 #include "CLHEP/Random/RandFlat.h"
 
 #include "remollEvent.hh"
@@ -9,6 +7,18 @@
 #include "G4Material.hh"
 
 #include "remolltypes.hh"
+
+////////////////////////////////////////////////////////
+#include "cteq/cteqpdf.h"
+
+cteq_pdf_t *__dis_pdf;
+
+// Use CTEQ6 parameterization
+//
+void initcteqpdf(){
+         __dis_pdf = cteq_pdf_alloc_id(400); 
+}
+////////////////////////////////////////////////////////
 
 remollGenDIS::remollGenDIS(){
     fTh_min =     5.0*deg;
@@ -53,7 +63,7 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double numax = beamE;
 
     double Ynum = 2.0*x*(1.0-y/2.0);
-    double Yden = 2.0*x*y + 4.0*x*(1.0-y-x*y*M/(2.0*numax))/y;
+    double Yden = 2.0*x*y + 4.0*x*(1.0-y-x*y*mp/(2.0*numax))/y;
     double Y = Ynum/Yden;
 
     double eta_gZ = GF*Q2*MZ*MZ/(alpha*2.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
@@ -96,15 +106,12 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double F1n = F2n/(2.0*x);
 
 
-    double thissigma_p = sigma_p( beamE/GeV, th, ef/GeV )*nanobarn/GeV;
+    //  PDG formulas for cross section
+    double sigmap_dxdy = 4.0*pi*alpha*alpha*((1.0-y-pow(x*y*mp,2.0)/Q2)*F2p+y*y*x*F1p)/(x*y*Q2);
+    double sigman_dxdy = 4.0*pi*alpha*alpha*((1.0-y-pow(x*y*mp,2.0)/Q2)*F2n+y*y*x*F1n)/(x*y*Q2);
 
-    double sigmap_dxdy = 4.0*pi*alpha*alpha*((1.0-y-pow(x*y*mp,2.0)/Q2)*F2p+y*y*x*F1p)
-	                   /(x*y*Q2);
-    double sigman_dxdy = 4.0*pi*alpha*alpha((1.0-y-pow(x*y*mp,2.0)/Q2)*F2p+y*y*x*F1p)
-	                   /(x*y*Q2);
-
-    sigmap_dOmega_dE = sigmap_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
-    sigman_dOmega_dE = sigman_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
+    double sigmap_dOmega_dE = sigmap_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
+    double sigman_dOmega_dE = sigman_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
 
 
     double pcont = sigmap_dOmega_dE*vert->GetMaterial()->GetZ();

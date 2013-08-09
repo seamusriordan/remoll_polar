@@ -63,7 +63,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall -pg")
 #----------------------------------------------------------------------------
 # Generate dictionaries as well (so we can write objects to ROOT files
 
-include_directories(${PROJECT_SOURCE_DIR}/include ${ROOT_INCLUDE_DIR} ${CMAKE_CURRENT_BINARY_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/include ${ROOT_INCLUDE_DIR} ${CMAKE_CURRENT_BINARY_DIR}/include ${PROJECT_SOURCE_DIR}/src/)
 
 
 #----------------------------------------------------------------------------
@@ -87,8 +87,8 @@ SET_TARGET_PROPERTIES(recteq PROPERTIES COMPILE_FLAGS "-DCTEQ_TBL_PATH=\\\"${PRO
 
 add_executable(remoll remoll.cc ${sources} ${headers} remollDict.cxx)
 add_library(remollroot SHARED ${libsources} ${libheaders} remollDict.cxx)
-target_link_libraries(remoll ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${Boost_LIBRARIES} )
-target_link_libraries(remollroot ${ROOT_LIBRARIES} ${Boost_LIBRARIES} recteq )
+target_link_libraries(remoll ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${Boost_LIBRARIES}  recteq )
+target_link_libraries(remollroot ${ROOT_LIBRARIES} ${Boost_LIBRARIES})
 
 #----------------------------------------------------------------------------
 # Copy all scripts to the build directory, i.e. the directory in which we

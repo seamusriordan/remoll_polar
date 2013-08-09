@@ -59,7 +59,7 @@ void remollGenpInelastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
 
     evt->SetW2( mp*mp + 2.0*mp*(beamE-ef) - Q2 );
-    evt->SetXbj( Q2/(4.0*mp*(vert->GetBeamE()-ef) );
+    evt->SetXbj( Q2/(4.0*mp*(vert->GetBeamE()-ef) ) );
 
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 

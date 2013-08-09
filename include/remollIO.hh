@@ -73,6 +73,7 @@ class remollIO {
 	Double_t fEvBeamP;
 	Double_t fEvQ2;
 	Double_t fEvW2;
+	Double_t fEvXbj;
 	Double_t fEvThCoM;
 
 	Double_t fBmX;

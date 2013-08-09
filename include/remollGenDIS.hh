@@ -9,13 +9,6 @@
 */
 
 #include "remollVEventGen.hh"
-#include "cteq/cteqpdf.h"
-
-// Use CTEQ6 parameterization
-//
-void initcteqpdf(){
-         __dis_pdf = cteq_pdf_alloc_id(400); 
-}
 
 
 class remollGenDIS : public remollVEventGen {

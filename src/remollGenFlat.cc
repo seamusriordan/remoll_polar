@@ -2,6 +2,7 @@
 
 #include "CLHEP/Random/RandFlat.h"
 
+#include "remollBeamTarget.hh"
 #include "remollEvent.hh"
 #include "remollVertex.hh"
 #include "G4Material.hh"
@@ -45,15 +46,15 @@ void remollGenFlat::SamplePhysics(remollVertex *vert, remollEvent *evt){
     evt->SetAsymmetry(APV);
 
     // Use unradiated beam energy
-    beamE = fBeamTarg->fBeamE;
+    double beamE = remollBeamTarget::GetBeamTarget()->fBeamE;
     double Q2 = 2.0*ene*beamE*(1.0-cos(th)  );
     evt->SetQ2( Q2 );
     evt->SetW2( proton_mass_c2*proton_mass_c2 + 2.0*proton_mass_c2*(beamE-ene) - Q2 );
-    evt->SetXbj( Q2/(4.0*proton_mass_c2*(beamE-ene) );
+    evt->SetXbj( Q2/(4.0*proton_mass_c2*(beamE-ene)) );
 
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
-	                     G4ThreeVector( e*sin(th)*cos(ph), e*sin(th)*sin(ph), e*cos(ph) ),
+	                     G4ThreeVector( ene*sin(th)*cos(ph), ene*sin(th)*sin(ph), ene*cos(ph) ),
 			     "e-" );
 
     return;

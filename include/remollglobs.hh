@@ -20,6 +20,9 @@ const double gV_d = -0.5 + 2.0*sin2thW_ms/3.0;
 const double gA_u =  0.5;
 const double gA_d = -0.5;
 
+const double gA = -0.5;
+const double gV = -0.5 + 2.0*sin2thW_ms;
+
 const double MZ = 91.1876*GeV;
 
 const double e_u = 2.0/3.0;
