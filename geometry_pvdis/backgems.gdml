@@ -1,0 +1,3207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Back GEMs -->
+
+        <define>
+	   <position name="backgem_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	   <rotation name="identity"/>
+	   <variable name="i0" value="1"/>
+	   <constant name="backgem_z1" value="306.000000"/>
+	   <constant name="backgem_z2" value="315.000000"/>
+	   <variable name="backgem_rmin1" value="105.000000"/>
+	   <constant name="backgem_rmax1" value="200.000000"/>
+	   <constant name="backgem_rmin2" value="115.000000"/>
+	   <constant name="backgem_rmax2" value="215.000000"/>
+        </define>
+        <materials>
+	   <material Z="1" name="Vacuum" state="gas">
+	       <T unit="K" value="2.73"/>
+  	       <P unit="pascal" value="3e-18"/>
+	       <D unit="g/cm3" value="1e-25"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Nitrogen" Z="7">
+	       <D    unit="g/L" value="1.165"/>
+	       <atom unit="g/mole" value="14.0067"/>
+	   </material>
+	   <material name="Oxygen" Z="8">
+	       <D    unit="g/L" value="1.332"/>
+	       <atom unit="g/mole" value="16"/>
+	   </material>
+	   <material name="Carbon" Z="6">
+	       <D    unit="g/cm3" value="2.21"/>
+	       <atom unit="g/mole" value="12.011"/>
+	   </material>
+	   <material name="Hydrogen" Z="1">
+	       <D    unit="g/cm3" value="0.067"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Silicon" Z="14">
+	       <D    unit="g/cm3" value="2.329"/>
+	       <atom unit="g/mole" value="28.086"/>
+	   </material>
+           <material name="Chlorine" Z="17">
+               <D    unit="g/cm3" value="1.574"/>
+               <atom unit="g/mole" value="35.453"/>
+           </material>
+
+
+	   <material name="Air" state="gas">
+	       <D value="0.00129" />
+	       <fraction n="0.7" ref="Nitrogen" />
+	       <fraction n="0.3" ref="Oxygen" />
+	   </material>
+
+	   <material name="NEMAG10" state="solid">
+	       <D unit="g/cm3" value="1.7"/>
+	       <composite n="1" ref="Silicon"/>
+	       <composite n="2" ref="Oxygen"/>
+	       <composite n="3" ref="Carbon"/>
+	       <composite n="4" ref="Hydrogen"/>
+	   </material>
+
+	   <material name="NOMEX_pure" state="solid">
+	       <D unit="g/cm3" value="1.38"/>
+	       <fraction n="0.23" ref="Chlorine"/>
+	       <fraction n="0.09" ref="Nitrogen"/>
+	       <fraction n="0.10" ref="Oxygen"/>
+	       <fraction n="0.54" ref="Carbon"/>
+	       <fraction n="0.04" ref="Hydrogen"/>
+	   </material>
+
+	   <material name="NOMEX" state="solid">
+	       <D unit="g/cm3" value="0.04"/>
+	       <fraction n="0.45" ref="NOMEX_pure"/>
+	       <fraction n="0.55" ref="Air"/>
+	   </material>
+
+	   <material  name="Kapton" state="solid">
+	       <D unit="g/cm3" value="1.42"/>
+	       <fraction n="0.026" ref="Hydrogen"/>
+	       <fraction n="0.692" ref="Carbon"/>
+	       <fraction n="0.073" ref="Nitrogen"/>
+	       <fraction n="0.209" ref="Oxygen"/>
+	   </material>
+
+	   <material Z="29" name="GEMCopper" state="solid">
+	       <D unit="g/cm3" value="8.960"/>
+	       <atom unit="g/mole" value="63.546"/>
+	   </material>
+
+	   <material Z="18" name="Argon" state="gas">
+	       <D unit="g/L" value="1.662"/>
+	       <atom unit="g/mole" value="39.948"/>
+	   </material>
+
+	   <material  name="CO2">
+	       <D unit="g/cm3" value="1.563"/>
+	       <composite n="1" ref="Carbon"/>
+	       <composite n="2" ref="Oxygen"/>
+	   </material>
+
+	   <material name="GEMgas" state="gas">
+	       <D unit="g/cm3" value="1e-25"/>
+	       <fraction n="0.713" ref="Argon"/>
+	       <fraction n="0.287" ref="CO2"/>
+	   </material>
+
+	   <material Z="82" name="Lead" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+
+        </materials>
+	
+	<solids>
+	      <cone name="backgemvol" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin1="backgem_rmin1+-0.500000" rmax1="backgem_rmax1" rmin2="backgem_rmin2" rmax2="backgem_rmax2+0.500000"  z="10.000000" />
+	         <tube name="backgemlay1_00" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.012000" />
+	         <tube name="backgemlay1_01" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000300" />
+	         <tube name="backgemlay1_02" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.012000" />
+	         <tube name="backgemlay1_03" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.005000" />
+	         <tube name="backgemlay1_04" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_05" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.300000" />
+	         <tube name="backgemlay1_06" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_07" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.005000" />
+	         <tube name="backgemlay1_08" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_09" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.200000" />
+	         <tube name="backgemlay1_10" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_11" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.005000" />
+	         <tube name="backgemlay1_12" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_13" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.200000" />
+	         <tube name="backgemlay1_14" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_15" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.005000" />
+	         <tube name="backgemlay1_16" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000500" />
+	         <tube name="backgemlay1_17" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.200000" />
+	         <tube name="backgemlay1_18" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.001000" />
+	         <tube name="backgemlay1_19" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.005000" />
+	         <tube name="backgemlay1_20" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.012000" />
+	         <tube name="backgemlay1_21" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.000300" />
+	         <tube name="backgemlay1_22" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.012000" />
+	         <tube name="backgemlay2_00" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.012000" />
+	         <tube name="backgemlay2_01" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000300" />
+	         <tube name="backgemlay2_02" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.012000" />
+	         <tube name="backgemlay2_03" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.005000" />
+	         <tube name="backgemlay2_04" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_05" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.300000" />
+	         <tube name="backgemlay2_06" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_07" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.005000" />
+	         <tube name="backgemlay2_08" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_09" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.200000" />
+	         <tube name="backgemlay2_10" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_11" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.005000" />
+	         <tube name="backgemlay2_12" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_13" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.200000" />
+	         <tube name="backgemlay2_14" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_15" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.005000" />
+	         <tube name="backgemlay2_16" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000500" />
+	         <tube name="backgemlay2_17" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.200000" />
+	         <tube name="backgemlay2_18" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.001000" />
+	         <tube name="backgemlay2_19" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.005000" />
+	         <tube name="backgemlay2_20" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.012000" />
+	         <tube name="backgemlay2_21" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.000300" />
+	         <tube name="backgemlay2_22" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.012000" />
+        </solids>
+
+	<structure>
+
+	         <volume name="logicbackgemlay1_00">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay1_00"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_00">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay2_00"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_01">
+		      <materialref ref ="NOMEX"/> 
+		      <solidref ref ="backgemlay1_01"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_01">
+		      <materialref ref ="NOMEX"/> 
+		      <solidref ref ="backgemlay2_01"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_02">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay1_02"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_02">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay2_02"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_03">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay1_03"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_03">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay2_03"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_04_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3400"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4400"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3401"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4401"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3402"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4402"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3403"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4403"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3404"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4404"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3405"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4405"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3406"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4406"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3407"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4407"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3408"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4408"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3409"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4409"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3410"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4410"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3411"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4411"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3412"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4412"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3413"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4413"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3414"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4414"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3415"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4415"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3416"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4416"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3417"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4417"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3418"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4418"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3419"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4419"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3420"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4420"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3421"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4421"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3422"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4422"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3423"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4423"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3424"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4424"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3425"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4425"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3426"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4426"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3427"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4427"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3428"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4428"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_04_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3429"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_04_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_04"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4429"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_00">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3500"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_00">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4500"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_01">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3501"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_01">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4501"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_02">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3502"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_02">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4502"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_03">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3503"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_03">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4503"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_04">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3504"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_04">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4504"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_05">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3505"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_05">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4505"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_06">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3506"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_06">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4506"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_07">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3507"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_07">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4507"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_08">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3508"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_08">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4508"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_09">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3509"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_09">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4509"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_10">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3510"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_10">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4510"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_11">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3511"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_11">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4511"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_12">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3512"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_12">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4512"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_13">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3513"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_13">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4513"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_14">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3514"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_14">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4514"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_15">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3515"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_15">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4515"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_16">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3516"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_16">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4516"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_17">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3517"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_17">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4517"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_18">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3518"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_18">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4518"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_19">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3519"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_19">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4519"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_20">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3520"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_20">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4520"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_21">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3521"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_21">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4521"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_22">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3522"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_22">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4522"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_23">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3523"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_23">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4523"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_24">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3524"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_24">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4524"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_25">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3525"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_25">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4525"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_26">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3526"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_26">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4526"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_27">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3527"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_27">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4527"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_28">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3528"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_28">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4528"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_05_29">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3529"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_05_29">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_05"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4529"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3600"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4600"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3601"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4601"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3602"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4602"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3603"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4603"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3604"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4604"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3605"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4605"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3606"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4606"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3607"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4607"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3608"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4608"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3609"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4609"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3610"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4610"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3611"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4611"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3612"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4612"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3613"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4613"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3614"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4614"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3615"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4615"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3616"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4616"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3617"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4617"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3618"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4618"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3619"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4619"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3620"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4620"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3621"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4621"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3622"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4622"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3623"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4623"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3624"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4624"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3625"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4625"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3626"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4626"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3627"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4627"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3628"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4628"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_06_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="3629"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_06_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_06"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4629"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_07">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay1_07"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_07">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay2_07"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_08"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_08"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_09">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_09"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_09">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_09"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_10"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_10"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_11">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay1_11"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_11">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay2_11"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_12"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_12"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_13">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_13"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_13">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_13"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_14"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_14"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_15">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay1_15"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_15">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay2_15"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_16"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_16"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_17">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay1_17"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_17">
+		      <materialref ref ="GEMgas"/> 
+		      <solidref ref ="backgemlay2_17"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_18_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4800"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_00">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5800"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4801"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_01">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5801"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4802"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_02">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5802"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4803"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_03">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5803"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4804"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_04">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5804"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4805"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_05">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5805"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4806"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_06">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5806"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4807"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_07">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5807"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4808"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_08">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5808"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4809"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_09">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5809"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4810"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_10">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5810"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4811"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_11">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5811"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4812"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_12">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5812"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4813"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_13">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5813"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4814"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_14">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5814"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4815"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_15">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5815"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4816"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_16">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5816"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4817"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_17">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5817"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4818"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_18">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5818"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4819"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_19">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5819"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4820"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_20">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5820"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4821"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_21">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5821"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4822"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_22">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5822"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4823"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_23">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5823"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4824"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_24">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5824"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4825"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_25">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5825"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4826"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_26">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5826"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4827"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_27">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5827"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4828"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_28">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5828"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_18_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay1_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="4829"/>
+		  </volume>
+	         <volume name="logicbackgemlay2_18_29">
+		      <materialref ref ="GEMCopper"/> 
+		      <solidref ref ="backgemlay2_18"/>
+		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="5829"/>
+		  </volume>
+	         <volume name="logicbackgemlay1_19">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay1_19"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_19">
+		      <materialref ref ="Kapton"/> 
+		      <solidref ref ="backgemlay2_19"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_20">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay1_20"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_20">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay2_20"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_21">
+		      <materialref ref ="NOMEX"/> 
+		      <solidref ref ="backgemlay1_21"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_21">
+		      <materialref ref ="NOMEX"/> 
+		      <solidref ref ="backgemlay2_21"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+		   </volume>
+	         <volume name="logicbackgemlay1_22">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay1_22"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+	         <volume name="logicbackgemlay2_22">
+		      <materialref ref ="NEMAG10"/> 
+		      <solidref ref ="backgemlay2_22"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+
+        <!---  Place volumes -->
+	        <volume name="logicbackGEMMother">
+		      <materialref ref="Vacuum"/>
+		      <solidref ref="backgemvol"/>
+	              <auxiliary auxtype="Visibility" auxvalue="false"/>
+    
+	        <loop for="i0" to="30" step="1">
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_00"/>
+		        <position name="backgempos1_00" unit="cm" x="0" y="0" z="-4.994000"/>
+		        <rotation name="backgemrot1_00" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_00"/>
+		        <position name="backgempos2_00" unit="cm" x="0" y="0" z="4.006000"/>
+		        <rotation name="backgemrot2_00" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_01"/>
+		        <position name="backgempos1_01" unit="cm" x="0" y="0" z="-4.987850"/>
+		        <rotation name="backgemrot1_01" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_01"/>
+		        <position name="backgempos2_01" unit="cm" x="0" y="0" z="4.012150"/>
+		        <rotation name="backgemrot2_01" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_02"/>
+		        <position name="backgempos1_02" unit="cm" x="0" y="0" z="-4.981700"/>
+		        <rotation name="backgemrot1_02" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_02"/>
+		        <position name="backgempos2_02" unit="cm" x="0" y="0" z="4.018300"/>
+		        <rotation name="backgemrot2_02" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_03"/>
+		        <position name="backgempos1_03" unit="cm" x="0" y="0" z="-4.973200"/>
+		        <rotation name="backgemrot1_03" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_03"/>
+		        <position name="backgempos2_03" unit="cm" x="0" y="0" z="4.026800"/>
+		        <rotation name="backgemrot2_03" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_07"/>
+		        <position name="backgempos1_07" unit="cm" x="0" y="0" z="-4.667200"/>
+		        <rotation name="backgemrot1_07" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_07"/>
+		        <position name="backgempos2_07" unit="cm" x="0" y="0" z="4.332800"/>
+		        <rotation name="backgemrot2_07" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_08"/>
+		        <position name="backgempos1_08" unit="cm" x="0" y="0" z="-4.664450"/>
+		        <rotation name="backgemrot1_08" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_08"/>
+		        <position name="backgempos2_08" unit="cm" x="0" y="0" z="4.335550"/>
+		        <rotation name="backgemrot2_08" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_09"/>
+		        <position name="backgempos1_09" unit="cm" x="0" y="0" z="-4.564200"/>
+		        <rotation name="backgemrot1_09" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_09"/>
+		        <position name="backgempos2_09" unit="cm" x="0" y="0" z="4.435800"/>
+		        <rotation name="backgemrot2_09" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_10"/>
+		        <position name="backgempos1_10" unit="cm" x="0" y="0" z="-4.463950"/>
+		        <rotation name="backgemrot1_10" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_10"/>
+		        <position name="backgempos2_10" unit="cm" x="0" y="0" z="4.536050"/>
+		        <rotation name="backgemrot2_10" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_11"/>
+		        <position name="backgempos1_11" unit="cm" x="0" y="0" z="-4.461200"/>
+		        <rotation name="backgemrot1_11" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_11"/>
+		        <position name="backgempos2_11" unit="cm" x="0" y="0" z="4.538800"/>
+		        <rotation name="backgemrot2_11" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_12"/>
+		        <position name="backgempos1_12" unit="cm" x="0" y="0" z="-4.458450"/>
+		        <rotation name="backgemrot1_12" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_12"/>
+		        <position name="backgempos2_12" unit="cm" x="0" y="0" z="4.541550"/>
+		        <rotation name="backgemrot2_12" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_13"/>
+		        <position name="backgempos1_13" unit="cm" x="0" y="0" z="-4.358200"/>
+		        <rotation name="backgemrot1_13" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_13"/>
+		        <position name="backgempos2_13" unit="cm" x="0" y="0" z="4.641800"/>
+		        <rotation name="backgemrot2_13" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_14"/>
+		        <position name="backgempos1_14" unit="cm" x="0" y="0" z="-4.257950"/>
+		        <rotation name="backgemrot1_14" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_14"/>
+		        <position name="backgempos2_14" unit="cm" x="0" y="0" z="4.742050"/>
+		        <rotation name="backgemrot2_14" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_15"/>
+		        <position name="backgempos1_15" unit="cm" x="0" y="0" z="-4.255200"/>
+		        <rotation name="backgemrot1_15" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_15"/>
+		        <position name="backgempos2_15" unit="cm" x="0" y="0" z="4.744800"/>
+		        <rotation name="backgemrot2_15" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_16"/>
+		        <position name="backgempos1_16" unit="cm" x="0" y="0" z="-4.252450"/>
+		        <rotation name="backgemrot1_16" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_16"/>
+		        <position name="backgempos2_16" unit="cm" x="0" y="0" z="4.747550"/>
+		        <rotation name="backgemrot2_16" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_17"/>
+		        <position name="backgempos1_17" unit="cm" x="0" y="0" z="-4.152200"/>
+		        <rotation name="backgemrot1_17" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_17"/>
+		        <position name="backgempos2_17" unit="cm" x="0" y="0" z="4.847800"/>
+		        <rotation name="backgemrot2_17" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_19"/>
+		        <position name="backgempos1_19" unit="cm" x="0" y="0" z="-4.048700"/>
+		        <rotation name="backgemrot1_19" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_19"/>
+		        <position name="backgempos2_19" unit="cm" x="0" y="0" z="4.951300"/>
+		        <rotation name="backgemrot2_19" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_20"/>
+		        <position name="backgempos1_20" unit="cm" x="0" y="0" z="-4.040200"/>
+		        <rotation name="backgemrot1_20" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_20"/>
+		        <position name="backgempos2_20" unit="cm" x="0" y="0" z="4.959800"/>
+		        <rotation name="backgemrot2_20" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_21"/>
+		        <position name="backgempos1_21" unit="cm" x="0" y="0" z="-4.034050"/>
+		        <rotation name="backgemrot1_21" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_21"/>
+		        <position name="backgempos2_21" unit="cm" x="0" y="0" z="4.965950"/>
+		        <rotation name="backgemrot2_21" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay1_22"/>
+		        <position name="backgempos1_22" unit="cm" x="0" y="0" z="-4.027900"/>
+		        <rotation name="backgemrot1_22" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+                   <physvol>
+                        <volumeref ref="logicbackgemlay2_22"/>
+		        <position name="backgempos2_22" unit="cm" x="0" y="0" z="4.972100"/>
+		        <rotation name="backgemrot2_22" unit="deg" x="0" y="0" z="360.0*i0/30"/>
+                   </physvol>
+	        </loop>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_00"/>
+		   <position name="backgempos1_04_00" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_00"/>
+		   <position name="backgempos2_04_00" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_01"/>
+		   <position name="backgempos1_04_01" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_01"/>
+		   <position name="backgempos2_04_01" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_02"/>
+		   <position name="backgempos1_04_02" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_02"/>
+		   <position name="backgempos2_04_02" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_03"/>
+		   <position name="backgempos1_04_03" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_03"/>
+		   <position name="backgempos2_04_03" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_04"/>
+		   <position name="backgempos1_04_04" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_04"/>
+		   <position name="backgempos2_04_04" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_05"/>
+		   <position name="backgempos1_04_05" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_05"/>
+		   <position name="backgempos2_04_05" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_06"/>
+		   <position name="backgempos1_04_06" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_06"/>
+		   <position name="backgempos2_04_06" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_07"/>
+		   <position name="backgempos1_04_07" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_07"/>
+		   <position name="backgempos2_04_07" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_08"/>
+		   <position name="backgempos1_04_08" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_08"/>
+		   <position name="backgempos2_04_08" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_09"/>
+		   <position name="backgempos1_04_09" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_09"/>
+		   <position name="backgempos2_04_09" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_10"/>
+		   <position name="backgempos1_04_10" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_10"/>
+		   <position name="backgempos2_04_10" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_11"/>
+		   <position name="backgempos1_04_11" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_11"/>
+		   <position name="backgempos2_04_11" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_12"/>
+		   <position name="backgempos1_04_12" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_12"/>
+		   <position name="backgempos2_04_12" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_13"/>
+		   <position name="backgempos1_04_13" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_13"/>
+		   <position name="backgempos2_04_13" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_14"/>
+		   <position name="backgempos1_04_14" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_14"/>
+		   <position name="backgempos2_04_14" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_15"/>
+		   <position name="backgempos1_04_15" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_15"/>
+		   <position name="backgempos2_04_15" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_16"/>
+		   <position name="backgempos1_04_16" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_16"/>
+		   <position name="backgempos2_04_16" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_17"/>
+		   <position name="backgempos1_04_17" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_17"/>
+		   <position name="backgempos2_04_17" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_18"/>
+		   <position name="backgempos1_04_18" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_18"/>
+		   <position name="backgempos2_04_18" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_19"/>
+		   <position name="backgempos1_04_19" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_19"/>
+		   <position name="backgempos2_04_19" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_20"/>
+		   <position name="backgempos1_04_20" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_20"/>
+		   <position name="backgempos2_04_20" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_21"/>
+		   <position name="backgempos1_04_21" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_21"/>
+		   <position name="backgempos2_04_21" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_22"/>
+		   <position name="backgempos1_04_22" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_22"/>
+		   <position name="backgempos2_04_22" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_23"/>
+		   <position name="backgempos1_04_23" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_23"/>
+		   <position name="backgempos2_04_23" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_24"/>
+		   <position name="backgempos1_04_24" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_24"/>
+		   <position name="backgempos2_04_24" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_25"/>
+		   <position name="backgempos1_04_25" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_25"/>
+		   <position name="backgempos2_04_25" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_26"/>
+		   <position name="backgempos1_04_26" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_26"/>
+		   <position name="backgempos2_04_26" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_27"/>
+		   <position name="backgempos1_04_27" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_27"/>
+		   <position name="backgempos2_04_27" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_28"/>
+		   <position name="backgempos1_04_28" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_28"/>
+		   <position name="backgempos2_04_28" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_04_29"/>
+		   <position name="backgempos1_04_29" unit="cm" x="0" y="0" z="-4.970450"/>
+		   <rotation name="backgemrot1_04_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_04_29"/>
+		   <position name="backgempos2_04_29" unit="cm" x="0" y="0" z="4.029550"/>
+		   <rotation name="backgemrot2_04_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_00"/>
+		   <position name="backgempos1_05_00" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_00"/>
+		   <position name="backgempos2_05_00" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_01"/>
+		   <position name="backgempos1_05_01" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_01"/>
+		   <position name="backgempos2_05_01" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_02"/>
+		   <position name="backgempos1_05_02" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_02"/>
+		   <position name="backgempos2_05_02" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_03"/>
+		   <position name="backgempos1_05_03" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_03"/>
+		   <position name="backgempos2_05_03" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_04"/>
+		   <position name="backgempos1_05_04" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_04"/>
+		   <position name="backgempos2_05_04" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_05"/>
+		   <position name="backgempos1_05_05" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_05"/>
+		   <position name="backgempos2_05_05" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_06"/>
+		   <position name="backgempos1_05_06" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_06"/>
+		   <position name="backgempos2_05_06" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_07"/>
+		   <position name="backgempos1_05_07" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_07"/>
+		   <position name="backgempos2_05_07" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_08"/>
+		   <position name="backgempos1_05_08" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_08"/>
+		   <position name="backgempos2_05_08" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_09"/>
+		   <position name="backgempos1_05_09" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_09"/>
+		   <position name="backgempos2_05_09" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_10"/>
+		   <position name="backgempos1_05_10" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_10"/>
+		   <position name="backgempos2_05_10" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_11"/>
+		   <position name="backgempos1_05_11" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_11"/>
+		   <position name="backgempos2_05_11" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_12"/>
+		   <position name="backgempos1_05_12" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_12"/>
+		   <position name="backgempos2_05_12" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_13"/>
+		   <position name="backgempos1_05_13" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_13"/>
+		   <position name="backgempos2_05_13" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_14"/>
+		   <position name="backgempos1_05_14" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_14"/>
+		   <position name="backgempos2_05_14" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_15"/>
+		   <position name="backgempos1_05_15" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_15"/>
+		   <position name="backgempos2_05_15" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_16"/>
+		   <position name="backgempos1_05_16" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_16"/>
+		   <position name="backgempos2_05_16" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_17"/>
+		   <position name="backgempos1_05_17" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_17"/>
+		   <position name="backgempos2_05_17" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_18"/>
+		   <position name="backgempos1_05_18" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_18"/>
+		   <position name="backgempos2_05_18" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_19"/>
+		   <position name="backgempos1_05_19" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_19"/>
+		   <position name="backgempos2_05_19" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_20"/>
+		   <position name="backgempos1_05_20" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_20"/>
+		   <position name="backgempos2_05_20" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_21"/>
+		   <position name="backgempos1_05_21" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_21"/>
+		   <position name="backgempos2_05_21" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_22"/>
+		   <position name="backgempos1_05_22" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_22"/>
+		   <position name="backgempos2_05_22" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_23"/>
+		   <position name="backgempos1_05_23" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_23"/>
+		   <position name="backgempos2_05_23" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_24"/>
+		   <position name="backgempos1_05_24" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_24"/>
+		   <position name="backgempos2_05_24" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_25"/>
+		   <position name="backgempos1_05_25" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_25"/>
+		   <position name="backgempos2_05_25" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_26"/>
+		   <position name="backgempos1_05_26" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_26"/>
+		   <position name="backgempos2_05_26" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_27"/>
+		   <position name="backgempos1_05_27" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_27"/>
+		   <position name="backgempos2_05_27" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_28"/>
+		   <position name="backgempos1_05_28" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_28"/>
+		   <position name="backgempos2_05_28" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_05_29"/>
+		   <position name="backgempos1_05_29" unit="cm" x="0" y="0" z="-4.820200"/>
+		   <rotation name="backgemrot1_05_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_05_29"/>
+		   <position name="backgempos2_05_29" unit="cm" x="0" y="0" z="4.179800"/>
+		   <rotation name="backgemrot2_05_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_00"/>
+		   <position name="backgempos1_06_00" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_00"/>
+		   <position name="backgempos2_06_00" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_01"/>
+		   <position name="backgempos1_06_01" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_01"/>
+		   <position name="backgempos2_06_01" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_02"/>
+		   <position name="backgempos1_06_02" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_02"/>
+		   <position name="backgempos2_06_02" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_03"/>
+		   <position name="backgempos1_06_03" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_03"/>
+		   <position name="backgempos2_06_03" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_04"/>
+		   <position name="backgempos1_06_04" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_04"/>
+		   <position name="backgempos2_06_04" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_05"/>
+		   <position name="backgempos1_06_05" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_05"/>
+		   <position name="backgempos2_06_05" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_06"/>
+		   <position name="backgempos1_06_06" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_06"/>
+		   <position name="backgempos2_06_06" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_07"/>
+		   <position name="backgempos1_06_07" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_07"/>
+		   <position name="backgempos2_06_07" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_08"/>
+		   <position name="backgempos1_06_08" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_08"/>
+		   <position name="backgempos2_06_08" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_09"/>
+		   <position name="backgempos1_06_09" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_09"/>
+		   <position name="backgempos2_06_09" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_10"/>
+		   <position name="backgempos1_06_10" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_10"/>
+		   <position name="backgempos2_06_10" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_11"/>
+		   <position name="backgempos1_06_11" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_11"/>
+		   <position name="backgempos2_06_11" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_12"/>
+		   <position name="backgempos1_06_12" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_12"/>
+		   <position name="backgempos2_06_12" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_13"/>
+		   <position name="backgempos1_06_13" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_13"/>
+		   <position name="backgempos2_06_13" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_14"/>
+		   <position name="backgempos1_06_14" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_14"/>
+		   <position name="backgempos2_06_14" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_15"/>
+		   <position name="backgempos1_06_15" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_15"/>
+		   <position name="backgempos2_06_15" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_16"/>
+		   <position name="backgempos1_06_16" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_16"/>
+		   <position name="backgempos2_06_16" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_17"/>
+		   <position name="backgempos1_06_17" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_17"/>
+		   <position name="backgempos2_06_17" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_18"/>
+		   <position name="backgempos1_06_18" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_18"/>
+		   <position name="backgempos2_06_18" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_19"/>
+		   <position name="backgempos1_06_19" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_19"/>
+		   <position name="backgempos2_06_19" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_20"/>
+		   <position name="backgempos1_06_20" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_20"/>
+		   <position name="backgempos2_06_20" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_21"/>
+		   <position name="backgempos1_06_21" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_21"/>
+		   <position name="backgempos2_06_21" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_22"/>
+		   <position name="backgempos1_06_22" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_22"/>
+		   <position name="backgempos2_06_22" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_23"/>
+		   <position name="backgempos1_06_23" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_23"/>
+		   <position name="backgempos2_06_23" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_24"/>
+		   <position name="backgempos1_06_24" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_24"/>
+		   <position name="backgempos2_06_24" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_25"/>
+		   <position name="backgempos1_06_25" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_25"/>
+		   <position name="backgempos2_06_25" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_26"/>
+		   <position name="backgempos1_06_26" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_26"/>
+		   <position name="backgempos2_06_26" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_27"/>
+		   <position name="backgempos1_06_27" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_27"/>
+		   <position name="backgempos2_06_27" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_28"/>
+		   <position name="backgempos1_06_28" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_28"/>
+		   <position name="backgempos2_06_28" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_06_29"/>
+		   <position name="backgempos1_06_29" unit="cm" x="0" y="0" z="-4.669950"/>
+		   <rotation name="backgemrot1_06_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_06_29"/>
+		   <position name="backgempos2_06_29" unit="cm" x="0" y="0" z="4.330050"/>
+		   <rotation name="backgemrot2_06_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_00"/>
+		   <position name="backgempos1_18_00" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_00"/>
+		   <position name="backgempos2_18_00" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_00" unit="deg" x="0" y="0" z="360.0*0.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_01"/>
+		   <position name="backgempos1_18_01" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_01"/>
+		   <position name="backgempos2_18_01" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_01" unit="deg" x="0" y="0" z="360.0*1.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_02"/>
+		   <position name="backgempos1_18_02" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_02"/>
+		   <position name="backgempos2_18_02" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_02" unit="deg" x="0" y="0" z="360.0*2.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_03"/>
+		   <position name="backgempos1_18_03" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_03"/>
+		   <position name="backgempos2_18_03" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_03" unit="deg" x="0" y="0" z="360.0*3.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_04"/>
+		   <position name="backgempos1_18_04" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_04"/>
+		   <position name="backgempos2_18_04" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_04" unit="deg" x="0" y="0" z="360.0*4.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_05"/>
+		   <position name="backgempos1_18_05" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_05"/>
+		   <position name="backgempos2_18_05" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_05" unit="deg" x="0" y="0" z="360.0*5.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_06"/>
+		   <position name="backgempos1_18_06" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_06"/>
+		   <position name="backgempos2_18_06" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_06" unit="deg" x="0" y="0" z="360.0*6.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_07"/>
+		   <position name="backgempos1_18_07" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_07"/>
+		   <position name="backgempos2_18_07" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_07" unit="deg" x="0" y="0" z="360.0*7.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_08"/>
+		   <position name="backgempos1_18_08" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_08"/>
+		   <position name="backgempos2_18_08" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_08" unit="deg" x="0" y="0" z="360.0*8.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_09"/>
+		   <position name="backgempos1_18_09" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_09"/>
+		   <position name="backgempos2_18_09" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_09" unit="deg" x="0" y="0" z="360.0*9.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_10"/>
+		   <position name="backgempos1_18_10" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_10"/>
+		   <position name="backgempos2_18_10" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_10" unit="deg" x="0" y="0" z="360.0*10.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_11"/>
+		   <position name="backgempos1_18_11" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_11"/>
+		   <position name="backgempos2_18_11" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_11" unit="deg" x="0" y="0" z="360.0*11.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_12"/>
+		   <position name="backgempos1_18_12" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_12"/>
+		   <position name="backgempos2_18_12" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_12" unit="deg" x="0" y="0" z="360.0*12.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_13"/>
+		   <position name="backgempos1_18_13" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_13"/>
+		   <position name="backgempos2_18_13" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_13" unit="deg" x="0" y="0" z="360.0*13.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_14"/>
+		   <position name="backgempos1_18_14" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_14"/>
+		   <position name="backgempos2_18_14" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_14" unit="deg" x="0" y="0" z="360.0*14.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_15"/>
+		   <position name="backgempos1_18_15" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_15"/>
+		   <position name="backgempos2_18_15" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_15" unit="deg" x="0" y="0" z="360.0*15.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_16"/>
+		   <position name="backgempos1_18_16" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_16"/>
+		   <position name="backgempos2_18_16" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_16" unit="deg" x="0" y="0" z="360.0*16.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_17"/>
+		   <position name="backgempos1_18_17" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_17"/>
+		   <position name="backgempos2_18_17" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_17" unit="deg" x="0" y="0" z="360.0*17.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_18"/>
+		   <position name="backgempos1_18_18" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_18"/>
+		   <position name="backgempos2_18_18" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_18" unit="deg" x="0" y="0" z="360.0*18.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_19"/>
+		   <position name="backgempos1_18_19" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_19"/>
+		   <position name="backgempos2_18_19" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_19" unit="deg" x="0" y="0" z="360.0*19.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_20"/>
+		   <position name="backgempos1_18_20" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_20"/>
+		   <position name="backgempos2_18_20" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_20" unit="deg" x="0" y="0" z="360.0*20.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_21"/>
+		   <position name="backgempos1_18_21" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_21"/>
+		   <position name="backgempos2_18_21" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_21" unit="deg" x="0" y="0" z="360.0*21.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_22"/>
+		   <position name="backgempos1_18_22" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_22"/>
+		   <position name="backgempos2_18_22" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_22" unit="deg" x="0" y="0" z="360.0*22.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_23"/>
+		   <position name="backgempos1_18_23" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_23"/>
+		   <position name="backgempos2_18_23" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_23" unit="deg" x="0" y="0" z="360.0*23.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_24"/>
+		   <position name="backgempos1_18_24" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_24"/>
+		   <position name="backgempos2_18_24" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_24" unit="deg" x="0" y="0" z="360.0*24.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_25"/>
+		   <position name="backgempos1_18_25" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_25"/>
+		   <position name="backgempos2_18_25" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_25" unit="deg" x="0" y="0" z="360.0*25.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_26"/>
+		   <position name="backgempos1_18_26" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_26"/>
+		   <position name="backgempos2_18_26" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_26" unit="deg" x="0" y="0" z="360.0*26.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_27"/>
+		   <position name="backgempos1_18_27" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_27"/>
+		   <position name="backgempos2_18_27" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_27" unit="deg" x="0" y="0" z="360.0*27.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_28"/>
+		   <position name="backgempos1_18_28" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_28"/>
+		   <position name="backgempos2_18_28" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_28" unit="deg" x="0" y="0" z="360.0*28.0/30.0"/>
+                </physvol>
+                <physvol>
+		   <volumeref ref="logicbackgemlay1_18_29"/>
+		   <position name="backgempos1_18_29" unit="cm" x="0" y="0" z="-4.051700"/>
+		   <rotation name="backgemrot1_18_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+                <physvol>
+                   <volumeref ref="logicbackgemlay2_18_29"/>
+		   <position name="backgempos2_18_29" unit="cm" x="0" y="0" z="4.948300"/>
+		   <rotation name="backgemrot2_18_29" unit="deg" x="0" y="0" z="360.0*29.0/30.0"/>
+                </physvol>
+
+	        </volume>
+	</structure>
+
+	<setup name="backGEM" version="1.0">
+	     <world ref="logicbackGEMMother"/>
+	</setup>
+</gdml>

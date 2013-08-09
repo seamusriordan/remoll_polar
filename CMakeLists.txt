@@ -99,13 +99,37 @@ target_link_libraries(remollroot ${ROOT_LIBRARIES} ${Boost_LIBRARIES})
 FILE( GLOB REMOLL_GEO "geometry/*" )
 
 set(REMOLL_SCRIPTS
+    macros/vis.mac
     vis/OIX.mac
     vis/Qt.mac
     vis/vis.mac
     vis/X.mac
     macros/runexample.mac
     macros/gui.mac
+    macros/vis.mac
     rootlogon.C
+    geometry_pvdis/genecal.py
+    geometry_pvdis/ecal_orig.gdml
+    geometry_pvdis/target.gdml
+    geometry_pvdis/gengembaffles.py
+    geometry_pvdis/solenoid.gdml
+    geometry_pvdis/cerhelp.py
+    geometry_pvdis/cerenkov_orig.gdml
+    geometry_pvdis/ecal.gdml
+    geometry_pvdis/solid_pvdis.gdml
+    geometry_pvdis/backgems.gdml
+    geometry_pvdis/gembaffles.gdml
+    geometry_pvdis/cerenkov.gdml
+    geometry_pvdis/gencerenkov.py
+    geometry_pvdis/genbackgems.py
+    geometry_pvdis/schema/gdml_parameterised.xsd
+    geometry_pvdis/schema/gdml_replicas.xsd
+    geometry_pvdis/schema/gdml_solids.xsd
+    geometry_pvdis/schema/gdml_define.xsd
+    geometry_pvdis/schema/gdml_extensions.xsd
+    geometry_pvdis/schema/gdml_core.xsd
+    geometry_pvdis/schema/gdml_materials.xsd
+    geometry_pvdis/schema/gdml.xsd
   )
 
 foreach(_script ${REMOLL_SCRIPTS})

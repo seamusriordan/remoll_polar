@@ -13,6 +13,7 @@ class TTree;
 
 class remollGenericDetectorHit;
 class remollGenericDetectorSum;
+class remollCalDetectorSum;
 class remollEvent;
 
 #include <xercesc/dom/DOMElement.hpp>
@@ -136,6 +137,18 @@ class remollIO {
 	Int_t fGenDetSum_det[__IO_MAXHIT];
 	Int_t fGenDetSum_id[__IO_MAXHIT];
 	Double_t fGenDetSum_edep[__IO_MAXHIT];
+	//  CalDetectorSum
+    public:
+	void AddCalDetectorSum(remollCalDetectorSum *);
+    private:
+	Int_t fNCalDetSum;
+	Int_t fCalDetSum_det[__IO_MAXHIT];
+	Int_t fCalDetSum_id[__IO_MAXHIT];
+	Double_t fCalDetSum_edep[__IO_MAXHIT];
+	Double_t fCalDetSum_photon[__IO_MAXHIT];
+	Double_t fCalDetSum_x[__IO_MAXHIT];
+	Double_t fCalDetSum_y[__IO_MAXHIT];
+
 };
 
 #endif//remollIO_HH

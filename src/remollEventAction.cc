@@ -1,6 +1,7 @@
 #include "remollEventAction.hh"
 #include "remollGenericDetectorHit.hh"
 #include "remollGenericDetectorSum.hh"
+#include "remollCalDetectorSum.hh"
 
 #include "G4Event.hh"
 #include "G4EventManager.hh"
@@ -60,6 +61,15 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
 		  fIO->AddGenericDetectorSum(
 			  (remollGenericDetectorSum *) thiscast->GetHit(hidx) );
+	      }
+	  }
+	  
+	  ////  CalDetector Sum ////////////////////////////////////
+	  if( remollCalDetectorSumCollection *thiscast = 
+		  dynamic_cast<remollCalDetectorSumCollection *>(thiscol)){
+	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
+		  fIO->AddCalDetectorSum(
+			  (remollCalDetectorSum *) thiscast->GetHit(hidx) );
 	      }
 	  }
 

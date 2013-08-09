@@ -21,11 +21,8 @@ void remollSteppingAction::UserSteppingAction(const G4Step *aStep) {
     G4Track* fTrack = aStep->GetTrack();
     G4Material* material = fTrack->GetMaterial();
 
-    // Mass of the volume we are in
-    double volmass = aStep->GetPostStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume()->GetMass(); 
-
-    // Don't continue in thick materials
-    if(  material->GetDensity() > fKryptoniteThresh && volmass > material->GetDensity()*10.0*cm3  && fEnableKryptonite){
+    // Don't continue in thick materials  FIXME:  GEMCopper is a bad way to do this
+    if(  material->GetDensity() > fKryptoniteThresh && fEnableKryptonite && material->GetName()!="GEMCopper"  ){
 	fTrack->SetTrackStatus(fStopAndKill);
     }
     if(   material->GetName()=="Kryptonite" ){

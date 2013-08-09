@@ -1,19 +1,11 @@
-12 GeV Moller simulation
+12 GeV SoLID simulation with remoll
 
 Seamus Riordan
 riordan@jlab.org
-January 9, 2013
+August 9, 2013
 
 Repository information is here:
-http://solid.physics.umass.edu/remoll.html
-
-Mailing list for repository updates is 
-
-12gevmoller_sim@jlab.org
-
-subscribe at
-
-https://mailman.jlab.org/mailman/listinfo/12gevmoller_sim
+http://solid.physics.umass.edu/remoll_solid.html
 
 ---------------------------------------------------
 
@@ -39,9 +31,9 @@ cd build
 cmake <path to remoll>
 make
 
-Field maps can be found here:
+The field map can be found here:
 
-http://hallaweb.jlab.org/12GeV/Moller/downloads/remoll/
+http://hallaweb.jlab.org/12GeV/SoLID/download/field/CLEO_rm.dat
 
 An example macro will be found in 
 
@@ -62,22 +54,9 @@ To run, execute
 
 which should bring up a graphical command interface
 
-To see the geometry you have to say:
+To see the geometry:
 
-/run/initialize
-
-then 
-
-/control/execute vis/Qt.mac
+/control/execute macros/vis.mac
 
 
 ---------------------------------------------------
-
-Troubleshooting:
-
-if you get errors about missing gitinfo.hh try
-
-cmake <path to remoll>
-make
-
-

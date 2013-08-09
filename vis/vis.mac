@@ -16,7 +16,7 @@
 
 # Add axis (has to be after /vis/scene/create )
 #
-/vis/scene/add/axes 0 0 0 100 cm
+#/vis/scene/add/axes 0 0 0 100 cm
 
 
 #
@@ -42,6 +42,8 @@
 #
 /vis/viewer/set/style surface
 
+/vis/viewer/addCutawayPlane 0.0 0.0 0.0 m 1.0 0.0 0.0
+/vis/viewer/set/lightsMove with-camera
 #
 # Create style
 #

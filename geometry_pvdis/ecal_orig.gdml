@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Calorimeter -->
+
+    <define>
+	<constant name="thick" value="25.0"/>
+	<position name="ecal_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+	<material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+	   <material Z="82" name="Lead" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+	   <material Z="82" name="Kryptonite" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+	   <material name="Nitrogen" Z="7">
+	       <D    unit="g/L" value="1.165"/>
+	       <atom unit="g/mole" value="14.0067"/>
+	   </material>
+	   <material name="Oxygen" Z="8">
+	       <D    unit="g/L" value="1.332"/>
+	       <atom unit="g/mole" value="16"/>
+	   </material>
+	   <material name="Air" state="gas">
+	       <D value="0.00129" />
+	       <fraction n="0.7" ref="Nitrogen" />
+	       <fraction n="0.3" ref="Oxygen" />
+	   </material>
+
+    </materials>
+
+    <solids>
+	<cone aunit="deg" deltaphi="360" lunit="cm" name="ecalsol" rmin1="110" rmax1="265" rmin2="110" rmax2="265" startphi="0" z="thick*2"/>
+    </solids>
+
+    <structure>
+
+	<volume name="logicEcal">
+	    <materialref ref="Lead"/>
+	    <solidref ref="ecalsol"/>
+	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
+	    <auxiliary auxtype="Color" auxvalue="green"/> 
+	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	    <auxiliary auxtype="DetNo" auxvalue="9000"/>
+	</volume>
+
+	<!---  Place volumes -->
+
+	<volume name="logicEcalMother">
+	    <materialref ref="Air"/>
+	    <solidref ref="ecalsol"/>
+
+	    <physvol>
+		<volumeref ref="logicEcal"/>
+		<positionref ref="ecal_origin"/>
+	    </physvol>
+	</volume>
+
+    </structure>
+
+    <setup name="Ecal" version="1.0">
+	<world ref="logicEcalMother"/>
+    </setup>
+
+</gdml>
+
+

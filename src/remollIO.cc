@@ -8,6 +8,7 @@
 
 #include "remollGenericDetectorHit.hh"
 #include "remollGenericDetectorSum.hh"
+#include "remollCalDetectorSum.hh"
 #include "remollEvent.hh"
 #include "remollRun.hh"
 #include "remollRunData.hh"
@@ -121,6 +122,15 @@ void remollIO::InitializeTree(){
     fTree->Branch("sum.det",  &fGenDetSum_det,  "sum.det[sum.n]/I");
     fTree->Branch("sum.vid",  &fGenDetSum_id,   "sum.vid[sum.n]/I");
     fTree->Branch("sum.edep", &fGenDetSum_edep, "sum.edep[sum.n]/D");
+    
+    // CalDetectorSum
+    fTree->Branch("cal.n",    &fNCalDetSum,     "cal.n/I");
+    fTree->Branch("cal.det",  &fCalDetSum_det,  "cal.det[sum.n]/I");
+    fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[sum.n]/I");
+    fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[sum.n]/D");
+    fTree->Branch("cal.phot", &fCalDetSum_photon, "cal.phot[sum.n]/D");
+    fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[sum.n]/I");
+    fTree->Branch("cal.y",    &fCalDetSum_y,    "cal.y[sum.n]/D");
 
     return;
 }
@@ -286,6 +296,24 @@ void remollIO::AddGenericDetectorSum(remollGenericDetectorSum *hit){
     fNGenDetSum++;
 }
 
+// CalDetectorSum
+
+void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
+    int n = fNCalDetSum;
+    if( n >= __IO_MAXHIT ){
+//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+	return;
+    }
+
+    fCalDetSum_edep[n] = hit->fEdep/__E_UNIT;
+    fCalDetSum_photon[n] = hit->fPhoton;
+    fCalDetSum_det[n]  = hit->fDetID;
+    fCalDetSum_id[n]   = hit->fCopyID;
+    fCalDetSum_x[n]    = hit->fX;
+    fCalDetSum_y[n]    = hit->fY;
+
+    fNCalDetSum++;
+}
 /*---------------------------------------------------------------------------------*/
 
 void remollIO::GrabGDMLFiles(G4String fn){

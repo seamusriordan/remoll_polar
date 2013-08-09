@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Cerenkov -->
+
+    <define>
+	<constant name="cer_zfront" value="194.0"/>
+	<constant name="cer_zback" value="cer_zfront+87.0"/>
+
+	<position name="cer_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	<position name="cer_entpos" x="0.0" y="0.0" z="cer_zfront" unit="cm"/>
+	<position name="cer_extpos" x="0.0" y="0.0" z="cer_zback" unit="cm"/>
+
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+	<material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+    </materials>
+
+
+    <solids>
+	<!--  Main gaseous volume -->
+	<polycone aunit="deg" startphi="0" deltaphi="360" lunit="cm" name="cersol">
+	    <zplane rmin="65.0"  rmax="144"  z="cer_zfront" />
+	    <zplane rmin="67.0"  rmax="155"  z="cer_zfront+15.01" />
+	    <zplane rmin="85.0"  rmax="265"  z="cer_zfront+15.01" />
+	    <zplane rmin="85.0"  rmax="265"  z="cer_zback" />
+	</polycone>
+
+	<tube name="cerentwindow" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="61.1" rmax="141.9" z="0.04" />
+	<tube name="cerextwindow" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="96.1" rmax="260.0" z="0.10" />
+
+    </solids>
+
+    <structure>
+	<volume name="logicCerEntWin">
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="cerentwindow"/>
+	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
+	    <auxiliary auxtype="Color" auxvalue="grey"/> 
+	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	    <auxiliary auxtype="DetNo" auxvalue="8000"/>
+	</volume>
+
+	<volume name="logicCerExtWin">
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="cerextwindow"/>
+	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
+	    <auxiliary auxtype="Color" auxvalue="grey"/> 
+	</volume>
+
+	<volume name="logicCer">
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="cersol"/>
+	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
+	    <auxiliary auxtype="Color" auxvalue="blue"/> 
+
+	    <!---
+	    <physvol>
+		<volumeref ref="logicCerEntWin"/>
+		<positionref ref="cer_entpos"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicCerExtWin"/>
+		<positionref ref="cer_extpos"/>
+	    </physvol>
+	    -->
+	</volume>
+
+	<!---  Place volumes -->
+
+	<volume name="logicCerMother">
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="cersol"/>
+
+	    <physvol>
+		<volumeref ref="logicCer"/>
+		<positionref ref="cer_origin"/>
+	    </physvol>
+	</volume>
+
+    </structure>
+
+    <setup name="Cer" version="1.0">
+	<world ref="logicCerMother"/>
+    </setup>
+
+</gdml>
+
+

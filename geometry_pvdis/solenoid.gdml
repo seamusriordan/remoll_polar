@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Target and beamline -->
+
+    <define>
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+	<material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+	   <material name="Nitrogen" Z="7">
+	       <D    unit="g/L" value="1.165"/>
+	       <atom unit="g/mole" value="14.0067"/>
+	   </material>
+	   <material name="Oxygen" Z="8">
+	       <D    unit="g/L" value="1.332"/>
+	       <atom unit="g/mole" value="16"/>
+	   </material>
+
+	   <material name="Air" state="gas">
+	       <D value="0.00129" />
+	       <fraction n="0.7" ref="Nitrogen" />
+	       <fraction n="0.3" ref="Oxygen" />
+	   </material>
+	<material Z="13" name="Aluminum" state="solid">
+	    <D unit="g/cm3" value="2.70"/>
+	    <atom unit="g/mole" value="26.98"/>
+	</material>
+	<material Z="26" name="Iron" state="solid">
+	    <D unit="g/cm3" value="7.874"/>
+	    <atom unit="g/mole" value="55.845"/>
+	</material>
+	   <material name="Carbon" Z="6">
+	       <D    unit="g/cm3" value="2.21"/>
+	       <atom unit="g/mole" value="12.011"/>
+	   </material>
+	   <material name="Chromium" Z="6">
+	       <D    unit="g/cm3" value="2.21"/>
+	       <atom unit="g/mole" value="12.011"/>
+	   </material>
+	   <material name="Silicon" Z="14">
+	       <D    unit="g/cm3" value="2.329"/>
+	       <atom unit="g/mole" value="28.086"/>
+	   </material>
+	   <material name="Magnesium" Z="12">
+	       <D    unit="g/cm3" value="1.738"/>
+	       <atom unit="g/mole" value="24.305"/>
+	   </material>
+	   <material name="Nickel" Z="28">
+	       <D    unit="g/cm3" value="8.908"/>
+	       <atom unit="g/mole" value="58.693"/>
+	   </material>
+
+	<material  name="StainlessSteel">
+	    <D unit="g/cm3" value="8.02"/>
+	    <fraction n="0.68" ref="Iron" />
+	    <fraction n="0.19" ref="Chromium" />
+	    <fraction n="0.02" ref="Magnesium" />
+	    <fraction n="0.01" ref="Silicon" />
+	    <fraction n="0.10" ref="Nickel" />
+	</material>
+
+
+    </materials>
+
+
+    <solids>
+	<polycone name="Coil" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="152.30" rmax="154.30" z="-173.80" />
+	    <zplane rmin="152.30" rmax="154.30" z="173.80" />
+	</polycone>
+
+	<polycone name="BarrelYokeInner" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="177.91" rmax="212.60" z="-266.50" />
+	    <zplane rmin="177.91" rmax="212.60" z="-189.00" />
+	    <zplane rmin="176.60" rmax="212.60" z="-189.00" />
+	    <zplane rmin="176.60" rmax="212.60" z="189.00" />
+	</polycone>
+
+	<polycone name="BarrelYokeOuter" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="221.51" rmax="257.50" z="-266.50" />
+	    <zplane rmin="221.51" rmax="257.50" z="189.00" />
+	</polycone>
+
+	<polycone name="SlabSpacerUpstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="212.61" rmax="221.50" z="-266.50" />
+	    <zplane rmin="212.61" rmax="221.50" z="-235.90" />
+	</polycone>
+
+	<polycone name="SlabSpacerDownstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="212.61" rmax="221.50" z="159.00" />
+	    <zplane rmin="212.61" rmax="221.50" z="189.00" />
+	</polycone>
+
+	<polycone name="CoilCollarUpstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="144.01" rmax="177.90" z="-266.50" />
+	    <zplane rmin="144.01" rmax="177.90" z="-189.01" />
+	</polycone>
+
+	<polycone name="CoilCollarDownstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="144.00" rmax="285.00" z="189.01" />
+	    <zplane rmin="144.00" rmax="285.00" z="193.00" />
+	    <zplane rmin="156.00" rmax="285.00" z="209.00" />
+	</polycone>
+
+	<polycone name="EndcapDonut" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="270.00" rmax="285.00" z="209.01" />
+	    <zplane rmin="270.00" rmax="285.00" z="485.00" />
+	</polycone>
+
+
+	<polycone name="EndcapBottomInner" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="30.00" rmax="285.00" z="485.01" />
+	    <zplane rmin="30.00" rmax="285.00" z="500.00" />
+	</polycone>
+
+	<polycone name="EndcapBottomOuter" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="30.00" rmax="185.00" z="500.01" />
+	    <zplane rmin="45.00" rmax="170.00" z="515.00" />
+	</polycone>
+
+	<polycone name="EndcapNose" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="20.00" rmax="60.00" z="189.00" />
+	    <zplane rmin="30.00" rmax="90.00" z="405.00" />
+	    <zplane rmin="30.00" rmax="90.00" z="485.00" />
+	</polycone>
+
+	<!--  This is just for mother purposes -->
+	<polycone name="motherEndcapDonut" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="270.00" rmax="285.00" z="208.01" />
+	    <zplane rmin="270.00" rmax="285.00" z="485.00" />
+	</polycone>
+
+	<polycone name="motherEndcapBottomInner" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="30.00" rmax="285.00" z="484.99" />
+	    <zplane rmin="30.00" rmax="285.00" z="500.00" />
+	</polycone>
+
+	<polycone name="motherEndcapBottomOuter" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="30.00" rmax="185.00" z="499.98" />
+	    <zplane rmin="45.00" rmax="170.00" z="515.00" />
+	</polycone>
+
+	<polycone name="motherEndcapNose" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="20.00" rmax="60.00" z="189.00" />
+	    <zplane rmin="30.00" rmax="90.00" z="405.00" />
+	    <zplane rmin="30.00" rmax="90.00" z="485.00" />
+	</polycone>
+	<!-- en                mother purposes -->
+
+	<polycone name="FrontPiece" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="55.60" rmax="144.00" z="-237.00" />
+	    <zplane rmin="70.00" rmax="144.00" z="-207.00" />
+	</polycone>
+
+	<polycone name="UpstreamShield1" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="48.50" rmax="144.00" z="-250.50" />
+	    <zplane rmin="50.50" rmax="144.00" z="-246.50" />
+	</polycone>
+
+	<polycone name="UpstreamShield2" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="44.60" rmax="144.00" z="-258.50" />
+	    <zplane rmin="46.50" rmax="144.00" z="-254.50" />
+	</polycone>
+
+	<polycone name="UpstreamShield3" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="40.10" rmax="144.00" z="-266.50" />
+	    <zplane rmin="42.70" rmax="144.00" z="-262.50" />
+	</polycone>
+
+	<polycone name="UpstreamShield4" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="36.80" rmax="257.50" z="-274.50" />
+	    <zplane rmin="38.80" rmax="257.50" z="-270.50" />
+	</polycone>
+
+	<polycone name="UpstreamShield5" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="33.90" rmax="257.50" z="-280.50" />
+	    <zplane rmin="35.30" rmax="257.50" z="-277.50" />
+	</polycone>
+
+	<tube name="CryostatInner" startphi="0" deltaphi="360" aunit="deg" lunit="cm" rmin="144.0" rmax="144.0+0.1" z="189*2-2-2"/>
+	<tube name="CryostatOuter" startphi="0" deltaphi="360" aunit="deg" lunit="cm" rmin="176.60-0.12" rmax="176.60-0.01" z="189*2-2-2"/>
+	<tube name="CryostatFlangeUpstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm" rmin="144.00" rmax="176.60-0.01" z="2-0.01"/>
+	<tube name="CryostatFlangeDownstream" startphi="0" deltaphi="360" aunit="deg" lunit="cm" rmin="144.00" rmax="176.60-0.01" z="2-0.01"/>
+
+	<polycone name="UpstreamMother" startphi="0" deltaphi="360" aunit="deg" lunit="cm">
+	    <zplane rmin="33.90" rmax="300" z="-280.50" />
+	    <zplane rmin="35.30" rmax="300" z="-277.50" />
+	    <zplane rmin="36.80" rmax="300" z="-274.50" />
+	    <zplane rmin="38.80" rmax="300" z="-270.50" />
+	    <zplane rmin="40.10" rmax="300" z="-266.50" />
+	    <zplane rmin="42.70" rmax="300" z="-262.50" />
+	    <zplane rmin="48.50" rmax="300" z="-250.50" />
+	    <zplane rmin="50.50" rmax="300" z="-246.50" />
+	    <zplane rmin="55.60" rmax="300" z="-237.00" />
+	    <zplane rmin="70.00" rmax="300" z="-207.00" />
+	    <zplane rmin="144.0" rmax="300" z="-207.00" />
+	    <zplane rmin="144.0" rmax="300" z= "189.01" />
+	</polycone>
+
+	<union name="munion1">
+	    <first  ref="UpstreamMother"/>
+	    <second ref="CoilCollarDownstream"/>
+	</union>
+	<union name="munion2">
+	    <first  ref="munion1"/>
+	    <second ref="motherEndcapDonut"/>
+	</union>
+	<union name="munion3">
+	    <first  ref="munion2"/>
+	    <second ref="motherEndcapBottomInner"/>
+	</union>
+	<union name="munion4">
+	    <first  ref="munion3"/>
+	    <second ref="motherEndcapBottomOuter"/>
+	</union>
+	<union name="SolenoidMother">
+	    <first  ref="munion4"/>
+	    <second ref="motherEndcapNose"/>
+	</union>
+
+    </solids>
+
+    <structure>
+	<volume name="logicCoil">
+	    <materialref ref="Iron"/>
+	    <solidref ref="Coil"/>
+	</volume>
+
+	<volume name="logicBarrelYokeInner">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="BarrelYokeInner"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicBarrelYokeOuter">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="BarrelYokeOuter"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicSlabSpacerUpstream">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="SlabSpacerUpstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicSlabSpacerDownstream">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="SlabSpacerDownstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicCoilCollarUpstream">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="CoilCollarUpstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicCoilCollarDownstream">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="CoilCollarDownstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicEndcapDonut">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="EndcapDonut"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicEndcapBottomInner">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="EndcapBottomInner"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicEndcapBottomOuter">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="EndcapBottomOuter"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicEndcapNose">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="EndcapNose"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicFrontPiece">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="FrontPiece"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicUpstreamShield1">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="UpstreamShield1"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicUpstreamShield2">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="UpstreamShield2"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicUpstreamShield3">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="UpstreamShield3"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicUpstreamShield4">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="UpstreamShield4"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicUpstreamShield5">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="UpstreamShield5"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicCryostatInner">
+	    <materialref ref="StainlessSteel"/>
+	    <solidref ref="CryostatInner"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+	
+	<volume name="logicCryostatOuter">
+	    <materialref ref="StainlessSteel"/>
+	    <solidref ref="CryostatOuter"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicCryostatFlangeUpstream">
+	    <materialref ref="StainlessSteel"/>
+	    <solidref ref="CryostatFlangeUpstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicCryostatFlangeDownstream">
+	    <materialref ref="StainlessSteel"/>
+	    <solidref ref="CryostatFlangeDownstream"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	</volume>
+
+	<volume name="logicSolenoidMother">
+	    <materialref ref="Air"/>
+	    <solidref ref="SolenoidMother"/>
+	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+
+	    <physvol>
+		<volumeref ref="logicCoil"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicBarrelYokeInner"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicBarrelYokeOuter"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicSlabSpacerUpstream"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicSlabSpacerDownstream"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicCoilCollarUpstream"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicCoilCollarDownstream"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEndcapDonut"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEndcapBottomInner"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEndcapBottomOuter"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEndcapNose"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicFrontPiece"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicUpstreamShield1"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicUpstreamShield2"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicUpstreamShield3"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicUpstreamShield4"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicUpstreamShield5"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicCryostatInner"/>
+	    </physvol>
+	    <physvol>
+		<volumeref ref="logicCryostatOuter"/>
+	    </physvol>
+	    <physvol>
+		<volumeref ref="logicCryostatFlangeUpstream"/>
+		<position unit="cm" name="CryostatFlangeUpstreampos" x="0.0" y="0.0" z="-(189.00-1)"/>
+	    </physvol>
+	    <physvol>
+		<volumeref ref="logicCryostatFlangeDownstream"/>
+		<position unit="cm" name="CryostatFlangeDowntreampos" x="0.0" y="0.0" z="189.00-1"/>
+	    </physvol>
+	</volume>
+
+    </structure>
+
+    <setup name="Solenoid" version="1.0">
+	<world ref="logicSolenoidMother"/>
+    </setup>
+
+</gdml>
+
+
