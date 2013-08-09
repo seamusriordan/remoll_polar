@@ -20,8 +20,8 @@
 #define NINTERVAL 3
 
 remollGenpElastic::remollGenpElastic(){
-    fTh_min =     0.1*deg;
-    fTh_max =     2.0*deg;
+    fTh_min =      5.0*deg;
+    fTh_max =     60.0*deg;
 
     fE_min = 80.0*MeV; // Absolute minimum of electron energy
                             // to generate
@@ -48,6 +48,8 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     std::vector<G4VPhysicalVolume *>::iterator it = targVols.begin();
     if( targVols.size() > 0 ){
+	// We're just going to radiate with whatever we have as a target volume
+	/*
 	while( (*it)->GetLogicalVolume()->GetMaterial()->GetName() != "LiquidHydrogen" 
 		&& it != targVols.end() ){ it++; }
 
@@ -55,6 +57,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 	    G4cerr << __FILE__ << " line " << __LINE__ << ": WARNING could not find target" << G4endl;
 	    bypass_target = true;
 	}     
+	*/
     } else {
 	bypass_target = true;
     }

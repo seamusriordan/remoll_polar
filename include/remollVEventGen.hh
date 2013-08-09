@@ -39,7 +39,8 @@ class remollVEventGen {
 
 	G4double fThCoM_min, fThCoM_max;
 	G4double fTh_min, fTh_max;
-	G4double fE_min;
+	G4double fPh_min, fPh_max;
+	G4double fE_min, fE_max;
 
     private:
 	const G4String fName;

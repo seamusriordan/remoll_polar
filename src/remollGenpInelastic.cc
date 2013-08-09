@@ -11,8 +11,8 @@
 #include "remolltypes.hh"
 
 remollGenpInelastic::remollGenpInelastic(){
-    fTh_min =     0.1*deg;
-    fTh_max =     5.0*deg;
+    fTh_min =     5.0*deg;
+    fTh_max =     60.0*deg;
 
     fApplyMultScatt = true;
 }
@@ -59,6 +59,8 @@ void remollGenpInelastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
 
     evt->SetW2( mp*mp + 2.0*mp*(beamE-ef) - Q2 );
+    evt->SetXbj( Q2/(4.0*mp*(vert->GetBeamE()-ef) );
+
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	                     G4ThreeVector(ef*sin(th)*cos(ph), ef*sin(th)*sin(ph), ef*cos(th) ), 

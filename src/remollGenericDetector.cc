@@ -51,7 +51,7 @@ G4bool remollGenericDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     // We're just going to record primary particles and things
     // that have just entered our boundary
     badhit = true;
-    if( track->GetCreatorProcess() == 0 ||
+    if( (track->GetCreatorProcess() == 0 && prestep->GetStepStatus() == fGeomBoundary ) ||
 	    (prestep->GetStepStatus() == fGeomBoundary && fTrackSecondaries)
       ){
 	badhit = false;

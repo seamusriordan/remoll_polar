@@ -19,6 +19,7 @@ class remollSteppingAction : public G4UserSteppingAction
     G4bool drawFlag;
 
     G4bool fEnableKryptonite;
+    G4double fKryptoniteThresh;
 
   public:
     inline void SetDrawFlag(G4bool val)

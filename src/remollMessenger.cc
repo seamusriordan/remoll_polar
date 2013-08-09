@@ -48,14 +48,15 @@ remollMessenger::remollMessenger(){
     seedCmd->SetGuidance("Set random engine seed");
     seedCmd->SetParameterName("seed", false);
 
-    kryptCmd = new G4UIcmdWithABool("/remoll/kryptonite",this);
-    kryptCmd->SetGuidance("Treat W, Pb, Cu as kryptonite");
+    kryptCmd = new G4UIcmdWithABool("/remoll/likekryptonite",this);
+    kryptCmd->SetGuidance("Treat heavy mats as kryptonite");
     kryptCmd->SetParameterName("krypt", false);
 
     opticalCmd = new G4UIcmdWithABool("/remoll/optical",this);
     opticalCmd->SetGuidance("Enable optical physics");
     opticalCmd->SetParameterName("optical", false);
-    opticalCmd->AvailableForStates(G4State_Idle); // Only have this AFTER we've initalized geometry
+//    opticalCmd->AvailableForStates(G4State_Idle); // Only have this AFTER we've initalized geometry
+    opticalCmd->AvailableForStates(G4State_PreInit); // Only have this AFTER we've initalized geometry
 
     newfieldCmd = new G4UIcmdWithAString("/remoll/addfield",this);
     newfieldCmd->SetGuidance("Add magnetic field");
@@ -68,16 +69,6 @@ remollMessenger::remollMessenger(){
     fieldCurrCmd = new G4UIcmdWithAString("/remoll/magcurrent",this);
     fieldCurrCmd->SetGuidance("Scale magnetic field by current");
     fieldCurrCmd->SetParameterName("filename", false);
-
-    tgtLenCmd = new G4UIcmdWithADoubleAndUnit("/remoll/targlen",this);
-    tgtLenCmd->SetGuidance("Target length");
-    tgtLenCmd->SetParameterName("targlen", false);
-    tgtLenCmd->AvailableForStates(G4State_Idle); // Only have this AFTER we've initalized geometry
-
-    tgtPosCmd = new G4UIcmdWithADoubleAndUnit("/remoll/targpos",this);
-    tgtPosCmd->SetGuidance("Target length");
-    tgtPosCmd->SetParameterName("targlen", false);
-    tgtPosCmd->AvailableForStates(G4State_Idle); // Only have this AFTER we've initalized geometry
 
     beamCurrCmd = new G4UIcmdWithADoubleAndUnit("/remoll/beamcurr",this);
     beamCurrCmd->SetGuidance("Beam current");
@@ -338,15 +329,6 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	fField->SetMagnetCurrent( scalefile, scaleval );
     }
 
-    if( cmd == tgtLenCmd ){
-	G4double len = tgtLenCmd->GetNewDoubleValue(newValue);
-	fBeamTarg->SetTargetLen(len);
-    }
-
-    if( cmd == tgtPosCmd ){
-	G4double pos = tgtPosCmd->GetNewDoubleValue(newValue);
-	fBeamTarg->SetTargetPos(pos);
-    }
 
     if( cmd == genSelectCmd ){
 	fprigen->SetGenerator( newValue );

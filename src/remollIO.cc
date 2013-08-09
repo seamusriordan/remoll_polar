@@ -63,6 +63,7 @@ void remollIO::InitializeTree(){
     fTree->Branch("ev.xs",    &fEvEffXS,  "ev.xs/D");
     fTree->Branch("ev.Q2",    &fEvQ2,     "ev.Q2/D");
     fTree->Branch("ev.W2",    &fEvW2,     "ev.W2/D");
+    fTree->Branch("ev.xbj",    &fEvXbj,     "ev.xbj/D");
     fTree->Branch("ev.thcom", &fEvThCoM,  "ev.thcom/D");
     fTree->Branch("ev.beamp",  &fEvBeamP,   "ev.beamp/D");
 
@@ -176,8 +177,8 @@ void remollIO::WriteTree(){
 
 void remollIO::SetEventData(remollEvent *ev){
     int n = ev->fPartType.size();
-    if( n > __IO_MAXHIT ){
-	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+    if( n >= __IO_MAXHIT ){
+//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 
@@ -191,6 +192,7 @@ void remollIO::SetEventData(remollEvent *ev){
 
     fEvQ2     = ev->fQ2/__E_UNIT/__E_UNIT;
     fEvW2     = ev->fW2/__E_UNIT/__E_UNIT;
+    fEvXbj    = ev->fXbj;
     fEvThCoM  = ev->fThCoM/deg; // specify this in degrees over anything else
 
     int idx;
@@ -234,8 +236,8 @@ void remollIO::SetEventData(remollEvent *ev){
 
 void remollIO::AddGenericDetectorHit(remollGenericDetectorHit *hit){
     int n = fNGenDetHit;
-    if( n > __IO_MAXHIT ){
-	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+    if( n >= __IO_MAXHIT ){
+//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 
@@ -272,8 +274,8 @@ void remollIO::AddGenericDetectorHit(remollGenericDetectorHit *hit){
 
 void remollIO::AddGenericDetectorSum(remollGenericDetectorSum *hit){
     int n = fNGenDetSum;
-    if( n > __IO_MAXHIT ){
-	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+    if( n >= __IO_MAXHIT ){
+//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 

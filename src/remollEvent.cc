@@ -41,6 +41,7 @@ void remollEvent::Reset(){
 
     // Only care about for certain processes
     fW2    = -1e9*GeV*GeV;
+    fXbj   = -1e9*GeV*GeV;
     fThCoM = -1e9;
 }
 
@@ -62,6 +63,7 @@ G4bool remollEvent::EventIsSane(){
     if( std::isnan(fThCoM) || std::isinf(fThCoM) ) return false;
     if( std::isnan(fQ2) || std::isinf(fQ2) ) return false;
     if( std::isnan(fW2) || std::isinf(fW2) ) return false;
+    if( std::isnan(fXbj) || std::isinf(fXbj) ) return false;
 
     if( fPartPos.size() < 1 && fEffXs > 0.0 ){ 
 	return false;
@@ -89,6 +91,7 @@ void remollEvent::Print(){
     G4cout << "\t" << fAsym*1e6 << " ppm asymmetry" << G4endl;
     G4cout << "\t" << "Q2 = " << fQ2/GeV/GeV << " GeV2" << G4endl;
     G4cout << "\t" << "W2 = " << fW2/GeV/GeV << " GeV2" << G4endl;
+    G4cout << "\t" << "xbj = " << fXbj << G4endl;
     G4cout << "\t" << "th_com = " << fThCoM/deg << " deg" << G4endl;
 
     G4cout << "\t" << fPartPos.size() << " particles generated" << G4endl;

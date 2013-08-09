@@ -14,6 +14,7 @@
 #include "remollPrimaryGeneratorAction.hh"
 #include "remollEventAction.hh"
 #include "remollSteppingAction.hh"
+#include "remollOpticalPhysics.hh"
 
 #include "G4StepLimiterBuilder.hh"
 
@@ -89,9 +90,10 @@ int main(int argc, char** argv){
     // Physics we want to use
     G4int verbose = 0;
     G4PhysListFactory factory;
-    G4VModularPhysicsList* physlist = factory.GetReferencePhysList("LHEP");
+    G4VModularPhysicsList* physlist = factory.GetReferencePhysList("FTFP_BERT");
     physlist->SetVerboseLevel(verbose);
     runManager->SetUserInitialization(physlist);
+    physlist->RegisterPhysics( new remollOpticalPhysics() );
 
     //-------------------------------
     // UserAction classes

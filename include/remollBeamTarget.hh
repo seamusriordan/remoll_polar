@@ -42,8 +42,8 @@ class remollBeamTarget {
 	void Reset(){ fTargVols.clear(); fMother = NULL; UpdateInfo(); }
 	void SetMotherVolume( G4VPhysicalVolume *v ){ fMother = v; UpdateInfo(); }
 	void AddVolume( G4VPhysicalVolume *v ){ fTargVols.push_back(v);  UpdateInfo(); }
-	void SetTargetPos(G4double z);
-	void SetTargetLen(G4double l);
+//	void SetTargetPos(G4double z);
+//	void SetTargetLen(G4double l);
 
 	void SetBeamCurrent(G4double I){ fBeamCurr = I; }
 

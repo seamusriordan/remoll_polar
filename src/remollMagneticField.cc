@@ -432,8 +432,6 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
 	Bfield[1] = 0.0;
 	Bfield[2] = 0.0;
 
-	printf("OUTSIDE %f %f %f  ->  %f %f %f\n", Point[0]/m, Point[1]/m, Point[2]/m, Bfield[0]/tesla, Bfield[1]/tesla, Bfield[2]/tesla );
-
 	return;
     }
 
@@ -516,8 +514,6 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     Bfield[0] = Bcart.x()*fFieldScale;
     Bfield[1] = Bcart.y()*fFieldScale;
     Bfield[2] = Bcart.z()*fFieldScale;
-
-    printf("%f %f %f  ->  %f %f %f\n", Point[0]/m, Point[1]/m, Point[2]/m, Bfield[0]/tesla, Bfield[1]/tesla, Bfield[2]/tesla );
 
     return;
 } 
