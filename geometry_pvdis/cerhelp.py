@@ -106,6 +106,8 @@ def ZYXrotToXYZ(x,y,z):
 
 
 def ZXYrotToXYZ(x,y,z):
+    print "This isn't implemented yet!  Just needs to be worked out"
+    exit(1)
     return ZYXrotToXYZ(x,y,z)
 
 
