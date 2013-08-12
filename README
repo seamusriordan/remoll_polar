@@ -35,9 +35,11 @@ The field map can be found here:
 
 http://hallaweb.jlab.org/12GeV/SoLID/download/field/CLEO_rm.dat
 
-An example macro will be found in 
+It just needs to be downloaded and for the example, present in the directory
+you are running in.  Otherwise, specify it in the macro as in the
+exmaple provided in macros/  An example macro will be found in 
 
-macros/
+macros/runexmaple.mac
 
 You need to load libremollroot.so if you want to access 
 the classes written out to the ROOT files.  Building
