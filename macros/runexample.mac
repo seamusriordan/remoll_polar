@@ -6,12 +6,14 @@
 # This must be explicitly called
 /run/initialize
 
+# add field map
 /remoll/addfield CLEO_rm.dat
-
+# change field map paramters
 #/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt 1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
 
 # Raster and initial angle stuff
+# Raster is on by default with 5x5mm
 #/remoll/rasx 5 mm
 #/remoll/rasy 5 mm
 #/remoll/beam_x0 0 mm
@@ -30,7 +32,7 @@
 #/remoll/thmax 2.0 deg
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
-#/remoll/gen pion
+#/remoll/gen pion  # just pi-, need to add options for more
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
@@ -44,6 +46,7 @@
 /remoll/beamcurr 85 microampere
 
 #Enable optical photons and processes
+#  These are presently always on
 #/remoll/optical true
 
 # Make interactions with heavy materials
@@ -53,9 +56,7 @@
 # Specify random number seed
 #/remoll/seed 123456
 
-#/gun/momentum 0.5 0.0 1.0 GeV
-#/gun/particle e-
-
+#  output filename
 /remoll/filename remollout.root
 
 /run/beamOn 100
