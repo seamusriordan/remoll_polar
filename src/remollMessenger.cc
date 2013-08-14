@@ -87,7 +87,7 @@ remollMessenger::remollMessenger(){
     thminCmd->SetParameterName("thmin", false);
 
     thmaxCmd = new G4UIcmdWithADoubleAndUnit("/remoll/thmax",this);
-    thmaxCmd->SetGuidance("Minimum generation angle");
+    thmaxCmd->SetGuidance("Maximum generation angle");
     thmaxCmd->SetParameterName("thmax", false);
 
     phminCmd = new G4UIcmdWithADoubleAndUnit("/remoll/phmin",this);
@@ -95,7 +95,7 @@ remollMessenger::remollMessenger(){
     phminCmd->SetParameterName("phmin", false);
 
     phmaxCmd = new G4UIcmdWithADoubleAndUnit("/remoll/phmax",this);
-    phmaxCmd->SetGuidance("Minimum azimuthal generation angle");
+    phmaxCmd->SetGuidance("Maximum azimuthal generation angle");
     phmaxCmd->SetParameterName("phmax", false);
 
     thCoMminCmd = new G4UIcmdWithADoubleAndUnit("/remoll/thcommin",this);
@@ -103,7 +103,7 @@ remollMessenger::remollMessenger(){
     thCoMminCmd->SetParameterName("thcommin", false);
 
     thCoMmaxCmd = new G4UIcmdWithADoubleAndUnit("/remoll/thcommax",this);
-    thCoMmaxCmd->SetGuidance("Minimum CoM generation angle");
+    thCoMmaxCmd->SetGuidance("Maximum CoM generation angle");
     thCoMmaxCmd->SetParameterName("thcommax", false);
 
     EminCmd = new G4UIcmdWithADoubleAndUnit("/remoll/emin",this);
@@ -111,7 +111,7 @@ remollMessenger::remollMessenger(){
     EminCmd->SetParameterName("emin", false);
 
     EmaxCmd = new G4UIcmdWithADoubleAndUnit("/remoll/emax",this);
-    EmaxCmd->SetGuidance("Minimum generation energy");
+    EmaxCmd->SetGuidance("Maximum generation energy");
     EmaxCmd->SetParameterName("emax", false);
 
 
@@ -173,6 +173,9 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
     }
 
     if( cmd == opticalCmd ){
+
+        G4cerr << __FILE__ << " line " << __LINE__ <<  ": FIXME:  Optical photons are always on, this command does nothing" << G4endl;
+	exit(1);
 	G4bool optical = opticalCmd->GetNewBoolValue(newValue);
 	if( optical ){
 	    fPhysicsList->RegisterPhysics( new remollOpticalPhysics() );

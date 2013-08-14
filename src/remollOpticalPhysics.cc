@@ -33,8 +33,12 @@ void remollOpticalPhysics::ConstructParticle()
 
 void remollOpticalPhysics::ConstructProcess()
 {
+    /*
+
+FIXME:  Add to verbosity responsiveness
     G4cout << "remollOpticalPhysics:: Add Optical Physics Processes"
            << G4endl;
+	   */
 
   theWLSProcess = new G4OpWLS();
 

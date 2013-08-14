@@ -339,6 +339,9 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     // Output geometry tree
     //==========================
 
+    /*
+     * FIXME:  Add to verbosity selection
+     
     G4cout << G4endl << "Element table: " << G4endl << G4endl;
     G4cout << *(G4Element::GetElementTable()) << G4endl;
 
@@ -346,6 +349,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 
     G4cout << G4endl << "Geometry tree: " << G4endl << G4endl;
+    */
 
     /*
     const G4MaterialTable *mytable = G4Material::GetMaterialTable();
