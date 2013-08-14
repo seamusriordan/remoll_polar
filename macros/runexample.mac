@@ -46,7 +46,7 @@
 /remoll/beamcurr 85 microampere
 
 #Enable optical photons and processes
-#  These are presently always on
+#  FIXME:   These are presently always on
 #/remoll/optical true
 
 # Make interactions with heavy materials
