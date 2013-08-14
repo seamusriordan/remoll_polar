@@ -50,7 +50,7 @@ bafdepth = 9.0
 
 
 rin_outbaf  = (34.8,54.3,73.9,93.4,112.8,132.1)
-rout_outbaf = (140,140,140,140,140,140) #coil edge is at 142cm
+rout_outbaf = (36.8,56.3,75.9,95.4,114.8,134.1) #coil edge is at 142cm
 
 
 rin_inbaf  = (5.0,14.,19.,23.9,28.9,33.8)

@@ -169,22 +169,22 @@
 	         <tube name="frontgemlay2_22" aunit="deg" startphi="-5" deltaphi="10" lunit="cm" rmin="frontgem_rmin2" rmax="frontgem_rmax2" z="0.012000" />
 	     <!-- Baffle rings/dets -->
 	         <tube name="bafring_in_00" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="5.000000" rmax="5.500000" z="9.000000" />
-	         <tube name="bafring_out_00" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="34.800000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_00" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="34.800000" rmax="36.800000" z="9.000000" />
 	         <tube name="bafdet_00" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="5.500000" rmax="34.800000" z="0.000100" />
 	         <tube name="bafring_in_01" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="14.000000" rmax="15.300000" z="9.000000" />
-	         <tube name="bafring_out_01" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="54.300000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_01" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="54.300000" rmax="56.300000" z="9.000000" />
 	         <tube name="bafdet_01" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="15.300000" rmax="54.300000" z="0.000100" />
 	         <tube name="bafring_in_02" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="19.000000" rmax="26.600000" z="9.000000" />
-	         <tube name="bafring_out_02" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="73.900000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_02" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="73.900000" rmax="75.900000" z="9.000000" />
 	         <tube name="bafdet_02" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="26.600000" rmax="73.900000" z="0.000100" />
 	         <tube name="bafring_in_03" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="23.900000" rmax="37.900000" z="9.000000" />
-	         <tube name="bafring_out_03" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="93.400000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_03" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="93.400000" rmax="95.400000" z="9.000000" />
 	         <tube name="bafdet_03" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="37.900000" rmax="93.400000" z="0.000100" />
 	         <tube name="bafring_in_04" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="28.900000" rmax="49.200000" z="9.000000" />
-	         <tube name="bafring_out_04" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="112.800000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_04" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="112.800000" rmax="114.800000" z="9.000000" />
 	         <tube name="bafdet_04" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="49.200000" rmax="112.800000" z="0.000100" />
 	         <tube name="bafring_in_05" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="33.800000" rmax="60.400000" z="9.000000" />
-	         <tube name="bafring_out_05" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="132.100000" rmax="140.000000" z="9.000000" />
+	         <tube name="bafring_out_05" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="132.100000" rmax="134.100000" z="9.000000" />
 	         <tube name="bafdet_05" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="60.400000" rmax="132.100000" z="0.000100" />
 	     <!-- Baffle block -->
 	         <tube name="bafblock_00_00" aunit="deg" startphi="13.277500" deltaphi="6.510000" lunit="cm" rmin="5.500000" rmax="6.965000" z="9.000000" />
