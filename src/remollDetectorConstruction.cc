@@ -43,11 +43,11 @@
 #include <vector>
 
 #define __DET_STRLEN 200
-#define __MAX_DETS 50000
+#define __MAX_DETS 100000
 
 remollDetectorConstruction::remollDetectorConstruction() {
     // Default geometry file
-    fDetFileName = "geometry/mollerMother.gdml";
+    fDetFileName = "geometry_pvdis/solid_pvdis.gdml";
 
 
     CreateGlobalMagneticField();

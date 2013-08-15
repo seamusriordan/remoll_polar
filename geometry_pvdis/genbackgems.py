@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-backgemdet1no = 3000
-backgemdet2no = 4000
+backgemdet1no = 30000
+backgemdet2no = 40000
 
 # GEM parameters
 
@@ -197,7 +197,7 @@ for i in range(nlayer):
     else: 
     #  Detector layers
 	    for j in range(nsector):
-		detno = backgemdet1no + j + 100*i
+		detno = backgemdet1no + i + 100*j
 	        #  First plane
 	        print """	         <volume name="logicbackgemlay1_%02d_%02d">
 		      <materialref ref =\"%s\"/> 
@@ -206,7 +206,7 @@ for i in range(nlayer):
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
 		  </volume>""" % detno
 
-	        detno = backgemdet2no + j + 100*i
+	        detno = backgemdet2no + i + 100*j
 	        #  Second plane
 	        print """	         <volume name="logicbackgemlay2_%02d_%02d">
 		      <materialref ref =\"%s\"/> 

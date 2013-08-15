@@ -7,7 +7,7 @@ from math import sin, cos, asin, acos, fabs, pi, sqrt, tan
 
 nsector = 30
 
-cerdetno = 8000
+cerdetno = 80000
 
 motherrmin = 60
 motherrmax = 265
@@ -516,7 +516,7 @@ for i in range(nsector):
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-	</volume>""" % (i, j*pmtN+k, cerdetno+i*10+j*pmtN+k)
+	</volume>""" % (i, j*pmtN+k, cerdetno+i*100+j*pmtN+k)
 
 print"""        <volume name="logiccerpmtwin">
 		      <materialref ref="H8500UVwin"/>

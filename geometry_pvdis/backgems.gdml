@@ -210,1081 +210,1081 @@
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3400"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30004"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_00">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4400"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40004"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3401"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30104"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4401"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40104"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3402"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30204"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4402"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40204"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3403"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30304"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4403"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40304"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3404"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30404"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4404"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40404"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3405"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30504"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4405"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40504"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3406"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30604"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4406"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40604"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3407"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30704"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4407"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40704"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3408"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30804"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4408"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40804"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3409"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30904"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4409"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40904"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3410"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31004"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4410"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41004"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3411"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31104"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4411"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41104"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3412"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31204"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4412"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41204"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3413"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31304"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4413"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41304"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3414"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31404"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4414"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41404"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3415"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31504"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4415"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41504"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3416"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31604"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4416"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41604"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3417"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31704"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4417"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41704"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3418"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31804"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4418"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41804"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3419"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31904"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4419"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41904"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3420"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32004"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4420"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42004"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3421"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32104"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4421"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42104"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3422"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32204"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4422"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42204"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3423"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32304"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4423"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42304"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3424"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32404"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4424"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42404"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3425"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32504"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4425"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42504"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3426"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32604"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4426"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42604"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3427"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32704"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4427"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42704"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3428"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32804"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4428"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42804"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_04_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3429"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32904"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_04_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_04"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4429"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42904"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_00">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3500"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30005"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_00">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4500"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40005"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_01">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3501"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30105"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_01">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4501"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40105"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_02">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3502"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30205"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_02">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4502"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40205"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_03">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3503"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30305"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_03">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4503"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40305"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_04">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3504"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30405"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_04">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4504"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40405"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_05">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3505"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30505"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_05">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4505"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40505"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_06">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3506"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30605"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_06">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4506"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40605"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_07">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3507"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30705"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_07">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4507"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40705"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_08">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3508"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30805"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_08">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4508"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40805"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_09">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3509"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30905"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_09">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4509"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40905"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_10">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3510"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31005"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_10">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4510"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41005"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_11">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3511"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31105"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_11">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4511"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41105"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_12">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3512"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31205"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_12">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4512"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41205"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_13">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3513"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31305"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_13">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4513"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41305"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_14">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3514"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31405"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_14">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4514"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41405"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_15">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3515"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31505"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_15">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4515"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41505"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_16">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3516"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31605"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_16">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4516"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41605"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_17">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3517"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31705"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_17">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4517"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41705"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_18">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3518"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31805"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_18">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4518"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41805"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_19">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3519"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31905"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_19">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4519"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41905"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_20">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3520"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32005"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_20">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4520"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42005"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_21">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3521"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32105"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_21">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4521"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42105"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_22">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3522"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32205"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_22">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4522"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42205"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_23">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3523"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32305"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_23">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4523"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42305"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_24">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3524"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32405"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_24">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4524"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42405"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_25">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3525"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32505"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_25">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4525"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42505"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_26">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3526"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32605"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_26">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4526"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42605"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_27">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3527"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32705"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_27">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4527"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42705"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_28">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3528"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32805"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_28">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4528"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42805"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_05_29">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay1_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3529"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32905"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_05_29">
 		      <materialref ref ="GEMgas"/> 
 		      <solidref ref ="backgemlay2_05"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4529"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42905"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_00">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3600"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30006"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_00">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4600"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40006"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3601"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30106"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4601"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40106"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3602"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30206"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4602"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40206"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3603"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30306"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4603"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40306"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3604"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30406"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4604"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40406"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3605"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30506"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4605"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40506"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3606"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30606"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4606"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40606"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3607"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30706"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4607"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40706"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3608"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30806"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4608"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40806"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3609"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30906"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4609"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40906"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3610"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31006"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4610"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41006"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3611"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31106"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4611"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41106"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3612"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31206"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4612"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41206"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3613"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31306"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4613"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41306"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3614"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31406"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4614"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41406"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3615"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31506"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4615"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41506"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3616"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31606"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4616"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41606"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3617"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31706"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4617"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41706"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3618"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31806"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4618"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41806"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3619"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31906"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4619"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41906"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3620"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32006"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4620"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42006"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3621"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32106"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4621"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42106"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3622"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32206"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4622"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42206"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3623"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32306"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4623"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42306"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3624"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32406"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4624"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42406"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3625"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32506"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4625"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42506"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3626"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32606"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4626"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42606"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3627"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32706"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4627"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42706"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3628"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32806"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4628"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42806"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_06_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="3629"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32906"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_06_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_06"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4629"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42906"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_07">
 		      <materialref ref ="Kapton"/> 
@@ -1400,361 +1400,361 @@
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4800"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30018"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_00">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5800"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40018"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4801"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30118"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_01">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5801"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40118"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4802"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30218"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_02">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5802"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40218"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4803"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30318"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_03">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5803"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40318"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4804"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30418"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_04">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5804"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40418"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4805"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30518"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_05">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5805"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40518"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4806"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30618"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_06">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5806"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40618"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4807"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30718"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_07">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5807"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40718"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4808"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30818"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_08">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5808"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40818"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4809"/>
+		      <auxiliary auxtype="DetNo" auxvalue="30918"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_09">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5809"/>
+		      <auxiliary auxtype="DetNo" auxvalue="40918"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4810"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31018"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_10">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5810"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41018"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4811"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31118"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_11">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5811"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41118"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4812"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31218"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_12">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5812"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41218"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4813"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31318"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_13">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5813"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41318"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4814"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31418"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_14">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5814"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41418"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4815"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31518"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_15">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5815"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41518"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4816"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31618"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_16">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5816"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41618"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4817"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31718"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_17">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5817"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41718"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4818"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31818"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_18">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5818"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41818"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4819"/>
+		      <auxiliary auxtype="DetNo" auxvalue="31918"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_19">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5819"/>
+		      <auxiliary auxtype="DetNo" auxvalue="41918"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4820"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32018"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_20">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5820"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42018"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4821"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32118"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_21">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5821"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42118"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4822"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32218"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_22">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5822"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42218"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4823"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32318"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_23">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5823"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42318"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4824"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32418"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_24">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5824"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42418"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4825"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32518"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_25">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5825"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42518"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4826"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32618"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_26">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5826"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42618"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4827"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32718"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_27">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5827"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42718"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4828"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32818"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_28">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5828"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42818"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_18_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay1_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="4829"/>
+		      <auxiliary auxtype="DetNo" auxvalue="32918"/>
 		  </volume>
 	         <volume name="logicbackgemlay2_18_29">
 		      <materialref ref ="GEMCopper"/> 
 		      <solidref ref ="backgemlay2_18"/>
 		      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="5829"/>
+		      <auxiliary auxtype="DetNo" auxvalue="42918"/>
 		  </volume>
 	         <volume name="logicbackgemlay1_19">
 		      <materialref ref ="Kapton"/> 

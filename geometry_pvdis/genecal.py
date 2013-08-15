@@ -1,8 +1,8 @@
 #!/usr/bin/python
 from math import sin,cos,sqrt,fabs, pi
 
-preshowerdetno = 8000
-showerdetno = 9000
+preshowerdetno = 80000
+showerdetno = 90000
 
 # ECal Paramters
 # This defines a preshower and shower

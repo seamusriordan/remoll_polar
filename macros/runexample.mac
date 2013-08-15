@@ -51,6 +51,8 @@
 
 # Make interactions with heavy materials
 # pure absorbers or not (on by default)
+# Materials explicity called Kryptonite 
+# are always kryptonite
 #/remoll/likekryptonite   true
 
 # Specify random number seed
