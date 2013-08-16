@@ -5,9 +5,8 @@
  * from Wiser parameterization
  *
  * Seamus Riordan
- * February 4, 2013
+ * August 16, 2013
  *
- * Based heavily on previous work from mollersim
 */
 
 #include "remollVEventGen.hh"
@@ -17,8 +16,9 @@ class remollGenPion : public remollVEventGen {
 	 remollGenPion();
 	~remollGenPion();
 
-	enum Pion_t {kPiPlus, kPiMinus};
+	enum Pion_t {kPiPlus, kPiMinus, kPi0};
 
+	void SetPionType(Pion_t t) { fPionType = t; }
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 

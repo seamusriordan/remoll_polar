@@ -94,7 +94,7 @@ int main(int argc, char** argv){
     physlist->SetVerboseLevel(verbose);
     runManager->SetUserInitialization(physlist);
     // FIXME:  Add optical physics to messenger toggle
-    physlist->RegisterPhysics( new remollOpticalPhysics() );
+//    physlist->RegisterPhysics( new remollOpticalPhysics() );
 
     //-------------------------------
     // UserAction classes

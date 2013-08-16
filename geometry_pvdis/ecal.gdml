@@ -82,6 +82,8 @@
 		      <solidref ref="ecalleadinglead"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Gray"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="99999"/>
 	        </volume>
 	         <volume name="logicecalleadscint">
 		      <materialref ref ="Scint"/> 

@@ -32,6 +32,7 @@ class remollGenericDetectorHit : public G4VHit {
 	G4double fP, fE, fM;
 	// Origin
 	G4ThreeVector f3V;
+	G4ThreeVector f3D;
 	// Geant4 track ID, particle type, and mother ID
 	G4int    fTrID, fPID, fmTrID;
 	// Process generator type

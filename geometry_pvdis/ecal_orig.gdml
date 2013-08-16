@@ -51,7 +51,7 @@
 	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
 	    <auxiliary auxtype="Color" auxvalue="green"/> 
 	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-	    <auxiliary auxtype="DetNo" auxvalue="9000"/>
+	    <auxiliary auxtype="DetNo" auxvalue="90000"/>
 	</volume>
 
 	<!---  Place volumes -->

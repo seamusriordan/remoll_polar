@@ -205,7 +205,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
     // sampling
     double samp_fact = sampv*sampv*(icth_a-icth_b)/(cthmin-cthmax);
 
-    double ph = CLHEP::RandFlat::shoot(0.0, 2.0*pi);
+    double ph = CLHEP::RandFlat::shoot(fPh_min,fPh_max);
 
     double ef    = proton_mass_c2*beamE/(proton_mass_c2 + beamE*(1.0-cos(th)));;
 
@@ -225,7 +225,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double sigma = sigma_mott*(ef/beamE)*(ffpart1 + ffpart2);
 
-    double V = 2.0*pi*(cthmin - cthmax)*samp_fact;
+    double V = (fPh_max-fPh_min)*pi*(cthmin - cthmax)*samp_fact;
 
     // Suppress too low angles from being generated
     // If we're in the multiple-scattering regime

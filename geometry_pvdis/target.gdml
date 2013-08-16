@@ -36,7 +36,7 @@
 	    <atom unit="g/mole" value="1.01"/>
 	</material>
 -->
-	<material Z="2" name="targetmat" state="liquid">
+	<material Z="1" name="targetmat" state="liquid">
 	    <D unit="g/cm3" value="0.169"/>
 	    <atom unit="g/mole" value="2.014"/>
 	</material>

@@ -44,6 +44,7 @@ hit.r		Hit radial coordinate, lab frame [m]
 hit.p		Momentum magnitude of particle [GeV]
 hit.p[xyz]	Momentum components of particle, lab frame [GeV]
 hit.v[xyz]	Creation vertex of particles
+hit.vd[xyz]	Creation direction of particles, unit vector
 hit.e		Energy of particle [GeV]
 hit.m		Mass of particle [GeV]
 

@@ -19,6 +19,9 @@ class remollGenpInelastic : public remollVEventGen {
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 
+	virtual void SetEmin( double emin ){ fE_min = emin; }
+	virtual void SetEmax( double emax ){ fE_max = emax; }
+
 };
 
 #endif//__REMOLLGENMOLLER_HH 

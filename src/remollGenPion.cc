@@ -13,9 +13,8 @@
 remollGenPion::remollGenPion(){
     fApplyMultScatt = false;
 
-    fTh_min = 0.01*deg;
-    fTh_max = 5.0*deg;
-    fE_min  = 80*MeV;
+    fTh_min = 20*deg;
+    fTh_max = 70*deg;
 
     fPionType = kPiMinus;
 }
@@ -30,16 +29,41 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double rad_len = vert->GetRadLen();
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
-    double ph = CLHEP::RandFlat::shoot(0.0, 2.0*pi);
+    double ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
     double pf = CLHEP::RandFlat::shoot(0.0, beamE);
 
-    double V = 2.0*pi*(cos(fTh_min) - cos(fTh_max));
+    double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max));
 
     double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 0)*nanobarn/GeV;
     double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 1)*nanobarn/GeV;
 
-    evt->SetEffCrossSection(V*(vert->GetMaterial()->GetZ()*sigpip + 
-		(vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*sigpim));
+    G4String piontypestr;
+
+    double thisxs = 0.0;
+
+    switch(fPionType){
+	case kPiMinus:
+	    piontypestr = G4String("pi-");
+	    thisxs = vert->GetMaterial()->GetZ()*sigpim + (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*sigpip;
+	    break;
+	case kPiPlus:
+	    piontypestr = G4String("pi+");
+	    thisxs = vert->GetMaterial()->GetZ()*sigpip + (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*sigpim;
+	    break;
+	case kPi0:
+	    piontypestr = G4String("pi0");
+	    thisxs = vert->GetMaterial()->GetZ()*(sigpip+sigpim)/2.0 + (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*(sigpip+sigpim)/2.0;
+	    break;
+
+	default:
+	    piontypestr = G4String("oops");
+	    break;
+    }
+
+
+    
+
+    evt->SetEffCrossSection(V*thisxs);
 
     if( vert->GetMaterial()->GetNumberOfElements() != 1 ){
 	G4cerr << __FILE__ << " line " << __LINE__ << 
@@ -49,19 +73,6 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     evt->SetAsymmetry(0.0);
 
-    G4String piontypestr;
-
-    switch(fPionType){
-	case kPiMinus:
-	    piontypestr = G4String("pi-");
-	    break;
-	case kPiPlus:
-	    piontypestr = G4String("pi+");
-	    break;
-	default:
-	    piontypestr = G4String("oops");
-	    break;
-    }
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	    G4ThreeVector(pf*sin(ph)*sin(th), pf*cos(ph)*sin(th), pf*cos(th)), 

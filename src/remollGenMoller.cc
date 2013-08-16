@@ -29,11 +29,11 @@ void remollGenMoller::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double e_com = me*gamma_com;
     double thcom = acos(CLHEP::RandFlat::shoot(cos(fThCoM_max), cos(fThCoM_min)));
-    double phcom = CLHEP::RandFlat::shoot(0.0, 2.0*pi);
+    double phcom = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
 
     double sigma = alpha*alpha*pow(3.0+cos(thcom)*cos(thcom),2.0)*hbarc*hbarc/pow(sin(thcom),4.0)/(2.0*me*beamE); // units of area
 
-    double V = 2.0*pi*(cos(fThCoM_min) - cos(fThCoM_max));
+    double V = (fPh_max-fPh_min)*(cos(fThCoM_min) - cos(fThCoM_max));
 
     //  Multiply by Z because we have Z electrons
     //  here we must also divide by two because we are double covering 

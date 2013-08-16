@@ -128,6 +128,9 @@ class remollIO {
 	Double_t fGenDetHit_Vx[__IO_MAXHIT];
 	Double_t fGenDetHit_Vy[__IO_MAXHIT];
 	Double_t fGenDetHit_Vz[__IO_MAXHIT];
+	Double_t fGenDetHit_Vdx[__IO_MAXHIT];
+	Double_t fGenDetHit_Vdy[__IO_MAXHIT];
+	Double_t fGenDetHit_Vdz[__IO_MAXHIT];
 
 	//  GenericDetectorSum
     public:

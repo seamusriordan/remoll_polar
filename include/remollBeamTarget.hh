@@ -46,6 +46,7 @@ class remollBeamTarget {
 //	void SetTargetLen(G4double l);
 
 	void SetBeamCurrent(G4double I){ fBeamCurr = I; }
+	void SetBeamEnergy(G4double ene){ fBeamE = ene; }
 
 	remollVertex SampleVertex(SampType_t);
 

@@ -10,6 +10,7 @@
 #include "remollIO.hh"
 #include "remollEventAction.hh"
 #include "remollVEventGen.hh"
+#include "remollGenPion.hh"
 #include "remollPrimaryGeneratorAction.hh"
 #include "remollBeamTarget.hh"
 #include "remollRun.hh"
@@ -36,6 +37,9 @@ remollMessenger::remollMessenger(){
     fStepAct      = NULL;
     fPhysicsList  = NULL;
 
+    fRemollDir = new G4UIdirectory("/remoll/");
+    fRemollDir->SetGuidance("UI commands of this code");
+
     // Grab singleton beam/target
     fBeamTarg = remollBeamTarget::GetBeamTarget();
 
@@ -56,7 +60,8 @@ remollMessenger::remollMessenger(){
     opticalCmd->SetGuidance("Enable optical physics");
     opticalCmd->SetParameterName("optical", false);
 //    opticalCmd->AvailableForStates(G4State_Idle); // Only have this AFTER we've initalized geometry
-    opticalCmd->AvailableForStates(G4State_PreInit); // Only have this AFTER we've initalized geometry
+//    opticalCmd->AvailableForStates(G4State_PreInit); // Only have this AFTER we've initalized geometry
+    opticalCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
 
     newfieldCmd = new G4UIcmdWithAString("/remoll/addfield",this);
     newfieldCmd->SetGuidance("Add magnetic field");
@@ -70,6 +75,10 @@ remollMessenger::remollMessenger(){
     fieldCurrCmd->SetGuidance("Scale magnetic field by current");
     fieldCurrCmd->SetParameterName("filename", false);
 
+    beamEneCmd = new G4UIcmdWithADoubleAndUnit("/remoll/beamene",this);
+    beamEneCmd->SetGuidance("Beam energy");
+    beamEneCmd->SetParameterName("beamene", false);
+
     beamCurrCmd = new G4UIcmdWithADoubleAndUnit("/remoll/beamcurr",this);
     beamCurrCmd->SetGuidance("Beam current");
     beamCurrCmd->SetParameterName("beamcurr", false);
@@ -81,6 +90,11 @@ remollMessenger::remollMessenger(){
     fileCmd = new G4UIcmdWithAString("/remoll/filename",this);
     fileCmd->SetGuidance("Output filename");
     fileCmd->SetParameterName("filename", false);
+
+    pionCmd = new G4UIcmdWithAString("/remoll/piontype",this);
+    pionCmd->SetGuidance("Generate pion type");
+    pionCmd->SetParameterName("piontype", false);
+
 
     thminCmd = new G4UIcmdWithADoubleAndUnit("/remoll/thmin",this);
     thminCmd->SetGuidance("Minimum generation angle");
@@ -174,8 +188,8 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 
     if( cmd == opticalCmd ){
 
-        G4cerr << __FILE__ << " line " << __LINE__ <<  ": FIXME:  Optical photons are always on, this command does nothing" << G4endl;
-	exit(1);
+//        G4cerr << __FILE__ << " line " << __LINE__ <<  ": FIXME:  Optical photons are always on, this command does nothing" << G4endl;
+//	exit(1);
 	G4bool optical = opticalCmd->GetNewBoolValue(newValue);
 	if( optical ){
 	    fPhysicsList->RegisterPhysics( new remollOpticalPhysics() );
@@ -232,15 +246,39 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	fBeamTarg->SetBeamCurrent(cur);
     }
 
+    if( cmd == beamEneCmd ){
+	G4double ene = beamEneCmd->GetNewDoubleValue(newValue);
+	fBeamTarg->SetBeamEnergy(ene);
+    }
+
     if( cmd == fileCmd ){
 	fIO->SetFilename(newValue);
+    }
+
+    if( cmd == pionCmd ){
+	remollVEventGen *agen = fprigen->GetGenerator();
+	remollGenPion *apion = dynamic_cast<remollGenPion *>(agen);
+	if( apion ){
+	    if( newValue.compareTo("pi-") == 0 ){
+		apion->SetPionType(remollGenPion::kPiMinus);
+	    }
+	    if( newValue.compareTo("pi+") == 0 ){
+		apion->SetPionType(remollGenPion::kPiPlus);
+	    }
+	    if( newValue.compareTo("pi0") == 0 ){
+		apion->SetPionType(remollGenPion::kPi0);
+	    }
+
+	} else {
+	    G4cerr << __FILE__ << " line " << __LINE__ <<  ": Can't set pion type for non-pion generator" << G4endl;
+	}
     }
 
     if( cmd == EminCmd ){
 	G4double en = EminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fE_min = en;
+	    agen->SetEmin(en);
 	}
     }
 
@@ -248,7 +286,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double en = EmaxCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fE_max = en;
+	    agen->SetEmax(en);
 	}
     }
 
@@ -256,7 +294,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double th = thminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fTh_min = th;
+	    agen->SetThMin(th);
 	}
     }
 
@@ -264,7 +302,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double th = thminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fTh_max = th;
+	    agen->SetThMax(th);
 	}
     }
 
@@ -272,7 +310,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double ph = phminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fPh_min = ph;
+	    agen->SetPhMin(ph);
 	}
     }
 
@@ -280,7 +318,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double ph = phminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fPh_max = ph;
+	    agen->SetPhMax(ph);
 	}
     }
 
@@ -288,7 +326,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double th = thCoMminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fThCoM_min = th;
+	    agen->SetThCoM_min(th);
 	}
     }
 
@@ -296,7 +334,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	G4double th = thCoMminCmd->GetNewDoubleValue(newValue);
 	remollVEventGen *agen = fprigen->GetGenerator();
 	if( agen ){
-	    agen->fThCoM_max = th;
+	    agen->SetThCoM_max(th);
 	}
     }
 

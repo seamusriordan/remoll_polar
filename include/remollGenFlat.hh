@@ -18,7 +18,8 @@ class remollGenFlat : public remollVEventGen {
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 
-	double fPh_min, fPh_max;
+	virtual void SetEmin( double emin ){ fE_min = emin; }
+	virtual void SetEmax( double emax ){ fE_max = emax; }
 };
 
 #endif//__REMOLLGENFLAT_HH 

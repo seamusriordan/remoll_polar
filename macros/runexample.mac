@@ -32,7 +32,8 @@
 #/remoll/thmax 2.0 deg
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
-#/remoll/gen pion  # just pi-, need to add options for more
+#/remoll/gen pion  # defaults to pi-
+#/remoll/piontype pi+ 
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
@@ -43,7 +44,8 @@
 #/remoll/emin  1.0 GeV
 #/remoll/emax 11.0 GeV
 
-/remoll/beamcurr 85 microampere
+#/remoll/beamene 11.0 GeV
+/remoll/beamcurr 50 microampere
 
 #Enable optical photons and processes
 #  FIXME:   These are presently always on

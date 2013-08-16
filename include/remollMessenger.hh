@@ -49,6 +49,8 @@ class remollMessenger : public G4UImessenger {
 	remollSteppingAction *fStepAct;
 	G4VModularPhysicsList *fPhysicsList;
 
+	G4UIdirectory *fRemollDir;
+
 	G4UIcmdWithAnInteger *seedCmd;
 	G4UIcmdWithABool     *kryptCmd;
 	G4UIcmdWithABool     *opticalCmd;
@@ -61,6 +63,7 @@ class remollMessenger : public G4UImessenger {
 	G4UIcmdWithAString   *genSelectCmd;
 
 	G4UIcmdWithADoubleAndUnit *beamCurrCmd;
+	G4UIcmdWithADoubleAndUnit *beamEneCmd;
 
 	G4UIcmdWithADoubleAndUnit *rasXCmd;
 	G4UIcmdWithADoubleAndUnit *rasYCmd;
@@ -75,6 +78,8 @@ class remollMessenger : public G4UImessenger {
 	G4UIcmdWithADoubleAndUnit *beamdphCmd;
 
 	G4UIcmdWithAString   *fileCmd;
+
+	G4UIcmdWithAString   *pionCmd;
 
 	////////////////////////////////////////////////
 	// To general event generators

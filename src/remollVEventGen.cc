@@ -15,9 +15,15 @@ remollVEventGen::remollVEventGen(){
     fSampType       = kCryogen;
     fApplyMultScatt = false;
 
+    fThCoM_min = -180.0*deg;
+    fThCoM_max =  180.0*deg;
+    fTh_min =   20.0*deg;
+    fTh_max =   50.0*deg;
     fPh_min = -180.0*deg;
-    fPh_max = -180.0*deg;
+    fPh_max =  180.0*deg;
     fE_max  = gDefaultBeamE;
+    fE_min  = 0.0;
+
 }
 
 remollVEventGen::~remollVEventGen(){

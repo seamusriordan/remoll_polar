@@ -185,7 +185,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80000"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70000"/>
 	</volume>
 	<volume name="logiccercath_00_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -193,7 +193,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80001"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70001"/>
 	</volume>
 	<volume name="logiccercath_00_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -201,7 +201,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80002"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70002"/>
 	</volume>
 	<volume name="logiccercath_00_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -209,7 +209,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80003"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70003"/>
 	</volume>
 	<volume name="logiccercath_00_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -217,7 +217,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80004"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70004"/>
 	</volume>
 	<volume name="logiccercath_00_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -225,7 +225,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80005"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70005"/>
 	</volume>
 	<volume name="logiccercath_00_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -233,7 +233,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80006"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70006"/>
 	</volume>
 	<volume name="logiccercath_00_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -241,7 +241,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80007"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70007"/>
 	</volume>
 	<volume name="logiccercath_00_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -249,7 +249,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80008"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70008"/>
 	</volume>
 	<volume name="logiccercath_01_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -257,7 +257,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80100"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70100"/>
 	</volume>
 	<volume name="logiccercath_01_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -265,7 +265,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80101"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70101"/>
 	</volume>
 	<volume name="logiccercath_01_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -273,7 +273,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80102"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70102"/>
 	</volume>
 	<volume name="logiccercath_01_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -281,7 +281,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80103"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70103"/>
 	</volume>
 	<volume name="logiccercath_01_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -289,7 +289,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80104"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70104"/>
 	</volume>
 	<volume name="logiccercath_01_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -297,7 +297,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80105"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70105"/>
 	</volume>
 	<volume name="logiccercath_01_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -305,7 +305,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80106"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70106"/>
 	</volume>
 	<volume name="logiccercath_01_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -313,7 +313,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80107"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70107"/>
 	</volume>
 	<volume name="logiccercath_01_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -321,7 +321,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80108"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70108"/>
 	</volume>
 	<volume name="logiccercath_02_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -329,7 +329,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80200"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70200"/>
 	</volume>
 	<volume name="logiccercath_02_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -337,7 +337,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80201"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70201"/>
 	</volume>
 	<volume name="logiccercath_02_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -345,7 +345,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80202"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70202"/>
 	</volume>
 	<volume name="logiccercath_02_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -353,7 +353,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80203"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70203"/>
 	</volume>
 	<volume name="logiccercath_02_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -361,7 +361,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80204"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70204"/>
 	</volume>
 	<volume name="logiccercath_02_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -369,7 +369,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80205"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70205"/>
 	</volume>
 	<volume name="logiccercath_02_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -377,7 +377,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80206"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70206"/>
 	</volume>
 	<volume name="logiccercath_02_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -385,7 +385,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80207"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70207"/>
 	</volume>
 	<volume name="logiccercath_02_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -393,7 +393,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80208"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70208"/>
 	</volume>
 	<volume name="logiccercath_03_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -401,7 +401,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80300"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70300"/>
 	</volume>
 	<volume name="logiccercath_03_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -409,7 +409,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80301"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70301"/>
 	</volume>
 	<volume name="logiccercath_03_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -417,7 +417,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80302"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70302"/>
 	</volume>
 	<volume name="logiccercath_03_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -425,7 +425,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80303"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70303"/>
 	</volume>
 	<volume name="logiccercath_03_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -433,7 +433,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80304"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70304"/>
 	</volume>
 	<volume name="logiccercath_03_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -441,7 +441,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80305"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70305"/>
 	</volume>
 	<volume name="logiccercath_03_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -449,7 +449,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80306"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70306"/>
 	</volume>
 	<volume name="logiccercath_03_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -457,7 +457,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80307"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70307"/>
 	</volume>
 	<volume name="logiccercath_03_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -465,7 +465,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80308"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70308"/>
 	</volume>
 	<volume name="logiccercath_04_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -473,7 +473,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80400"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70400"/>
 	</volume>
 	<volume name="logiccercath_04_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -481,7 +481,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80401"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70401"/>
 	</volume>
 	<volume name="logiccercath_04_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -489,7 +489,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80402"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70402"/>
 	</volume>
 	<volume name="logiccercath_04_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -497,7 +497,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80403"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70403"/>
 	</volume>
 	<volume name="logiccercath_04_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -505,7 +505,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80404"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70404"/>
 	</volume>
 	<volume name="logiccercath_04_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -513,7 +513,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80405"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70405"/>
 	</volume>
 	<volume name="logiccercath_04_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -521,7 +521,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80406"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70406"/>
 	</volume>
 	<volume name="logiccercath_04_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -529,7 +529,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80407"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70407"/>
 	</volume>
 	<volume name="logiccercath_04_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -537,7 +537,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80408"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70408"/>
 	</volume>
 	<volume name="logiccercath_05_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -545,7 +545,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80500"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70500"/>
 	</volume>
 	<volume name="logiccercath_05_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -553,7 +553,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80501"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70501"/>
 	</volume>
 	<volume name="logiccercath_05_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -561,7 +561,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80502"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70502"/>
 	</volume>
 	<volume name="logiccercath_05_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -569,7 +569,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80503"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70503"/>
 	</volume>
 	<volume name="logiccercath_05_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -577,7 +577,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80504"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70504"/>
 	</volume>
 	<volume name="logiccercath_05_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -585,7 +585,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80505"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70505"/>
 	</volume>
 	<volume name="logiccercath_05_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -593,7 +593,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80506"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70506"/>
 	</volume>
 	<volume name="logiccercath_05_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -601,7 +601,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80507"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70507"/>
 	</volume>
 	<volume name="logiccercath_05_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -609,7 +609,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80508"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70508"/>
 	</volume>
 	<volume name="logiccercath_06_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -617,7 +617,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80600"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70600"/>
 	</volume>
 	<volume name="logiccercath_06_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -625,7 +625,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80601"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70601"/>
 	</volume>
 	<volume name="logiccercath_06_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -633,7 +633,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80602"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70602"/>
 	</volume>
 	<volume name="logiccercath_06_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -641,7 +641,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80603"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70603"/>
 	</volume>
 	<volume name="logiccercath_06_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -649,7 +649,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80604"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70604"/>
 	</volume>
 	<volume name="logiccercath_06_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -657,7 +657,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80605"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70605"/>
 	</volume>
 	<volume name="logiccercath_06_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -665,7 +665,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80606"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70606"/>
 	</volume>
 	<volume name="logiccercath_06_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -673,7 +673,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80607"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70607"/>
 	</volume>
 	<volume name="logiccercath_06_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -681,7 +681,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80608"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70608"/>
 	</volume>
 	<volume name="logiccercath_07_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -689,7 +689,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80700"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70700"/>
 	</volume>
 	<volume name="logiccercath_07_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -697,7 +697,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80701"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70701"/>
 	</volume>
 	<volume name="logiccercath_07_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -705,7 +705,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80702"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70702"/>
 	</volume>
 	<volume name="logiccercath_07_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -713,7 +713,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80703"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70703"/>
 	</volume>
 	<volume name="logiccercath_07_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -721,7 +721,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80704"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70704"/>
 	</volume>
 	<volume name="logiccercath_07_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -729,7 +729,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80705"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70705"/>
 	</volume>
 	<volume name="logiccercath_07_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -737,7 +737,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80706"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70706"/>
 	</volume>
 	<volume name="logiccercath_07_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -745,7 +745,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80707"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70707"/>
 	</volume>
 	<volume name="logiccercath_07_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -753,7 +753,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80708"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70708"/>
 	</volume>
 	<volume name="logiccercath_08_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -761,7 +761,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80800"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70800"/>
 	</volume>
 	<volume name="logiccercath_08_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -769,7 +769,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80801"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70801"/>
 	</volume>
 	<volume name="logiccercath_08_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -777,7 +777,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80802"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70802"/>
 	</volume>
 	<volume name="logiccercath_08_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -785,7 +785,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80803"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70803"/>
 	</volume>
 	<volume name="logiccercath_08_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -793,7 +793,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80804"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70804"/>
 	</volume>
 	<volume name="logiccercath_08_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -801,7 +801,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80805"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70805"/>
 	</volume>
 	<volume name="logiccercath_08_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -809,7 +809,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80806"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70806"/>
 	</volume>
 	<volume name="logiccercath_08_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -817,7 +817,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80807"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70807"/>
 	</volume>
 	<volume name="logiccercath_08_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -825,7 +825,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80808"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70808"/>
 	</volume>
 	<volume name="logiccercath_09_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -833,7 +833,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80900"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70900"/>
 	</volume>
 	<volume name="logiccercath_09_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -841,7 +841,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80901"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70901"/>
 	</volume>
 	<volume name="logiccercath_09_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -849,7 +849,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80902"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70902"/>
 	</volume>
 	<volume name="logiccercath_09_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -857,7 +857,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80903"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70903"/>
 	</volume>
 	<volume name="logiccercath_09_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -865,7 +865,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80904"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70904"/>
 	</volume>
 	<volume name="logiccercath_09_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -873,7 +873,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80905"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70905"/>
 	</volume>
 	<volume name="logiccercath_09_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -881,7 +881,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80906"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70906"/>
 	</volume>
 	<volume name="logiccercath_09_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -889,7 +889,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80907"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70907"/>
 	</volume>
 	<volume name="logiccercath_09_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -897,7 +897,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80908"/>
+		      <auxiliary auxtype="DetNo" auxvalue="70908"/>
 	</volume>
 	<volume name="logiccercath_10_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -905,7 +905,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81000"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71000"/>
 	</volume>
 	<volume name="logiccercath_10_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -913,7 +913,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81001"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71001"/>
 	</volume>
 	<volume name="logiccercath_10_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -921,7 +921,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81002"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71002"/>
 	</volume>
 	<volume name="logiccercath_10_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -929,7 +929,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81003"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71003"/>
 	</volume>
 	<volume name="logiccercath_10_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -937,7 +937,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81004"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71004"/>
 	</volume>
 	<volume name="logiccercath_10_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -945,7 +945,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81005"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71005"/>
 	</volume>
 	<volume name="logiccercath_10_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -953,7 +953,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81006"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71006"/>
 	</volume>
 	<volume name="logiccercath_10_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -961,7 +961,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81007"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71007"/>
 	</volume>
 	<volume name="logiccercath_10_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -969,7 +969,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81008"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71008"/>
 	</volume>
 	<volume name="logiccercath_11_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -977,7 +977,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81100"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71100"/>
 	</volume>
 	<volume name="logiccercath_11_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -985,7 +985,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81101"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71101"/>
 	</volume>
 	<volume name="logiccercath_11_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -993,7 +993,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81102"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71102"/>
 	</volume>
 	<volume name="logiccercath_11_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1001,7 +1001,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81103"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71103"/>
 	</volume>
 	<volume name="logiccercath_11_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1009,7 +1009,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81104"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71104"/>
 	</volume>
 	<volume name="logiccercath_11_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1017,7 +1017,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81105"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71105"/>
 	</volume>
 	<volume name="logiccercath_11_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1025,7 +1025,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81106"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71106"/>
 	</volume>
 	<volume name="logiccercath_11_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1033,7 +1033,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81107"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71107"/>
 	</volume>
 	<volume name="logiccercath_11_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1041,7 +1041,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81108"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71108"/>
 	</volume>
 	<volume name="logiccercath_12_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1049,7 +1049,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81200"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71200"/>
 	</volume>
 	<volume name="logiccercath_12_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1057,7 +1057,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81201"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71201"/>
 	</volume>
 	<volume name="logiccercath_12_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1065,7 +1065,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81202"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71202"/>
 	</volume>
 	<volume name="logiccercath_12_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1073,7 +1073,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81203"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71203"/>
 	</volume>
 	<volume name="logiccercath_12_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1081,7 +1081,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81204"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71204"/>
 	</volume>
 	<volume name="logiccercath_12_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1089,7 +1089,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81205"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71205"/>
 	</volume>
 	<volume name="logiccercath_12_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1097,7 +1097,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81206"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71206"/>
 	</volume>
 	<volume name="logiccercath_12_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1105,7 +1105,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81207"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71207"/>
 	</volume>
 	<volume name="logiccercath_12_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1113,7 +1113,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81208"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71208"/>
 	</volume>
 	<volume name="logiccercath_13_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1121,7 +1121,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81300"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71300"/>
 	</volume>
 	<volume name="logiccercath_13_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1129,7 +1129,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81301"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71301"/>
 	</volume>
 	<volume name="logiccercath_13_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1137,7 +1137,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81302"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71302"/>
 	</volume>
 	<volume name="logiccercath_13_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1145,7 +1145,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81303"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71303"/>
 	</volume>
 	<volume name="logiccercath_13_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1153,7 +1153,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81304"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71304"/>
 	</volume>
 	<volume name="logiccercath_13_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1161,7 +1161,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81305"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71305"/>
 	</volume>
 	<volume name="logiccercath_13_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1169,7 +1169,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81306"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71306"/>
 	</volume>
 	<volume name="logiccercath_13_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1177,7 +1177,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81307"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71307"/>
 	</volume>
 	<volume name="logiccercath_13_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1185,7 +1185,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81308"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71308"/>
 	</volume>
 	<volume name="logiccercath_14_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1193,7 +1193,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81400"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71400"/>
 	</volume>
 	<volume name="logiccercath_14_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1201,7 +1201,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81401"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71401"/>
 	</volume>
 	<volume name="logiccercath_14_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1209,7 +1209,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81402"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71402"/>
 	</volume>
 	<volume name="logiccercath_14_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1217,7 +1217,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81403"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71403"/>
 	</volume>
 	<volume name="logiccercath_14_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1225,7 +1225,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81404"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71404"/>
 	</volume>
 	<volume name="logiccercath_14_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1233,7 +1233,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81405"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71405"/>
 	</volume>
 	<volume name="logiccercath_14_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1241,7 +1241,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81406"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71406"/>
 	</volume>
 	<volume name="logiccercath_14_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1249,7 +1249,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81407"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71407"/>
 	</volume>
 	<volume name="logiccercath_14_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1257,7 +1257,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81408"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71408"/>
 	</volume>
 	<volume name="logiccercath_15_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1265,7 +1265,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81500"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71500"/>
 	</volume>
 	<volume name="logiccercath_15_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1273,7 +1273,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81501"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71501"/>
 	</volume>
 	<volume name="logiccercath_15_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1281,7 +1281,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81502"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71502"/>
 	</volume>
 	<volume name="logiccercath_15_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1289,7 +1289,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81503"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71503"/>
 	</volume>
 	<volume name="logiccercath_15_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1297,7 +1297,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81504"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71504"/>
 	</volume>
 	<volume name="logiccercath_15_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1305,7 +1305,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81505"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71505"/>
 	</volume>
 	<volume name="logiccercath_15_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1313,7 +1313,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81506"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71506"/>
 	</volume>
 	<volume name="logiccercath_15_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1321,7 +1321,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81507"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71507"/>
 	</volume>
 	<volume name="logiccercath_15_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1329,7 +1329,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81508"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71508"/>
 	</volume>
 	<volume name="logiccercath_16_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1337,7 +1337,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81600"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71600"/>
 	</volume>
 	<volume name="logiccercath_16_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1345,7 +1345,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81601"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71601"/>
 	</volume>
 	<volume name="logiccercath_16_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1353,7 +1353,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81602"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71602"/>
 	</volume>
 	<volume name="logiccercath_16_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1361,7 +1361,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81603"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71603"/>
 	</volume>
 	<volume name="logiccercath_16_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1369,7 +1369,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81604"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71604"/>
 	</volume>
 	<volume name="logiccercath_16_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1377,7 +1377,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81605"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71605"/>
 	</volume>
 	<volume name="logiccercath_16_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1385,7 +1385,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81606"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71606"/>
 	</volume>
 	<volume name="logiccercath_16_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1393,7 +1393,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81607"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71607"/>
 	</volume>
 	<volume name="logiccercath_16_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1401,7 +1401,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81608"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71608"/>
 	</volume>
 	<volume name="logiccercath_17_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1409,7 +1409,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81700"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71700"/>
 	</volume>
 	<volume name="logiccercath_17_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1417,7 +1417,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81701"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71701"/>
 	</volume>
 	<volume name="logiccercath_17_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1425,7 +1425,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81702"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71702"/>
 	</volume>
 	<volume name="logiccercath_17_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1433,7 +1433,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81703"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71703"/>
 	</volume>
 	<volume name="logiccercath_17_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1441,7 +1441,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81704"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71704"/>
 	</volume>
 	<volume name="logiccercath_17_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1449,7 +1449,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81705"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71705"/>
 	</volume>
 	<volume name="logiccercath_17_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1457,7 +1457,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81706"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71706"/>
 	</volume>
 	<volume name="logiccercath_17_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1465,7 +1465,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81707"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71707"/>
 	</volume>
 	<volume name="logiccercath_17_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1473,7 +1473,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81708"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71708"/>
 	</volume>
 	<volume name="logiccercath_18_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1481,7 +1481,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81800"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71800"/>
 	</volume>
 	<volume name="logiccercath_18_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1489,7 +1489,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81801"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71801"/>
 	</volume>
 	<volume name="logiccercath_18_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1497,7 +1497,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81802"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71802"/>
 	</volume>
 	<volume name="logiccercath_18_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1505,7 +1505,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81803"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71803"/>
 	</volume>
 	<volume name="logiccercath_18_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1513,7 +1513,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81804"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71804"/>
 	</volume>
 	<volume name="logiccercath_18_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1521,7 +1521,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81805"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71805"/>
 	</volume>
 	<volume name="logiccercath_18_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1529,7 +1529,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81806"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71806"/>
 	</volume>
 	<volume name="logiccercath_18_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1537,7 +1537,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81807"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71807"/>
 	</volume>
 	<volume name="logiccercath_18_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1545,7 +1545,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81808"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71808"/>
 	</volume>
 	<volume name="logiccercath_19_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1553,7 +1553,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81900"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71900"/>
 	</volume>
 	<volume name="logiccercath_19_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1561,7 +1561,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81901"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71901"/>
 	</volume>
 	<volume name="logiccercath_19_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1569,7 +1569,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81902"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71902"/>
 	</volume>
 	<volume name="logiccercath_19_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1577,7 +1577,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81903"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71903"/>
 	</volume>
 	<volume name="logiccercath_19_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1585,7 +1585,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81904"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71904"/>
 	</volume>
 	<volume name="logiccercath_19_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1593,7 +1593,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81905"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71905"/>
 	</volume>
 	<volume name="logiccercath_19_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1601,7 +1601,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81906"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71906"/>
 	</volume>
 	<volume name="logiccercath_19_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1609,7 +1609,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81907"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71907"/>
 	</volume>
 	<volume name="logiccercath_19_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1617,7 +1617,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="81908"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71908"/>
 	</volume>
 	<volume name="logiccercath_20_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1625,7 +1625,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82000"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72000"/>
 	</volume>
 	<volume name="logiccercath_20_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1633,7 +1633,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82001"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72001"/>
 	</volume>
 	<volume name="logiccercath_20_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1641,7 +1641,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82002"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72002"/>
 	</volume>
 	<volume name="logiccercath_20_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1649,7 +1649,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82003"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72003"/>
 	</volume>
 	<volume name="logiccercath_20_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1657,7 +1657,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82004"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72004"/>
 	</volume>
 	<volume name="logiccercath_20_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1665,7 +1665,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82005"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72005"/>
 	</volume>
 	<volume name="logiccercath_20_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1673,7 +1673,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82006"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72006"/>
 	</volume>
 	<volume name="logiccercath_20_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1681,7 +1681,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82007"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72007"/>
 	</volume>
 	<volume name="logiccercath_20_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1689,7 +1689,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82008"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72008"/>
 	</volume>
 	<volume name="logiccercath_21_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1697,7 +1697,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82100"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72100"/>
 	</volume>
 	<volume name="logiccercath_21_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1705,7 +1705,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82101"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72101"/>
 	</volume>
 	<volume name="logiccercath_21_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1713,7 +1713,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82102"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72102"/>
 	</volume>
 	<volume name="logiccercath_21_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1721,7 +1721,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82103"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72103"/>
 	</volume>
 	<volume name="logiccercath_21_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1729,7 +1729,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82104"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72104"/>
 	</volume>
 	<volume name="logiccercath_21_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1737,7 +1737,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82105"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72105"/>
 	</volume>
 	<volume name="logiccercath_21_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1745,7 +1745,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82106"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72106"/>
 	</volume>
 	<volume name="logiccercath_21_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1753,7 +1753,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82107"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72107"/>
 	</volume>
 	<volume name="logiccercath_21_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1761,7 +1761,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82108"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72108"/>
 	</volume>
 	<volume name="logiccercath_22_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1769,7 +1769,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82200"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72200"/>
 	</volume>
 	<volume name="logiccercath_22_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1777,7 +1777,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82201"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72201"/>
 	</volume>
 	<volume name="logiccercath_22_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1785,7 +1785,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82202"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72202"/>
 	</volume>
 	<volume name="logiccercath_22_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1793,7 +1793,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82203"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72203"/>
 	</volume>
 	<volume name="logiccercath_22_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1801,7 +1801,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82204"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72204"/>
 	</volume>
 	<volume name="logiccercath_22_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1809,7 +1809,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82205"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72205"/>
 	</volume>
 	<volume name="logiccercath_22_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1817,7 +1817,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82206"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72206"/>
 	</volume>
 	<volume name="logiccercath_22_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1825,7 +1825,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82207"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72207"/>
 	</volume>
 	<volume name="logiccercath_22_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1833,7 +1833,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82208"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72208"/>
 	</volume>
 	<volume name="logiccercath_23_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1841,7 +1841,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82300"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72300"/>
 	</volume>
 	<volume name="logiccercath_23_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1849,7 +1849,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82301"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72301"/>
 	</volume>
 	<volume name="logiccercath_23_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1857,7 +1857,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82302"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72302"/>
 	</volume>
 	<volume name="logiccercath_23_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1865,7 +1865,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82303"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72303"/>
 	</volume>
 	<volume name="logiccercath_23_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1873,7 +1873,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82304"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72304"/>
 	</volume>
 	<volume name="logiccercath_23_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1881,7 +1881,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82305"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72305"/>
 	</volume>
 	<volume name="logiccercath_23_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1889,7 +1889,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82306"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72306"/>
 	</volume>
 	<volume name="logiccercath_23_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1897,7 +1897,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82307"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72307"/>
 	</volume>
 	<volume name="logiccercath_23_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1905,7 +1905,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82308"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72308"/>
 	</volume>
 	<volume name="logiccercath_24_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1913,7 +1913,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82400"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72400"/>
 	</volume>
 	<volume name="logiccercath_24_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1921,7 +1921,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82401"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72401"/>
 	</volume>
 	<volume name="logiccercath_24_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -1929,7 +1929,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82402"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72402"/>
 	</volume>
 	<volume name="logiccercath_24_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -1937,7 +1937,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82403"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72403"/>
 	</volume>
 	<volume name="logiccercath_24_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -1945,7 +1945,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82404"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72404"/>
 	</volume>
 	<volume name="logiccercath_24_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -1953,7 +1953,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82405"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72405"/>
 	</volume>
 	<volume name="logiccercath_24_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -1961,7 +1961,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82406"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72406"/>
 	</volume>
 	<volume name="logiccercath_24_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -1969,7 +1969,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82407"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72407"/>
 	</volume>
 	<volume name="logiccercath_24_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -1977,7 +1977,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82408"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72408"/>
 	</volume>
 	<volume name="logiccercath_25_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -1985,7 +1985,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82500"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72500"/>
 	</volume>
 	<volume name="logiccercath_25_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -1993,7 +1993,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82501"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72501"/>
 	</volume>
 	<volume name="logiccercath_25_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -2001,7 +2001,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82502"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72502"/>
 	</volume>
 	<volume name="logiccercath_25_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -2009,7 +2009,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82503"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72503"/>
 	</volume>
 	<volume name="logiccercath_25_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -2017,7 +2017,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82504"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72504"/>
 	</volume>
 	<volume name="logiccercath_25_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -2025,7 +2025,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82505"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72505"/>
 	</volume>
 	<volume name="logiccercath_25_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -2033,7 +2033,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82506"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72506"/>
 	</volume>
 	<volume name="logiccercath_25_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -2041,7 +2041,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82507"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72507"/>
 	</volume>
 	<volume name="logiccercath_25_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -2049,7 +2049,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82508"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72508"/>
 	</volume>
 	<volume name="logiccercath_26_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -2057,7 +2057,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82600"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72600"/>
 	</volume>
 	<volume name="logiccercath_26_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -2065,7 +2065,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82601"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72601"/>
 	</volume>
 	<volume name="logiccercath_26_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -2073,7 +2073,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82602"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72602"/>
 	</volume>
 	<volume name="logiccercath_26_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -2081,7 +2081,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82603"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72603"/>
 	</volume>
 	<volume name="logiccercath_26_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -2089,7 +2089,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82604"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72604"/>
 	</volume>
 	<volume name="logiccercath_26_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -2097,7 +2097,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82605"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72605"/>
 	</volume>
 	<volume name="logiccercath_26_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -2105,7 +2105,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82606"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72606"/>
 	</volume>
 	<volume name="logiccercath_26_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -2113,7 +2113,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82607"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72607"/>
 	</volume>
 	<volume name="logiccercath_26_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -2121,7 +2121,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82608"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72608"/>
 	</volume>
 	<volume name="logiccercath_27_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -2129,7 +2129,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82700"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72700"/>
 	</volume>
 	<volume name="logiccercath_27_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -2137,7 +2137,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82701"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72701"/>
 	</volume>
 	<volume name="logiccercath_27_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -2145,7 +2145,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82702"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72702"/>
 	</volume>
 	<volume name="logiccercath_27_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -2153,7 +2153,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82703"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72703"/>
 	</volume>
 	<volume name="logiccercath_27_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -2161,7 +2161,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82704"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72704"/>
 	</volume>
 	<volume name="logiccercath_27_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -2169,7 +2169,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82705"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72705"/>
 	</volume>
 	<volume name="logiccercath_27_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -2177,7 +2177,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82706"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72706"/>
 	</volume>
 	<volume name="logiccercath_27_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -2185,7 +2185,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82707"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72707"/>
 	</volume>
 	<volume name="logiccercath_27_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -2193,7 +2193,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82708"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72708"/>
 	</volume>
 	<volume name="logiccercath_28_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -2201,7 +2201,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82800"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72800"/>
 	</volume>
 	<volume name="logiccercath_28_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -2209,7 +2209,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82801"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72801"/>
 	</volume>
 	<volume name="logiccercath_28_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -2217,7 +2217,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82802"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72802"/>
 	</volume>
 	<volume name="logiccercath_28_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -2225,7 +2225,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82803"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72803"/>
 	</volume>
 	<volume name="logiccercath_28_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -2233,7 +2233,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82804"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72804"/>
 	</volume>
 	<volume name="logiccercath_28_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -2241,7 +2241,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82805"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72805"/>
 	</volume>
 	<volume name="logiccercath_28_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -2249,7 +2249,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82806"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72806"/>
 	</volume>
 	<volume name="logiccercath_28_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -2257,7 +2257,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82807"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72807"/>
 	</volume>
 	<volume name="logiccercath_28_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -2265,7 +2265,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82808"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72808"/>
 	</volume>
 	<volume name="logiccercath_29_00">
 		      <materialref ref="H8500_PMToption"/>
@@ -2273,7 +2273,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82900"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72900"/>
 	</volume>
 	<volume name="logiccercath_29_01">
 		      <materialref ref="H8500_PMToption"/>
@@ -2281,7 +2281,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82901"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72901"/>
 	</volume>
 	<volume name="logiccercath_29_02">
 		      <materialref ref="H8500_PMToption"/>
@@ -2289,7 +2289,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82902"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72902"/>
 	</volume>
 	<volume name="logiccercath_29_03">
 		      <materialref ref="H8500_PMToption"/>
@@ -2297,7 +2297,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82903"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72903"/>
 	</volume>
 	<volume name="logiccercath_29_04">
 		      <materialref ref="H8500_PMToption"/>
@@ -2305,7 +2305,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82904"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72904"/>
 	</volume>
 	<volume name="logiccercath_29_05">
 		      <materialref ref="H8500_PMToption"/>
@@ -2313,7 +2313,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82905"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72905"/>
 	</volume>
 	<volume name="logiccercath_29_06">
 		      <materialref ref="H8500_PMToption"/>
@@ -2321,7 +2321,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82906"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72906"/>
 	</volume>
 	<volume name="logiccercath_29_07">
 		      <materialref ref="H8500_PMToption"/>
@@ -2329,7 +2329,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82907"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72907"/>
 	</volume>
 	<volume name="logiccercath_29_08">
 		      <materialref ref="H8500_PMToption"/>
@@ -2337,7 +2337,7 @@
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="82908"/>
+		      <auxiliary auxtype="DetNo" auxvalue="72908"/>
 	</volume>
         <volume name="logiccerpmtwin">
 		      <materialref ref="H8500UVwin"/>
@@ -5681,7 +5681,7 @@
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 	              <auxiliary auxtype="Color" auxvalue="Gray"/>
 		      <auxiliary auxtype="SensDet" auxvalue="PlaneDet"/>
-		      <auxiliary auxtype="DetNo" auxvalue="80000"/>
+		      <auxiliary auxtype="DetNo" auxvalue="79999"/>
 	</volume>
 	<volume name="logiccerbwin">
 		      <materialref ref="Aluminum"/>

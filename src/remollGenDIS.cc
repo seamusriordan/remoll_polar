@@ -40,9 +40,24 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double mp    = proton_mass_c2;
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
-    double ph = CLHEP::RandFlat::shoot(0.0, 2.0*pi);
+    double ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
     double efmax = mp*beamE/(mp + beamE*(1.0-cos(th)));;
-    double ef = CLHEP::RandFlat::shoot(0.0, efmax);
+    double efmin = 0.0;
+
+
+    if( efmax > fE_max ){
+	efmax = fE_max;
+    }
+
+    if( fE_min < 0.0 || fE_min > efmax ){
+	G4cerr << __FILE__ << " line " << __LINE__ <<
+		             ": Warning!  minimum energy specified is nonmeaninful (" << fE_min/GeV << " GeV), setting to 0" << G4endl;
+	efmin = 0.0;
+    } else {
+	efmin = fE_min;
+    }
+
+    double ef = CLHEP::RandFlat::shoot(efmin, efmax);
 
 
     if( vert->GetMaterial()->GetNumberOfElements() != 1 ){
@@ -120,7 +135,7 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double sigmatot = pcont + ncont;
 
-    double V = 2.0*pi*(cos(fTh_min) - cos(fTh_max))*efmax;
+    double V = (fPh_max - fPh_min)*(cos(fTh_min) - cos(fTh_max))*(efmax-efmin);
 
     evt->SetEffCrossSection(sigmatot*V);
 

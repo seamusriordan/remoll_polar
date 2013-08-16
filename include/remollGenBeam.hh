@@ -20,6 +20,12 @@ class remollGenBeam : public remollVEventGen {
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 
+	virtual void SetThMin(double){  G4cerr << __FILE__ << " line " << __LINE__ << " " << __PRETTY_FUNCTION__ << " :  Generator does not respond to this command" << G4endl; }
+	virtual void SetThMax(double){  G4cerr << __FILE__ << " line " << __LINE__ << " " << __PRETTY_FUNCTION__ << " :  Generator does not respond to this command" << G4endl; }
+	virtual void SetPhMin(double){  G4cerr << __FILE__ << " line " << __LINE__ << " " << __PRETTY_FUNCTION__ << " :  Generator does not respond to this command" << G4endl; }
+	virtual void SetPhMax(double){  G4cerr << __FILE__ << " line " << __LINE__ << " " << __PRETTY_FUNCTION__ << " :  Generator does not respond to this command" << G4endl; }
+	virtual void SetEmin(double){  G4cerr << __FILE__ << " line " << __LINE__ << " " << __PRETTY_FUNCTION__ << " :  Generator does not respond to this command" << G4endl; }
+
 	remollBeamTarget *fBeamTarg;
 
 	double fZpos;

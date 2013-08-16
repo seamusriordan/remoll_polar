@@ -150,7 +150,9 @@ print """	         <volume name="logicecalleadinglead">
 		      <solidref ref="ecalleadinglead"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Gray"/>
-	        </volume>""" % (ecalmat)
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
+	        </volume>""" % (ecalmat, showerdetno+9999)  # assign 99999 to leading lead (useful for kryptonite runs)
 print """	         <volume name="logicecalleadscint">
 		      <materialref ref ="Scint"/> 
 		      <solidref ref ="ecalleadscint"/>

@@ -44,7 +44,7 @@
 	    <auxiliary auxtype="Visibility" auxvalue="true"/> 
 	    <auxiliary auxtype="Color" auxvalue="grey"/> 
 	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-	    <auxiliary auxtype="DetNo" auxvalue="8000"/>
+	    <auxiliary auxtype="DetNo" auxvalue="70000"/>
 	</volume>
 
 	<volume name="logicCerExtWin">

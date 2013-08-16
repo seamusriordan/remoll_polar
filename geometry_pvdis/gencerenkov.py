@@ -7,7 +7,7 @@ from math import sin, cos, asin, acos, fabs, pi, sqrt, tan
 
 nsector = 30
 
-cerdetno = 80000
+cerdetno = 70000
 
 motherrmin = 60
 motherrmax = 265
@@ -667,7 +667,7 @@ print """	</volume>
 		      <solidref ref="cerbackwin"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 	              <auxiliary auxtype="Color" auxvalue="Gray"/>
-	</volume>""" % cerdetno
+	</volume>""" % (cerdetno+9999)  #useful if optical photons are off
 
 
 ######################  Mother tank
