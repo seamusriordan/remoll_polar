@@ -71,7 +71,7 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double nu = beamE-ef;
     evt->SetW2( mp*mp + 2.0*mp*nu - Q2 );
-    double x = Q2/(4.0*mp*nu);
+    double x = Q2/(2.0*mp*nu);
     evt->SetXbj( x );
     double y = nu/beamE;
 
