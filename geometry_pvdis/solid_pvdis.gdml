@@ -41,7 +41,7 @@
 
 
     <solids>
-	<box lunit="mm" name="Worldbox" x="4000" y="4000" z="80000"/>
+	<box lunit="mm" name="Worldbox" x="8000" y="8000" z="80000"/>
     </solids>
 
     <structure>
