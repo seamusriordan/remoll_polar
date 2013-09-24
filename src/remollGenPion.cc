@@ -16,6 +16,10 @@ remollGenPion::remollGenPion(){
     fTh_min = 20*deg;
     fTh_max = 70*deg;
 
+    
+    fE_min = 0.0*deg;
+    fE_max = -1e9;
+
     fPionType = kPiMinus;
 }
 
@@ -30,12 +34,25 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
     double ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
-    double pf = CLHEP::RandFlat::shoot(0.0, beamE);
 
-    double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max))*beamE;
+    double true_emax = 0.0;
+    if( fE_max < 0.0 || fE_max > beamE ){
+	true_emax = beamE;
+    } else {
+	true_emax = fE_max;
+    }
+    
+    double pf = CLHEP::RandFlat::shoot(fE_min, true_emax);
 
-    double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 0)*nanobarn/GeV;
-    double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 1)*nanobarn/GeV;
+    assert( pf > 0.0 );
+    assert( pf < beamE );
+
+    double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max))*true_emax;
+
+    double intrad = 2.0*alpha*log(beamE/electron_mass_c2)/pi;
+
+    double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len*4.0/3.0 + intrad, 0)*nanobarn/GeV;
+    double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len*4.0/3.0 + intrad, 1)*nanobarn/GeV;
 
     G4String piontypestr;
 
