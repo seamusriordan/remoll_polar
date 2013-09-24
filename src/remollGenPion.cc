@@ -32,7 +32,7 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
     double pf = CLHEP::RandFlat::shoot(0.0, beamE);
 
-    double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max));
+    double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max))*beamE;
 
     double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 0)*nanobarn/GeV;
     double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 1)*nanobarn/GeV;
