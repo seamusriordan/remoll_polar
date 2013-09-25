@@ -18,6 +18,11 @@ cteq_pdf_t *__dis_pdf;
 void initcteqpdf(){
          __dis_pdf = cteq_pdf_alloc_id(400); 
 }
+
+void freecteqpdf(){
+         cteq_pdf_free(__dis_pdf); 
+}
+
 ////////////////////////////////////////////////////////
 
 remollGenDIS::remollGenDIS(){
@@ -31,6 +36,7 @@ remollGenDIS::remollGenDIS(){
 }
 
 remollGenDIS::~remollGenDIS(){
+    freecteqpdf();
 }
 
 void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
@@ -83,20 +89,21 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double eta_gZ = GF*Q2*MZ*MZ/(alpha*2.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
 
+    double evQ2 = Q2/(GeV*GeV);
     // Force a mimimum evolution
-    if( Q2 < 1.0 ){
-	Q2 = 1.0;
+    if( evQ2 < 1.0 ){
+	evQ2 = 1.0;
     }
 
-    double qu =    cteq_pdf_evolvepdf(__dis_pdf, 1, x, sqrt(Q2) );
-    double qd =    cteq_pdf_evolvepdf(__dis_pdf, 2, x, sqrt(Q2) );
-    double qubar = cteq_pdf_evolvepdf(__dis_pdf, -1, x, sqrt(Q2) );
-    double qdbar = cteq_pdf_evolvepdf(__dis_pdf, -2, x, sqrt(Q2) );
+    double qu =    cteq_pdf_evolvepdf(__dis_pdf, 1, x, sqrt(evQ2) );
+    double qd =    cteq_pdf_evolvepdf(__dis_pdf, 2, x, sqrt(evQ2) );
+    double qubar = cteq_pdf_evolvepdf(__dis_pdf, -1, x, sqrt(evQ2) );
+    double qdbar = cteq_pdf_evolvepdf(__dis_pdf, -2, x, sqrt(evQ2) );
 
     double quv = qu-qubar;
     double qdv = qd-qdbar;
 
-    double qs = cteq_pdf_evolvepdf(__dis_pdf, 3, x, sqrt(Q2) );
+    double qs = cteq_pdf_evolvepdf(__dis_pdf, 3, x, sqrt(evQ2) );
 
 
     double F2p = x*( e_u*e_u*quv + e_d*e_d*qdv );
