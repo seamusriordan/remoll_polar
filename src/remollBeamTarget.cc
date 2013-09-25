@@ -225,7 +225,7 @@ remollVertex remollBeamTarget::SampleVertex(SampType_t samp){
 	    fRadLen = radsum;
 	    fVer    = G4ThreeVector( rasx, rasy, 
 		      zinvol - (*it)->GetFrameTranslation().z() + fZpos 
-		       - ((G4Tubs *) (*it)->GetLogicalVolume()->GetSolid())->GetZHalfLength() );
+				     - ((G4Tubs *) (*it)->GetLogicalVolume()->GetSolid())->GetZHalfLength() ); //absolute z position
 
 	    G4double masssum = 0.0;
 	    const G4int *atomvec = mat->GetAtomsVector();
@@ -280,7 +280,7 @@ remollVertex remollBeamTarget::SampleVertex(SampType_t samp){
 
 
     if( nmsmat > 0 ){
-	fMS->Init( fBeamE, nmsmat, msthick, msA, msZ );
+        fMS->Init( fBeamE, nmsmat, msthick, msA, msZ );// multi-scatter vector
 	msth = fMS->GenerateMSPlane();
 	msph = fMS->GenerateMSPlane();
     } else {
@@ -299,8 +299,8 @@ remollVertex remollBeamTarget::SampleVertex(SampType_t samp){
     fDir.rotateY( bmth);
     fDir.rotateX(-bmph);
 
-    fDir.rotateY(msth);
-    fDir.rotateX(msph);
+    fDir.rotateY(msth);// multi-scatter
+    fDir.rotateX(msph);// multi-scatter
 
     // Sample beam energy based on radiation
     // We do this so it doesn't affect the weighting

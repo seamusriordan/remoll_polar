@@ -1,8 +1,8 @@
 #  Example file
 
 # This must be called before initialize
-/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
-
+#/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 # This must be explicitly called
 /run/initialize
 
@@ -27,24 +27,24 @@
 
 
 #/remoll/gen beam
-/remoll/gen elastic 
+#/remoll/gen elastic 
 #/remoll/thmin 0.1 deg
 #/remoll/thmax 2.0 deg
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
 #/remoll/gen pion  # defaults to pi-
 #/remoll/piontype pi+ 
-#/remoll/gen dis
+/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
-#/remoll/thmin 20.0 deg
-#/remoll/thmax 50.0 deg
-#/remoll/phmin -180.0 deg
-#/remoll/phmax 180.0 deg
-#/remoll/emin  1.0 GeV
-#/remoll/emax 11.0 GeV
+/remoll/thmin 0.0 deg
+/remoll/thmax 180.0 deg
+/remoll/phmin -180.0 deg
+/remoll/phmax 180.0 deg
+/remoll/emin  0 GeV
+/remoll/emax 11.0 GeV
 
-#/remoll/beamene 11.0 GeV
+/remoll/beamene 11.0 GeV
 /remoll/beamcurr 50 microampere
 
 #Enable optical photons and processes
@@ -61,6 +61,7 @@
 #/remoll/seed 123456
 
 #  output filename
-/remoll/filename remollout.root
+#/remoll/filename remollout.root
+/remoll/filename remoll_dis_out_test2.root
 
-/run/beamOn 100
+/run/beamOn 100000

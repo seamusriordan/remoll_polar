@@ -196,6 +196,7 @@ int main(int argc, char** argv){
 
 
 	UI->ApplyCommand(command+fileName);
+	remollRun::GetRun()->GetData()->Print();
     }
 
     //if one used the GUI then delete it

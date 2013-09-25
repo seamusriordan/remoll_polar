@@ -32,10 +32,17 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
     double pf = CLHEP::RandFlat::shoot(0.0, beamE);
 
+    //solid angle in steradians : rakitha Tue Sep 24 14:11:36 EDT 2013
     double V = (fPh_max-fPh_min)*(cos(fTh_min) - cos(fTh_max));
-
+    double E_int = beamE; //The integral of pion energies from 0 to beamE -> int dE from 0 to beamE : rakitha Tue Sep 24 14:11:36 EDT 2013
+    //checking the radiation length: a comment in wiser_pion.h says, *effective* *total* radiator = rad_len*4/3 + 0.05
+    /*
     double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 0)*nanobarn/GeV;
     double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len + 0.05, 1)*nanobarn/GeV;
+    */
+
+    double sigpip = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len*4.0/3.0 + 0.05, 0)*nanobarn/GeV;
+    double sigpim = wiser_sigma(beamE/GeV, pf/GeV, th, rad_len*4.0/3.0 + 0.05, 1)*nanobarn/GeV;
 
     G4String piontypestr;
 
@@ -62,8 +69,12 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
 
     
-
-    evt->SetEffCrossSection(V*thisxs);
+    //thisxs is in nanobarns per GeV per str
+    //to get effective cross section in nanobarns, EffCrossSection = V*E_int*thisxs where V is in str and E_int is total energy integral for a pion 
+    //also see main.f rate calculation in original fortran code  (main.f lines 209 - 211)
+    //rakitha  Tue Sep 24 11:06:41 EDT 2013
+    evt->SetEffCrossSection(V*thisxs*E_int);
+    //evt->SetEffCrossSection(V*thisxs);
 
     if( vert->GetMaterial()->GetNumberOfElements() != 1 ){
 	G4cerr << __FILE__ << " line " << __LINE__ << 
