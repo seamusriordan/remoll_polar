@@ -19,6 +19,12 @@ class remollGenPion : public remollVEventGen {
 	enum Pion_t {kPiPlus, kPiMinus, kPi0};
 
 	void SetPionType(Pion_t t) { fPionType = t; }
+
+	void SetEmin( double emin ){ fE_min=emin; }
+	void SetEmax( double emax ){ fE_max=emax; }
+
+
+
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 

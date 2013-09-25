@@ -139,8 +139,8 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     evt->SetEffCrossSection(sigmatot*V);
 
-    G4double APVp = eta_gZ*(gA*F1gZp + Y*gV*F3gZp);
-    G4double APVn = eta_gZ*(gA*F1gZn + Y*gV*F3gZn);
+    G4double APVp = eta_gZ*(gA*F1gZp + Y*gV*F3gZp)/F1p;
+    G4double APVn = eta_gZ*(gA*F1gZn + Y*gV*F3gZn)/F1n;
 
 
     G4double APV = (APVp*pcont + APVn*ncont)/(pcont+ncont);
