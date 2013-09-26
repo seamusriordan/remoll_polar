@@ -1,3 +1,4 @@
+#include "remollBeamTarget.hh"
 #include "remollGenPion.hh"
 
 #include "G4String.hh"
@@ -29,7 +30,9 @@ remollGenPion::~remollGenPion(){
 void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     // Generate Pion event
 
-    double beamE   = vert->GetBeamE();
+//    double beamE   = vert->GetBeamE();
+    // Use unradiated beam vertex
+    double beamE = remollBeamTarget::GetBeamTarget()->fBeamE;
     double rad_len = vert->GetRadLen();
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
