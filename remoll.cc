@@ -90,7 +90,28 @@ int main(int argc, char** argv){
     // Physics we want to use
     G4int verbose = 0;
     G4PhysListFactory factory;
-    G4VModularPhysicsList* physlist = factory.GetReferencePhysList("FTFP_BERT");
+    G4String physName = "";
+
+    // Physics List name defined via environment variable
+    char* path = getenv("PHYSLIST");
+    if (path) { 
+      physName = G4String(path); 
+      G4cout << "Physics list environment variable found  " << physName << G4endl;
+    } else { //No Physics List name defined via environment variable, use the default one
+      physName = "FTFP_BERT";
+      G4cout << "Physics list environment variable not found. Using " << physName << " as physics list."<< G4endl;
+    }
+
+    // reference PhysicsList via its name
+    G4VModularPhysicsList* physlist;
+    if(factory.IsReferencePhysList(physName)) {
+      G4cout << "Setting physics list to " << physName << G4endl;
+      physlist = factory.GetReferencePhysList(physName);
+    } else {
+      G4cout << "Invalid physics list " << physName << " Now using FTFP_BERT " << G4endl;
+      physlist = factory.GetReferencePhysList("FTFP_BERT");
+    }
+
     physlist->SetVerboseLevel(verbose);
     runManager->SetUserInitialization(physlist);
     // FIXME:  Add optical physics to messenger toggle
