@@ -15,6 +15,7 @@
 #include "remollEventAction.hh"
 #include "remollSteppingAction.hh"
 #include "remollOpticalPhysics.hh"
+#include "remollPhysicsList.hh"
 
 #include "G4StepLimiterBuilder.hh"
 
@@ -91,8 +92,22 @@ int main(int argc, char** argv){
     G4int verbose = 0;
     G4PhysListFactory factory;
     G4String physName = "";
+    remollPhysicsList *phys = new remollPhysicsList();
 
-    // Physics List name defined via environment variable
+    G4VModularPhysicsList* physlist;
+    //Physics List is hard coded to QGSP_BERT
+    physlist = factory.GetReferencePhysList("QGSP_BERT");
+    physlist->SetVerboseLevel(verbose);
+    runManager->SetUserInitialization(physlist);
+
+    /*
+    // Physics List updated via the macro. This feature is working but disabled till more testing is done to compare with the results when physics list from factory.GetReferencePhysList("QGSP_BERT") is used. Rakitha Thu Oct  3 09:16:58 EDT 2013
+    rmmess->SetPhysList(phys);
+    runManager->SetUserInitialization(phys);
+    */
+
+    /*    
+    // Physics List name defined via environment variable : currently disabled - rakitha Thu Oct  3 09:09:16 EDT 2013
     char* path = getenv("PHYSLIST");
     if (path) { 
       physName = G4String(path); 
@@ -114,6 +129,8 @@ int main(int argc, char** argv){
 
     physlist->SetVerboseLevel(verbose);
     runManager->SetUserInitialization(physlist);
+    */
+
     // FIXME:  Add optical physics to messenger toggle
 //    physlist->RegisterPhysics( new remollOpticalPhysics() );
 

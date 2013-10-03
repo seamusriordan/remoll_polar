@@ -43,6 +43,10 @@ remollMessenger::remollMessenger(){
     // Grab singleton beam/target
     fBeamTarg = remollBeamTarget::GetBeamTarget();
 
+    physListCmd = new G4UIcmdWithAString("/remoll/setphysicslist",this);
+    physListCmd->SetGuidance("Set the Physics List");
+    physListCmd->SetParameterName("physlist", false);
+
     detfilesCmd = new G4UIcmdWithAString("/remoll/setgeofile",this);
     detfilesCmd->SetGuidance("Set geometry GDML files");
     detfilesCmd->SetParameterName("geofilename", false);
@@ -184,6 +188,11 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
     if( cmd == kryptCmd ){
 	G4bool krypt = kryptCmd->GetNewBoolValue(newValue);
 	fStepAct->SetEnableKryptonite(krypt);
+    }
+    if( cmd == physListCmd ){
+      G4cout << "remollMessenger :: Setting physics list to " << newValue << G4endl;
+      fPhysicsList->SetVerboseLevel(1);
+      fPhysicsList->AddPhysicsList(newValue);
     }
 
     if( cmd == opticalCmd ){
