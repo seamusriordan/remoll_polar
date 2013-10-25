@@ -8,11 +8,12 @@ backgemdet2no = 40000
 z1 = 306.0
 z2 = 315.0
 
+# GEM Rin and Rout updated to match GEMC geometry : rakitha Fri Oct 25 09:17:28 EDT 2013
 r1min = 105.0
-r1max = 200.0
-
-r2min = 115.0
-r2max = 215.0
+r1max = 230.0
+# GEM Rin and Rout updated to match GEMC geometry : rakitha Fri Oct 25 09:17:28 EDT 2013
+r2min = 109.0
+r2max = 237.0
 
 nlayer  = 23
 nsector = 30

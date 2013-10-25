@@ -469,12 +469,14 @@ print """	     <!-- Baffle block -->"""
 
 for i in range(nbaf):
       for j in range(nblock):
+          # compute the start phi and delta phi correctly for babar baffles : rakitha Fri Oct 25 09:22:09 EDT 2013
 	  sphi = mybaf[i][j*4+2]
 	  dphi = mybaf[i][j*4+3]-sphi+1 #1 deg more
-
+############### 
 	  # startphi = sphi + dphi
 	  # stopphi  = sphi + 360/nsector
 	  # phidiff  = stopphi - startphi
+###############
           startphi = sphi
           phidiff = dphi
 

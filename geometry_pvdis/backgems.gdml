@@ -9,9 +9,9 @@
 	   <constant name="backgem_z1" value="306.000000"/>
 	   <constant name="backgem_z2" value="315.000000"/>
 	   <variable name="backgem_rmin1" value="105.000000"/>
-	   <constant name="backgem_rmax1" value="200.000000"/>
-	   <constant name="backgem_rmin2" value="115.000000"/>
-	   <constant name="backgem_rmax2" value="215.000000"/>
+	   <constant name="backgem_rmax1" value="230.000000"/>
+	   <constant name="backgem_rmin2" value="109.000000"/>
+	   <constant name="backgem_rmax2" value="237.000000"/>
         </define>
         <materials>
 	   <material Z="1" name="Vacuum" state="gas">
