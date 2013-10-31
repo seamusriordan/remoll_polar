@@ -4,6 +4,7 @@
 
     <define>
 	<constant name="targetz" value="10.0"/>
+	<!-- <constant name="targetz" value="0.0"/> -->
 	<constant name="entwinthick" value="0.0125"/>
 	<constant name="extwinthick" value="0.0125"/>
 
