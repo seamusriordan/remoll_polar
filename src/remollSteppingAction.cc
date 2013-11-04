@@ -13,6 +13,7 @@ remollSteppingAction::remollSteppingAction()
 ///  new remollSteppingActionMessenger(this);
 
     fEnableKryptonite = true;
+    Energy_cut = 0.1*MeV;
 
     fKryptoniteThresh = 5.0*g/cm3;
 }
@@ -28,6 +29,9 @@ void remollSteppingAction::UserSteppingAction(const G4Step *aStep) {
     if(   material->GetName()=="Kryptonite" ){
 	fTrack->SetTrackStatus(fStopAndKill);
     }
+    //For killing trcks below a certain energy : rakitha Tue Oct 29 17:05:07 EDT 2013
+    if(fTrack->GetKineticEnergy() < Energy_cut )
+      fTrack->SetTrackStatus(fStopAndKill);
 }
 
 

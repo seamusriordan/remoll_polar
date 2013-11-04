@@ -14,16 +14,19 @@ class remollSteppingAction : public G4UserSteppingAction
     virtual void UserSteppingAction(const G4Step*);
 
     void SetEnableKryptonite(G4bool k){ fEnableKryptonite = k; }
+    void SetMinimumEnergyCut(G4double energycut){ Energy_cut = energycut;}
 
   private:
     G4bool drawFlag;
 
     G4bool fEnableKryptonite;
     G4double fKryptoniteThresh;
-
+    
+    G4double Energy_cut;
   public:
     inline void SetDrawFlag(G4bool val)
     { drawFlag = val; };
+
 };
 
 #endif//__REMOLLSTEPPINGACTION_HH

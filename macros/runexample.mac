@@ -1,8 +1,8 @@
 #  Example file
 
 # This must be called before initialize
-#/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
-/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
+/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 # This must be explicitly called
 /run/initialize
 
@@ -57,6 +57,10 @@
 # are always kryptonite
 #/remoll/likekryptonite   true
 
+#Below the this energy, the tracks are killed
+/remoll/minEnergyCut 0.1 MeV
+
+
 # Specify random number seed
 #/remoll/seed 123456
 
@@ -64,4 +68,4 @@
 #/remoll/filename remollout.root
 /remoll/filename remoll_dis_out_test2.root
 
-/run/beamOn 100000
+/run/beamOn 1000

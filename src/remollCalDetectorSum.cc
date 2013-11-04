@@ -11,6 +11,9 @@ remollCalDetectorSum::remollCalDetectorSum(int detid, int copyid){
     fY      = 0.0;
     fXsum   = 0.0;
     fYsum   = 0.0;
+    fDet_X  = 0.0;
+    fDet_Y  = 0.0;
+    fDet_Z  = 0.0;
 }
 
 remollCalDetectorSum::~remollCalDetectorSum(){
@@ -26,6 +29,9 @@ remollCalDetectorSum::remollCalDetectorSum(const remollCalDetectorSum &right) : 
     fY      = right.fY;
     fXsum   = right.fXsum;
     fYsum   = right.fYsum;
+    fDet_X  = right.fDet_X;
+    fDet_Y  = right.fDet_Y;
+    fDet_Z  = right.fDet_Z;
 }
 
 const remollCalDetectorSum& remollCalDetectorSum::operator =(const remollCalDetectorSum &right){

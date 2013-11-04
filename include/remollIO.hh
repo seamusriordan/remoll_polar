@@ -151,6 +151,9 @@ class remollIO {
 	Double_t fCalDetSum_photon[__IO_MAXHIT];
 	Double_t fCalDetSum_x[__IO_MAXHIT];
 	Double_t fCalDetSum_y[__IO_MAXHIT];
+        Double_t fCalDetPos_X[__IO_MAXHIT];
+        Double_t fCalDetPos_Y[__IO_MAXHIT];
+        Double_t fCalDetPos_Z[__IO_MAXHIT];
 
 };
 
