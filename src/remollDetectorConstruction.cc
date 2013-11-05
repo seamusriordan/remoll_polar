@@ -394,14 +394,14 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
 G4int remollDetectorConstruction::UpdateCopyNo(G4VPhysicalVolume* aVolume,G4int index){  
 
-  if (aVolume->GetLogicalVolume()->GetNoDaughters()==0 ){
+  //if (aVolume->GetLogicalVolume()->GetNoDaughters()==0 ){
       aVolume->SetCopyNo(index);
       index++;
-  }else {
+      //}else {
     for(int i=0;i<aVolume->GetLogicalVolume()->GetNoDaughters();i++){
       index = UpdateCopyNo(aVolume->GetLogicalVolume()->GetDaughter(i),index);
     }
-  }
+    //}
 
   return index;
 };

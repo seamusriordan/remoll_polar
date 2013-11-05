@@ -30,21 +30,31 @@ void remollCalDetector::Initialize(G4HCofThisEvent *){
 G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     G4bool badedep = false;
     G4int copyID = 0;
+    G4int ecal_id = 0;
+    G4int ecal_block_id = 0;
 
     // Get touchable volume info
     G4TouchableHistory *hist = 
 	(G4TouchableHistory*)(step->GetPreStepPoint()->GetTouchable());
-    G4TouchableHandle theTouchable = step->GetPreStepPoint()->GetTouchableHandle();
+    //G4TouchableHandle theTouchable = step->GetPreStepPoint()->GetTouchableHandle();
     G4StepPoint *prestep = step->GetPreStepPoint();
     G4Track     *track   = step->GetTrack();
 
     G4double edep = step->GetTotalEnergyDeposit();
     
+    
+    /*
+      Due to the geometrical design of the ecal, the copy id is not unique. This is due to one fraction of the ecal is first generated and then it is repeated along the X-Y plane. The copy id for ecal blocks within the first generated fraction (ecal_block_id) is unique. This id is then repeated in the other ecal blocks  (ecal_id). Therefore, ecal_id and ecal_block_id are both required to extract an unique id (copyID). In each ecal block there are 389 volumes with unique ids. There are 3461 ecal blocks in the ecal detector.
+      : Rakitha Tue Nov  5 09:19:01 EST 2013
+     */
+    ecal_block_id = (hist->GetVolume(1)->GetCopyNo() - 35)/390;
+    ecal_id = (hist->GetVolume()->GetCopyNo() - 1349045);
+
+    copyID =  (ecal_block_id - 1) * 390 + ecal_id;
+
     //Folowing method is needed to access translation vectors of the physical volumes. Only Z is translated at each physical volume
     //But this physical volume is then placed at various X/Y locations of a mother volume. 
-    //Therefore translation X/Y are taken from that mother volume.
-    copyID = hist->GetVolume()->GetCopyNo();
-    
+    //Therefore translation X/Y are taken from that mother volume.    
 
     G4double tr_xpos = hist->GetVolume(1)->GetTranslation().x();//Get X from the mother volume
     G4double tr_ypos = hist->GetVolume(1)->GetTranslation().y();//Get Y from the mother volume
@@ -52,16 +62,16 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
 
     
     //debug code commented out : rakitha Tue Oct 29 13:04:08 EDT 2013
-    /*
-    if (copyID){
+    /*   
+    if (copyID){ 
     G4cout << "*************************** "<< G4endl;
-    G4cout << "copyID " << copyID << G4endl;
+    G4cout << "Mother copyID [" << hist->GetVolume(1)->GetCopyNo() << "]->copyID :" << copyID << G4endl;
     G4cout << "tr_xpos " << tr_xpos<< G4endl;
     G4cout << "tr_ypos " << tr_ypos<< G4endl;
     G4cout << "tr_zpos " << tr_zpos<< G4endl;
    G4cout << "*************************** "<< G4endl;
     }
-    */
+    */   
     
 
     //  Get pointer to our sum  /////////////////////////
