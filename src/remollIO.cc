@@ -133,8 +133,14 @@ void remollIO::InitializeTree(){
     fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[sum.n]/I");
     fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[sum.n]/D");
     fTree->Branch("cal.phot", &fCalDetSum_photon, "cal.phot[sum.n]/D");
-    fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[sum.n]/I");
+    fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[sum.n]/D");
     fTree->Branch("cal.y",    &fCalDetSum_y,    "cal.y[sum.n]/D");
+    fTree->Branch("cal.det_x",    &fCalDetPos_X,    "cal.det_x[sum.n]/D");
+    fTree->Branch("cal.det_y",    &fCalDetPos_Y,    "cal.det_y[sum.n]/D");
+    fTree->Branch("cal.det_z",    &fCalDetPos_Z,    "cal.det_z[sum.n]/D");
+
+
+    
 
     return;
 }
@@ -152,6 +158,7 @@ void remollIO::Flush(){
     //  Set arrays to 0
     fNGenDetHit = 0;
     fNGenDetSum = 0;
+    fNCalDetSum = 0;
 }
 
 void remollIO::WriteTree(){
@@ -309,7 +316,7 @@ void remollIO::AddGenericDetectorSum(remollGenericDetectorSum *hit){
 void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     int n = fNCalDetSum;
     if( n >= __IO_MAXHIT ){
-//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+	G4cerr << "remollIO::WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 
@@ -319,6 +326,10 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     fCalDetSum_id[n]   = hit->fCopyID;
     fCalDetSum_x[n]    = hit->fX;
     fCalDetSum_y[n]    = hit->fY;
+    //Adding ecal block phys volume location for each hit : rakitha Tue Oct 29 13:30:01 EDT 2013
+    fCalDetPos_X[n]     = hit->fDet_X;
+    fCalDetPos_Y[n]     = hit->fDet_Y;
+    fCalDetPos_Z[n]     = hit->fDet_Z;
 
     fNCalDetSum++;
 }

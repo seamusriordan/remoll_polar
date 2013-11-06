@@ -60,6 +60,10 @@ remollMessenger::remollMessenger(){
     kryptCmd->SetGuidance("Treat heavy mats as kryptonite");
     kryptCmd->SetParameterName("krypt", false);
 
+    trackEnergyCutCmd = new G4UIcmdWithADoubleAndUnit("/remoll/minEnergyCut",this);
+    trackEnergyCutCmd->SetGuidance("Minimum Energy below which tracks are killed");
+    trackEnergyCutCmd->SetParameterName("minEnergyCut", false);
+
     opticalCmd = new G4UIcmdWithABool("/remoll/optical",this);
     opticalCmd->SetGuidance("Enable optical physics");
     opticalCmd->SetParameterName("optical", false);
@@ -188,6 +192,10 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
     if( cmd == kryptCmd ){
 	G4bool krypt = kryptCmd->GetNewBoolValue(newValue);
 	fStepAct->SetEnableKryptonite(krypt);
+    } 
+    if( cmd == trackEnergyCutCmd ){
+        G4double minecut = trackEnergyCutCmd->GetNewDoubleValue(newValue);
+	fStepAct->SetMinimumEnergyCut(minecut);
     }
     if( cmd == physListCmd ){
       G4cout << "remollMessenger :: Setting physics list to " << newValue << G4endl;

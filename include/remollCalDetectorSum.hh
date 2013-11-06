@@ -24,7 +24,9 @@ class remollCalDetectorSum : public G4VHit {
 	G4double fEdep;
 	G4double fPhoton;
 	G4double fX, fY;
+        G4double fDet_X, fDet_Y, fDet_Z;
 	G4double fXsum, fYsum;
+  
 };
 
 

@@ -77,6 +77,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
     worldVolume = fGDMLParser->GetWorldVolume();
     
+
     std::vector<G4LogicalVolume *> targvols;
     G4LogicalVolume * mtargvol = NULL;
 
@@ -158,6 +159,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
   }
 //  G4cout << G4endl<< G4endl;
 
+  
 
   //====================================================
   // Associate target volumes with beam/target class
@@ -240,7 +242,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
     G4bool neednewdet;
 
-    for( iter  = auxmap->begin(); iter != auxmap->end(); iter++) {
+    for( iter  = auxmap->begin(); iter != auxmap->end(); iter++) { //this loop over logical volumes where auxtype=sensdet not over the phyvols where logical volumes are placed : rakitha Wed Sep 25 17:57:31 EDT 2013
 	G4LogicalVolume* myvol = (*iter).first;
 	//      G4cout << "Volume " << myvol->GetName() << G4endl;
 
@@ -260,12 +262,19 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 			    G4cerr << "Volume " << myvol->GetName() << " given " << det_no << " but __MAX_DETS is " << __MAX_DETS << G4endl;
 			    exit(1);
 			}
+
 			if( useddetnums[det_no] ){
 			    neednewdet = false;
 			}
 			useddetnums[det_no] = true;
 		    }
 		}
+		if (det_type == "Cal"){
+		  G4cout << "  Sensitive detector " << det_type
+			 << " for volume " << myvol->GetName() << " det id " << det_no
+			 <<  G4endl << G4endl;		  
+		}
+
 		if( det_no <= 0 ){
 		    k = 1;
 		    while( useddetnums[k] == true && k < __MAX_DETS ){ k++; }
@@ -295,12 +304,15 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
 		    if ((*vit).value == "Cal"){
 			thisdet = new remollCalDetector(detectorname, det_no);
+			G4cout << "  Creating sensitive detector " << det_type
+			       << " for volume " << myvol->GetName() << " det id " << det_no
+			<<  G4endl << G4endl;
 		    } else {
 			thisdet = new remollGenericDetector(detectorname, det_no);
 		    }
 		    /*
 		    G4cout << "  Creating sensitive detector " << det_type
-			<< " for volume " << myvol->GetName()
+			<< " for volume " << myvol->GetName() << " det id " << det_no
 			<<  G4endl << G4endl;
 			*/
 		    SDman->AddNewDetector(thisdet);
@@ -364,11 +376,57 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     exit(1);
     */
 
-    G4cout << G4endl << "###### Leaving remollDetectorConstruction::Read() " << G4endl << G4endl;
+    
+    UpdateCopyNo(worldVolume,1); 
+    
+    
+    G4cout << G4endl << "Geometry tree: " << G4endl << G4endl;
+    //commented out to save terminal output length 
+    //DumpGeometricalTree(worldVolume);   
+
+    G4cout << G4endl << "###### Leaving remollDetectorConstruction::Construct() " << G4endl << G4endl;
+
+
+    
 
     return worldVolume;
 }
 
+G4int remollDetectorConstruction::UpdateCopyNo(G4VPhysicalVolume* aVolume,G4int index){  
+
+  //if (aVolume->GetLogicalVolume()->GetNoDaughters()==0 ){
+      aVolume->SetCopyNo(index);
+      index++;
+      //}else {
+    for(int i=0;i<aVolume->GetLogicalVolume()->GetNoDaughters();i++){
+      index = UpdateCopyNo(aVolume->GetLogicalVolume()->GetDaughter(i),index);
+    }
+    //}
+
+  return index;
+};
+
+
+
+
+void remollDetectorConstruction::DumpGeometricalTree(G4VPhysicalVolume* aVolume,G4int depth)
+{
+  for(int isp=0;isp<depth;isp++)
+  { G4cout << "  "; }
+  //aVolume->SetCopyNo(1);
+  G4cout << aVolume->GetName() << "[" << aVolume->GetCopyNo() << "] "
+         << aVolume->GetLogicalVolume()->GetName() << " "
+         << aVolume->GetLogicalVolume()->GetNoDaughters() << " "
+         << aVolume->GetLogicalVolume()->GetMaterial()->GetName();
+  if(aVolume->GetLogicalVolume()->GetSensitiveDetector())
+  {
+    G4cout << " " << aVolume->GetLogicalVolume()->GetSensitiveDetector()
+                            ->GetFullPathName();
+  }
+  G4cout << G4endl;
+  for(int i=0;i<aVolume->GetLogicalVolume()->GetNoDaughters();i++)
+  { DumpGeometricalTree(aVolume->GetLogicalVolume()->GetDaughter(i),depth+1); }
+}
 
 void remollDetectorConstruction::CreateGlobalMagneticField() {
     fGlobalField = new remollGlobalField();
