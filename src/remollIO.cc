@@ -158,6 +158,7 @@ void remollIO::Flush(){
     //  Set arrays to 0
     fNGenDetHit = 0;
     fNGenDetSum = 0;
+    fNCalDetSum = 0;
 }
 
 void remollIO::WriteTree(){
@@ -315,7 +316,7 @@ void remollIO::AddGenericDetectorSum(remollGenericDetectorSum *hit){
 void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     int n = fNCalDetSum;
     if( n >= __IO_MAXHIT ){
-//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+	G4cerr << "remollIO::WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 
