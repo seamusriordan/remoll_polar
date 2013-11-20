@@ -120,6 +120,7 @@ set(REMOLL_SCRIPTS
     geometry_pvdis/backgems.gdml
     geometry_pvdis/gembaffles.gdml
     geometry_pvdis/gembaffles_5cm_inner.gdml
+    geometry_pvdis/gembaffles_babarmore1.gdml
     geometry_pvdis/cerenkov.gdml
     geometry_pvdis/gencerenkov.py
     geometry_pvdis/genbackgems.py
