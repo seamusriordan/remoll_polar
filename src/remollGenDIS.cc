@@ -7,6 +7,10 @@
 #include "G4Material.hh"
 
 #include "remolltypes.hh"
+/*
+// not required any more rakitha - Wed Nov 20 16:56:30 EST 2013
+#include "remollBeamTarget.hh"
+*/
 
 ////////////////////////////////////////////////////////
 #include "cteq/cteqpdf.h"
@@ -42,7 +46,7 @@ remollGenDIS::~remollGenDIS(){
 void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     // Generate inelastic event
 
-    double beamE = vert->GetBeamE();
+    double beamE = vert->GetBeamE();//generic beam energy uncorrected for rad-loss remollBeamTarget::GetBeamTarget()->fBeamE; //rakitha - Wed Nov 20 16:56:30 EST 2013
     double mp    = proton_mass_c2;
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
