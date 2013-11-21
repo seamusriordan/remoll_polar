@@ -65,6 +65,7 @@ class remollIO {
     public:
 	void SetEventData(remollEvent *);
     private:
+        Int_t fEv_num;
 	Int_t fNEvPart;
 
 	Double_t fEvRate;

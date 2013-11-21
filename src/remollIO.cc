@@ -29,7 +29,7 @@ remollIO::remollIO(){
     InitializeTree();
     // Default filename
     strcpy(fFilename, "remollout.root");
-
+    fEv_num=0;//set event number zero at the beginning Rakitha Wed Nov 20 17:20:02 EST 2013
     fFile = NULL;
 }
 
@@ -67,6 +67,7 @@ void remollIO::InitializeTree(){
     fTree->Branch("ev.xbj",    &fEvXbj,     "ev.xbj/D");
     fTree->Branch("ev.thcom", &fEvThCoM,  "ev.thcom/D");
     fTree->Branch("ev.beamp",  &fEvBeamP,   "ev.beamp/D");
+    fTree->Branch("ev.evnum",  &fEv_num,   "ev.evnum/I");
 
     fTree->Branch("ev.npart", &fNEvPart   ,     "ev.npart/I");
     fTree->Branch("ev.pid",   &fEvPID,      "ev.pid[ev.npart]/I");
@@ -129,17 +130,17 @@ void remollIO::InitializeTree(){
     
     // CalDetectorSum
     fTree->Branch("cal.n",    &fNCalDetSum,     "cal.n/I");
-    fTree->Branch("cal.det",  &fCalDetSum_det,  "cal.det[sum.n]/I");
-    fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[sum.n]/I");
-    fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[sum.n]/D");
-    fTree->Branch("cal.phot", &fCalDetSum_photon, "cal.phot[sum.n]/D");
-    fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[sum.n]/D");
-    fTree->Branch("cal.y",    &fCalDetSum_y,    "cal.y[sum.n]/D");
-    fTree->Branch("cal.det_x",    &fCalDetPos_X,    "cal.det_x[sum.n]/D");
-    fTree->Branch("cal.det_y",    &fCalDetPos_Y,    "cal.det_y[sum.n]/D");
-    fTree->Branch("cal.det_z",    &fCalDetPos_Z,    "cal.det_z[sum.n]/D");
+    fTree->Branch("cal.det",  &fCalDetSum_det,  "cal.det[cal.n]/I");
+    fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[cal.n]/I");
+    fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[cal.n]/D");
+    fTree->Branch("cal.phot", &fCalDetSum_photon, "cal.phot[cal.n]/D");
+    fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[cal.n]/D");
+    fTree->Branch("cal.y",    &fCalDetSum_y,    "cal.y[cal.n]/D");
+    fTree->Branch("cal.det_x",    &fCalDetPos_X,    "cal.det_x[cal.n]/D");
+    fTree->Branch("cal.det_y",    &fCalDetPos_Y,    "cal.det_y[cal.n]/D");
+    fTree->Branch("cal.det_z",    &fCalDetPos_Z,    "cal.det_z[cal.n]/D");
 
-
+    fEv_num=0;//set event number zero at the beginning Rakitha Wed Nov 20 17:20:02 EST 2013
     
 
     return;
@@ -202,7 +203,7 @@ void remollIO::SetEventData(remollEvent *ev){
 //	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
-
+    fEv_num++; //increment the event counter Rakitha Wed Nov 20 17:20:02 EST 2013
     fNEvPart = n;
 
     fEvRate   = ev->fRate*s;
