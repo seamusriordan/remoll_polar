@@ -14,6 +14,7 @@ remollGenericDetectorHit::remollGenericDetectorHit(G4int det, G4int copy){
     fP  = -1.0;
     fE  = -1.0;
     fM  = -1.0;
+    fT  = -1.0;
 
     fTrID  = -1;
     fPID   = (G4int) 1e9;
@@ -38,6 +39,7 @@ remollGenericDetectorHit::remollGenericDetectorHit(const remollGenericDetectorHi
     fP      = right.fP;
     fE      = right.fE;
     fM      = right.fM;
+    fT      = right.fT;
 
     fTrID   = right.fTrID;
     fPID    = right.fPID;

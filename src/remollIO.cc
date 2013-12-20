@@ -105,6 +105,7 @@ void remollIO::InitializeTree(){
     fTree->Branch("hit.y",    &fGenDetHit_Y,   "hit.y[hit.n]/D");
     fTree->Branch("hit.z",    &fGenDetHit_Z,   "hit.z[hit.n]/D");
     fTree->Branch("hit.r",    &fGenDetHit_R,   "hit.r[hit.n]/D");
+    fTree->Branch("hit.t",    &fGenDetHit_T,   "hit.t[hit.n]/D");
 
     fTree->Branch("hit.px",   &fGenDetHit_Px,   "hit.px[hit.n]/D");
     fTree->Branch("hit.py",   &fGenDetHit_Py,   "hit.py[hit.n]/D");
@@ -136,6 +137,10 @@ void remollIO::InitializeTree(){
     fTree->Branch("cal.phot", &fCalDetSum_photon, "cal.phot[cal.n]/D");
     fTree->Branch("cal.x",    &fCalDetSum_x,    "cal.x[cal.n]/D");
     fTree->Branch("cal.y",    &fCalDetSum_y,    "cal.y[cal.n]/D");
+    fTree->Branch("cal.st",    &fCalDetSum_starttime,    "cal.st[cal.n]/D");
+    fTree->Branch("cal.et",    &fCalDetSum_endtime,    "cal.et[cal.n]/D");
+    
+
     fTree->Branch("cal.det_x",    &fCalDetPos_X,    "cal.det_x[cal.n]/D");
     fTree->Branch("cal.det_y",    &fCalDetPos_Y,    "cal.det_y[cal.n]/D");
     fTree->Branch("cal.det_z",    &fCalDetPos_Z,    "cal.det_z[cal.n]/D");
@@ -275,7 +280,7 @@ void remollIO::AddGenericDetectorHit(remollGenericDetectorHit *hit){
     fGenDetHit_Y[n]  = hit->f3X.y()/__L_UNIT;
     fGenDetHit_Z[n]  = hit->f3X.z()/__L_UNIT;
     fGenDetHit_R[n]  = sqrt(hit->f3X.x()*hit->f3X.x()+hit->f3X.y()*hit->f3X.y())/__L_UNIT;
-
+    
     fGenDetHit_Px[n]  = hit->f3P.x()/__E_UNIT;
     fGenDetHit_Py[n]  = hit->f3P.y()/__E_UNIT;
     fGenDetHit_Pz[n]  = hit->f3P.z()/__E_UNIT;
@@ -291,6 +296,7 @@ void remollIO::AddGenericDetectorHit(remollGenericDetectorHit *hit){
     fGenDetHit_P[n]  = hit->fP/__E_UNIT;
     fGenDetHit_E[n]  = hit->fE/__E_UNIT;
     fGenDetHit_M[n]  = hit->fM/__E_UNIT;
+    fGenDetHit_T[n]  = hit->fT/__T_UNIT;
 
     fNGenDetHit++;
 }
@@ -325,12 +331,16 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     fCalDetSum_photon[n] = hit->fPhoton;
     fCalDetSum_det[n]  = hit->fDetID;
     fCalDetSum_id[n]   = hit->fCopyID;
-    fCalDetSum_x[n]    = hit->fX;
-    fCalDetSum_y[n]    = hit->fY;
+    fCalDetSum_x[n]    = hit->fX/__L_UNIT;
+    fCalDetSum_y[n]    = hit->fY/__L_UNIT;
+    //Adding start and end time for ecal block in each event
+    fCalDetSum_starttime[n] = hit->ffT/__T_UNIT;
+    fCalDetSum_endtime[n] = hit->flT/__T_UNIT;
+
     //Adding ecal block phys volume location for each hit : rakitha Tue Oct 29 13:30:01 EDT 2013
-    fCalDetPos_X[n]     = hit->fDet_X;
-    fCalDetPos_Y[n]     = hit->fDet_Y;
-    fCalDetPos_Z[n]     = hit->fDet_Z;
+    fCalDetPos_X[n]     = hit->fDet_X/__L_UNIT;
+    fCalDetPos_Y[n]     = hit->fDet_Y/__L_UNIT;
+    fCalDetPos_Z[n]     = hit->fDet_Z/__L_UNIT;
 
     fNCalDetSum++;
 }

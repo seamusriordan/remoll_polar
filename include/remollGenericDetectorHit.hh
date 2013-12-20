@@ -28,8 +28,8 @@ class remollGenericDetectorHit : public G4VHit {
 	// Position and momentum in lab coordinates
 	G4ThreeVector f3X;
 	G4ThreeVector f3P;
-	// Total momentum, energy, mass
-	G4double fP, fE, fM;
+	// Total momentum, energy, mass, and time of hit
+  G4double fP, fE, fM, fT;
 	// Origin
 	G4ThreeVector f3V;
 	G4ThreeVector f3D;

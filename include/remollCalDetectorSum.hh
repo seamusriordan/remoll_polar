@@ -23,7 +23,7 @@ class remollCalDetectorSum : public G4VHit {
 	G4int    fCopyID;
 	G4double fEdep;
 	G4double fPhoton;
-	G4double fX, fY;
+        G4double fX, fY, ffT, flT;//ffT is time of the first hit on the cal block flT is time of the last hit in each event
         G4double fDet_X, fDet_Y, fDet_Z;
 	G4double fXsum, fYsum;
   
