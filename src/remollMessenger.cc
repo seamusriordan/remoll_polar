@@ -204,15 +204,17 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
     }
 
     if( cmd == opticalCmd ){
-
-//        G4cerr << __FILE__ << " line " << __LINE__ <<  ": FIXME:  Optical photons are always on, this command does nothing" << G4endl;
-//	exit(1);
+      //G4cerr << __FILE__ << " line " << __LINE__ <<  ": FIXME:  Optical photons are on" << G4endl;
 	G4bool optical = opticalCmd->GetNewBoolValue(newValue);
+	fPhysicsList->SetOpticalPhysics(optical);
+	/*
+//If I do this way, I don't see remollOpticalPhysics::ConstructProcess() routine get called. Something could be wrong Therefore I'm called remollOpticalPhysics routines in the remollPhysicsList class: Rakitha Mon Dec 30 00:03:13 EST 2013
 	if( optical ){
 	    fPhysicsList->RegisterPhysics( new remollOpticalPhysics() );
 	} else {
 	    fPhysicsList->RemovePhysics("Optical");
 	}
+	*/
 
     }
 

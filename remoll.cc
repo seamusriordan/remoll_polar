@@ -27,6 +27,7 @@
 //  Standard physics list
 #include "LHEP.hh"
 #include "G4PhysListFactory.hh"
+#include "G4HadronicProcessStore.hh"
 #include "G4RunManager.hh"
 
 #include "G4UnitsTable.hh"
@@ -93,18 +94,21 @@ int main(int argc, char** argv){
     G4PhysListFactory factory;
     G4String physName = "";
     remollPhysicsList *phys = new remollPhysicsList();
-
+    /*
     G4VModularPhysicsList* physlist;
     //Physics List is hard coded to QGSP_BERT
     physlist = factory.GetReferencePhysList("QGSP_BERT");
     physlist->SetVerboseLevel(verbose);
     runManager->SetUserInitialization(physlist);
-
-    /*
-    // Physics List updated via the macro. This feature is working but disabled till more testing is done to compare with the results when physics list from factory.GetReferencePhysList("QGSP_BERT") is used. Rakitha Thu Oct  3 09:16:58 EDT 2013
+    G4HadronicProcessStore::Instance()->SetVerbose(2);
+    */
+    
+    // Physics List updated via the macro.  Rakitha Mon Dec 30 00:25:54 EST 2013
     rmmess->SetPhysList(phys);
     runManager->SetUserInitialization(phys);
-    */
+    //use this option to increase the verbose level for hadronic process information
+    //G4HadronicProcessStore::Instance()->SetVerbose(2);
+    
 
     /*    
     // Physics List name defined via environment variable : currently disabled - rakitha Thu Oct  3 09:09:16 EDT 2013
