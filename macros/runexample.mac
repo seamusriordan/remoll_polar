@@ -7,6 +7,7 @@
 #/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 
 #Adding physics list must be called before initialze command
+#supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
 /remoll/setphysicslist QGSP_BERT_EMV
 #EM only physics list options (emstandard_opt0 emstandard_opt1 emstandard_opt2 emstandard_opt3)
 #/remoll/setphysicslist emstandard_opt1
