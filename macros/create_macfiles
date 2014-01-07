@@ -1,0 +1,20 @@
+#!/bin/bash
+# Authors : Rakitha Beminiwattha
+# Tue Jan  7 14:11:24 EST 2014
+
+echo -e "received arguments >$*<"
+echo " creating mac files for runs "$1" to "$2
+
+ 
+
+run1=$1;
+run2=$2;
+
+##use double quotes so the shell can substitute variables in std. sed command we use single quotes ref - http://stackoverflow.com/questions/7033860/bash-script-using-sed-with-variables-in-a-for-loop
+for ((c=$1; c<=$2; c++))
+  do
+     echo "Run-$c"
+     scp ./run_beam_e_1.mac ./run_beam_e_$c.mac
+     sed -i "s/remoll_babarmore1_beam_e_LD_10M_1_new.root/remoll_babarmore1_beam_e_LD_10M_${c}_new.root/g" ./run_beam_e_$c.mac
+  done 
+
