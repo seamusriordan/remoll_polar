@@ -79,6 +79,7 @@
 #include "HadronPhysicsQGSP_FTFP_BERT.hh"
 #include "HadronPhysicsQGS_BIC.hh"
 
+
 #include "G4IonPhysics.hh"
 
 #include "G4LossTableManager.hh"
@@ -90,6 +91,8 @@
 #include "G4Electron.hh"
 #include "G4Positron.hh"
 #include "G4Proton.hh"
+
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
 
@@ -105,11 +108,15 @@ remollPhysicsList::remollPhysicsList() : G4VModularPhysicsList()
 
   //pMessenger = new PhysicsListMessenger(this);
 
-  // Particles
-  particleList = new G4DecayPhysics("decays");
+  // To create all the  particles necessary for simulation use G4DecayPhysics::ConstructParticle routine construct following particles : Bosons,Leptons, Mesons, Baryons, Ions, and short lived particles
+  particleList = new G4DecayPhysics("decays"); 
 
   // EM physics
-  emPhysicsList = new G4EmStandardPhysics(verboseLevel);
+  emPhysicsList = new G4EmStandardPhysics(verboseLevel);  
+
+  //Optical Physics
+  opPhysicsList = new remollOpticalPhysics();
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
@@ -122,31 +129,50 @@ remollPhysicsList::~remollPhysicsList()
   for(size_t i=0; i<hadronPhys.size(); i++) {
     delete hadronPhys[i];
   }
+  delete opPhysicsList;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
 
 void remollPhysicsList::ConstructParticle()
 {
+  //G4DecayPhysics::ConstructParticle routine construct following particles : Bosons,Leptons, Mesons, Baryons, Ions, and short lived particles
   particleList->ConstructParticle();
+
+  //Optical Physics
+  if (OpticalPhysics)
+    opPhysicsList->ConstructParticle();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
 
 void remollPhysicsList::ConstructProcess()
 {
+  //method provided by G4VUserPhysicsList assigns transportaion process to all parIcles defined in ConstructParIcle()
   AddTransportation();
-  emPhysicsList->ConstructProcess();
+  if (verboseLevel>0) {
+    G4cout << "PhysicsList::ConstructProcess() " << G4endl;
+  }
+  if (emPhysicsList){
+    emPhysicsList->ConstructProcess();
+  }
   particleList->ConstructProcess();
   for(size_t i=0; i<hadronPhys.size(); i++) {
     hadronPhys[i]->ConstructProcess();
   }
+  //Optical Physics
+  if (OpticalPhysics)
+    opPhysicsList->ConstructProcess();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
 
 void remollPhysicsList::AddPhysicsList(const G4String& name)
 {
+  if (verboseLevel>0) {
+    G4cout << "PhysicsList::AddPhysicsList() " << G4endl;
+  }
+
   if (verboseLevel>0) {
     G4cout << "PhysicsList::AddPhysicsList: <" << name << ">" << G4endl;
   }
@@ -181,7 +207,6 @@ void remollPhysicsList::AddPhysicsList(const G4String& name)
     AddPhysicsList("FTFP_BERT");
 
   } else if (name == "FTFP_BERT") {
-
     SetBuilderList1();
     hadronPhys.push_back( new HadronPhysicsFTFP_BERT());
 
@@ -219,11 +244,9 @@ void remollPhysicsList::AddPhysicsList(const G4String& name)
     hadronPhys.push_back( new HadronPhysicsQGSP());
 
   } else if (name == "QGSP_BERT") {
-    G4VPhysicsConstructor * physConst = new HadronPhysicsQGSP_BERT(verboseLevel);
-    //physConst->SetVerboseLevel(verboseLevel);
+
     SetBuilderList1();
-    //hadronPhys.push_back( new HadronPhysicsQGSP_BERT());
-    hadronPhys.push_back(physConst);
+    hadronPhys.push_back( new HadronPhysicsQGSP_BERT());
 
   } else if (name == "QGSP_FTFP_BERT") {
 
@@ -270,12 +293,19 @@ void remollPhysicsList::AddPhysicsList(const G4String& name)
     SetBuilderList0(true);
     hadronPhys.push_back( new HadronPhysicsQGSP_BIC_HP());
 
+  } else if (name == "QGSP_BERT_HO") {//add only hadronic processes
+    if (verboseLevel>0) {
+      G4cout << "Debug remollPhysicsList::AddPhysicsList - Setting physics list to hadronic only : QGSP_BERT_EMV " << G4endl;
+    }
+    delete emPhysicsList;
+    AddPhysicsList("QGSP_BERT");
   } else {
 
     G4cout << "remollPhysicsList::AddPhysicsList: <" << name << ">"
            << " is not defined"
            << G4endl;
   }
+  //RegisterPhysics( new remollOpticalPhysics() );
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....

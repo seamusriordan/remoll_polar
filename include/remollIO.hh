@@ -118,6 +118,7 @@ class remollIO {
 	Double_t fGenDetHit_Y[__IO_MAXHIT];
 	Double_t fGenDetHit_Z[__IO_MAXHIT];
 	Double_t fGenDetHit_R[__IO_MAXHIT];
+        Double_t fGenDetHit_T[__IO_MAXHIT];
 
 	Double_t fGenDetHit_Px[__IO_MAXHIT];
 	Double_t fGenDetHit_Py[__IO_MAXHIT];
@@ -155,7 +156,8 @@ class remollIO {
         Double_t fCalDetPos_X[__IO_MAXHIT];
         Double_t fCalDetPos_Y[__IO_MAXHIT];
         Double_t fCalDetPos_Z[__IO_MAXHIT];
-
+        Double_t fCalDetSum_starttime[__IO_MAXHIT];
+        Double_t fCalDetSum_endtime[__IO_MAXHIT];
 };
 
 #endif//remollIO_HH

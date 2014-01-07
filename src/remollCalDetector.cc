@@ -41,7 +41,8 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     G4Track     *track   = step->GetTrack();
 
     G4double edep = step->GetTotalEnergyDeposit();
-    
+    G4double globaltime_firsthit = 0;//step->GetPreStepPoint()->GetGlobalTime();
+    G4double globaltime = step->GetPreStepPoint()->GetGlobalTime();
     
     /*
       Due to the geometrical design of the ecal, the copy id is not unique. This is due to one fraction of the ecal is first generated and then it is repeated along the X-Y plane. The copy id for ecal blocks within the first generated fraction (ecal_block_id) is unique. This id is then repeated in the other ecal blocks  (ecal_id). Therefore, ecal_id and ecal_block_id are both required to extract an unique id (copyID). In each ecal block there are 389 volumes with unique ids. There are 3461 ecal blocks in the ecal detector.
@@ -80,8 +81,18 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     if( !fSumMap.count(copyID) ){
 	if( edep > 0.0 ){
 	    thissum = new remollCalDetectorSum(fDetNo, copyID);
+	    /*
+	    G4cout << "*************************** "<< G4endl;
+	    G4cout << "Mother copyID [" << ecal_block_id << "] ["<<ecal_id <<"]->copyID :" << copyID << G4endl;
+	    G4cout << "tr_xpos " << tr_xpos<< G4endl;
+	    G4cout << "tr_ypos " << tr_ypos<< G4endl;
+	    G4cout << "tr_zpos " << tr_zpos<< G4endl;
+	    G4cout << "*************************** "<< G4endl;	    
+	    */
 	    fSumMap[copyID] = thissum;
 	    fSumColl->insert( thissum );
+	    //get the global time of the first hit on the ecal block
+	    globaltime_firsthit = step->GetPreStepPoint()->GetGlobalTime();
 	} else {
 	    badedep = true;
 	}
@@ -106,6 +117,18 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
 	thissum->fDet_X   = tr_xpos;
 	thissum->fDet_Y   = tr_ypos;
 	thissum->fDet_Z   = tr_zpos;
+
+	//set the global time of the first hit into this cal detector
+	if (globaltime_firsthit!=0){
+	  thissum->ffT = globaltime_firsthit;
+	  thissum->flT = globaltime_firsthit;
+	} else { //update first hit time and last hit time for followup hits on the same cal block
+	  if (globaltime < thissum->ffT) 
+	  thissum->ffT = globaltime;
+	
+	  if  (globaltime > thissum->flT)
+	    thissum->flT = globaltime;
+	}
     }
 
     return !badedep;

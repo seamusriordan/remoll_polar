@@ -2,9 +2,24 @@
 
 # This must be called before initialize
 /remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_mycopy.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_krypto.gdml
 #/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
+
+#Adding physics list must be called before initialze command
+#supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
+/remoll/setphysicslist QGSP_BERT_EMV
+#EM only physics list options (emstandard_opt0 emstandard_opt1 emstandard_opt2 emstandard_opt3)
+#/remoll/setphysicslist emstandard_opt1
+#Hadronic only physics list options currently only support QGSP_BERT 
+#/remoll/setphysicslist QGSP_BERT_HO
+
+#Enable optical photons and processes (true or false)
+/remoll/optical false
+
 # This must be explicitly called
 /run/initialize
+
 
 # add field map
 /remoll/addfield CLEO_rm.dat
@@ -37,8 +52,10 @@
 /remoll/gen dis
 
 #/remoll/gen flat  # flat generator
-/remoll/thmin 0.0 deg
-/remoll/thmax 180.0 deg
+#/remoll/thmin 0.0 deg
+/remoll/thmin 10.0 deg
+/remoll/thmax 50.0 deg
+#/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
 /remoll/phmax 180.0 deg
 /remoll/emin  0 GeV
@@ -47,25 +64,27 @@
 /remoll/beamene 11.0 GeV
 /remoll/beamcurr 50 microampere
 
-#Enable optical photons and processes
-#  FIXME:   These are presently always on
-#/remoll/optical true
 
 # Make interactions with heavy materials
 # pure absorbers or not (on by default)
 # Materials explicity called Kryptonite 
 # are always kryptonite
-#/remoll/likekryptonite   true
+/remoll/likekryptonite false
 
 #Below the this energy, the tracks are killed
-/remoll/minEnergyCut 0 MeV
-
+/remoll/minEnergyCut 1 MeV
 
 # Specify random number seed
 #/remoll/seed 123456
 
+# no gamma interaction
+#/process/inactivate phot
+#/process/inactivate compt
+#/process/inactivate conv
+
+
+
 #  output filename
 #/remoll/filename remollout.root
-/remoll/filename remoll_dis_out_test2.root
-
-/run/beamOn 1000
+#/remoll/filename remoll_dis_out_test3.root
+/run/beamOn 100

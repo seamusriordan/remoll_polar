@@ -1,3 +1,7 @@
+/*
+See Geant4 example N06 for optical physics 
+ */
+
 #include "G4LossTableManager.hh"
 #include "G4EmSaturation.hh"
 
@@ -33,12 +37,12 @@ void remollOpticalPhysics::ConstructParticle()
 
 void remollOpticalPhysics::ConstructProcess()
 {
-    /*
 
-FIXME:  Add to verbosity responsiveness
-    G4cout << "remollOpticalPhysics:: Add Optical Physics Processes"
+
+  //FIXME:  Add to verbosity responsiveness
+    G4cout << "remollOpticalPhysics:: Added Optical Physics Processes"
            << G4endl;
-	   */
+
 
   theWLSProcess = new G4OpWLS();
 

@@ -45,8 +45,12 @@
 #include "G4VModularPhysicsList.hh"
 #include "globals.hh"
 
+#include "remollOpticalPhysics.hh"
+
 class G4VPhysicsConstructor;
 class PhysicsListMessenger;
+
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -60,6 +64,10 @@ public:
   void ConstructParticle();
     
   void SetCuts();
+
+  void SetOpticalPhysics(G4bool flagOP = false){
+    OpticalPhysics = flagOP;
+  };
   void SetCutForGamma(G4double);
   void SetCutForElectron(G4double);
   void SetCutForPositron(G4double);
@@ -70,6 +78,7 @@ public:
   void List();
   void SetVerboseLevel(G4int vbs = 0){
     verboseLevel=vbs;
+    G4VModularPhysicsList::SetVerboseLevel(verboseLevel);
   };
 
 private:
@@ -87,9 +96,12 @@ private:
 
   G4VPhysicsConstructor*  emPhysicsList;
   G4VPhysicsConstructor*  particleList;
+  remollOpticalPhysics*  opPhysicsList;
   std::vector<G4VPhysicsConstructor*>  hadronPhys;
     
   G4bool dump;
+  G4bool OpticalPhysics;
+
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

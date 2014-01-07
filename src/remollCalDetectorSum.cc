@@ -9,6 +9,8 @@ remollCalDetectorSum::remollCalDetectorSum(int detid, int copyid){
     fPhoton = 0.0;
     fX      = 0.0;
     fY      = 0.0;
+    ffT      = 0.0;
+    flT      = 0.0;
     fXsum   = 0.0;
     fYsum   = 0.0;
     fDet_X  = 0.0;
@@ -27,6 +29,8 @@ remollCalDetectorSum::remollCalDetectorSum(const remollCalDetectorSum &right) : 
     fPhoton = right.fPhoton;
     fX      = right.fX;
     fY      = right.fY;
+    ffT      = right.ffT;
+    flT      = right.flT;
     fXsum   = right.fXsum;
     fYsum   = right.fYsum;
     fDet_X  = right.fDet_X;
