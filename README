@@ -2,17 +2,18 @@
 
 Seamus Riordan
 riordan@jlab.org
-August 9, 2013
+January 7, 2014
 
 Repository information is here:
-http://solid.physics.umass.edu/remoll_solid.html
+
+https://github.com/JeffersonLab/remoll_solid
 
 ---------------------------------------------------
 
 
 Packages to build this:
 
->=Geant4.9.5
+>=Geant4.9.6
 cmake > 2.6
 root
 python
