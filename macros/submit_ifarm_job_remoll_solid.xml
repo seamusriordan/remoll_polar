@@ -1,0 +1,25 @@
+<Request>
+  <Email email="rakithab@jlab.org" request="false" job="true"/>
+  <Project name="solid"/>
+  <Track name="simulation"/>
+  <Name name="remoll_run_beam_e_10M_1_new"/>
+  <OS name="centos62"/>
+  <TimeLimit unit="minutes" time="4320"/>
+  <DiskSpace space="20300" unit="MB"/>
+  <Memory space="2048" unit="MB"/>
+  <Command><![CDATA[
+date
+whoami
+hostname
+cd /u/home/rakithab/SoLID/remoll_solid_new
+source /u/home/rakithab/SoLID/set_solid_env 
+build/remoll macros/run_beam_e_1.mac
+date
+  ]]></Command>
+
+  <Job>
+    <Stdout dest="/volatile/hallc/qweak/rakithab/solid/outputs/remoll_babarmore1_beam_e_LD_10M_1_new.out"/>
+    <Stderr dest="/volatile/hallc/qweak/rakithab/solid/outputs/remoll_babarmore1_beam_e_LD_10M_1_new.err"/>
+  </Job>
+ 
+</Request>
