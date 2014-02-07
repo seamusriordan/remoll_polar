@@ -126,6 +126,7 @@ void remollMagneticField::ReadFieldMap(){
 
     // open the field map file
     G4int nlines = 0;
+    // int nread;
     G4int cidx;
 
 #ifdef __USE_BOOST_IOSTREAMS
