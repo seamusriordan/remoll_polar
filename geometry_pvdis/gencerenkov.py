@@ -182,6 +182,9 @@ if mirrAng1 != 0.0:
     PosV1_cone   = PosV1_cone + PosV_deltaC
 
 PosV1_temp_CM = PosV1_temp
+
+
+
 RotPointV = TVector3( 0.0, PosV1.y() - sqrt(R*R - (zMirrRotPoint1 - PosV1.Z())*(zMirrRotPoint1 - PosV1.Z())), zMirrRotPoint1)
 
 cerhelp.calcIntPoints( R, PosV1_temp, PosV1_cone, 0.5*(Z1_end - Z1_front), R1_front_in, R1_front_out, R1_end_in, R1_end_out, -mirrAng1)
@@ -199,7 +202,7 @@ R2_front_out = Z2_front*tan(Angle_out2*pi/180);
 R2_end_in    = Z2_end*tan(Angle_in2*pi/180);
 R2_end_out   = Z2_end*tan(Angle_out2*pi/180);
 
-RposV = cerhelp.buildSPmirror( V0_tg_V, Pos_im_Obs_V, cr_ang2, Z_M1)
+RposV = cerhelp.buildSPmirror( V0_tg_V, Pos_im_Obs_V, cr_ang2, Z_M2)
 
 R = RposV[0]
 PosV2 = RposV[1]
@@ -478,16 +481,17 @@ print """         <cone name="cerwincone" aunit="deg" startphi="0" deltaphi="360
 print """         <cone name="cerpmtshield" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin1="%f" rmax1="%f" rmin2="%f" rmax2="%f" z="%f"/>""" % (sqrt(2.0)*(pmtN*PMT_width+0.5), sqrt(2.0)*(pmtN*PMT_width+1.0), sqrt(2.0)*(pmtN*PMT_width+0.5), sqrt(2.0)*(pmtN*PMT_width+1.0), pmt_shield_hlength*2)
 
 print """         <sphere name="cermirror1sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="%f" rmax="%f"/>""" % (mirror1R, mirror1R + T_M1 )
-print """         <cone name="cermirror1cone" aunit="deg" lunit="cm" rmin1="%f" rmax1="%f" rmin2="%f" rmax2="%f" z="%f" startphi="%f" deltaphi="%f"/>""" % ( R1_front_in, R1_front_out, R1_end_in, R1_end_out, 0.5*(Z1_end - Z1_front), 84, 12  )
+print """         <cone name="cermirror1cone" aunit="deg" lunit="cm" rmin1="%f" rmax1="%f" rmin2="%f" rmax2="%f" z="%f" startphi="%f" deltaphi="%f"/>""" % ( R1_front_in, R1_front_out, R1_end_in, R1_end_out, Z1_end - Z1_front, 84, 12  )
 print """         <intersection name="cermirror1">
 			<first ref="cermirror1sphere"/>
 			<second ref="cermirror1cone"/>
 			<position unit="cm" name="mirror1intpos" x="%f" y="%f" z="%f" />
 		        <rotation unit="deg" name="mirror1introt" x="%f" y="%f" z="%f" /> 
 		  </intersection>""" % (PosV1_cone.X()-PosV1_temp.X(), PosV1_cone.Y()-PosV1_temp.Y(), PosV1_cone.Z()-PosV1_temp.Z(), -mirrAng1, 0.0, 0.0 )
+
 		  
 print """         <sphere name="cermirror2sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="%f" rmax="%f"/>""" % (mirror2R, mirror2R + T_M2 )
-print """         <cone name="cermirror2cone" aunit="deg" lunit="cm" rmin1="%f" rmax1="%f" rmin2="%f" rmax2="%f" z="%f" startphi="%f" deltaphi="%f"/>""" % ( R2_front_in, R2_front_out, R2_end_in, R2_end_out, 0.5*(Z2_end - Z2_front), 84, 12  )
+print """         <cone name="cermirror2cone" aunit="deg" lunit="cm" rmin1="%f" rmax1="%f" rmin2="%f" rmax2="%f" z="%f" startphi="%f" deltaphi="%f"/>""" % ( R2_front_in, R2_front_out, R2_end_in, R2_end_out, Z2_end - Z2_front, 84, 12  )
 print """         <intersection name="cermirror2">
 			<first ref="cermirror2sphere"/>
 			<second ref="cermirror2cone"/>
@@ -634,8 +638,7 @@ for i in range(nsector):
                 </physvol>""" % (i, temp_pos_Vc.X(), temp_pos_Vc.Y(), temp_pos_Vc.Z() - cerz0, i, newrotangs[0], newrotangs[1], newrotangs[2] )
 
     #  Mirror
-    mir1pos = PosV1_temp_CM
-    mir1pos = mir_rotz*mir1pos
+    mir1pos = mir_rotz*PosV1_temp_CM
     mir2pos = mir_rotz*PosV2_temp_CM
 
 

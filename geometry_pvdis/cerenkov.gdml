@@ -159,19 +159,19 @@
          <cone name="cerwincone" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin1="7.800000" rmax1="8.300000" rmin2="21.000000" rmax2="21.500000" z="30.000000"/>
          <cone name="cerpmtshield" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin1="11.737973" rmax1="12.445079" rmin2="11.737973" rmax2="12.445079" z="20.000000"/>
          <sphere name="cermirror1sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="277.508746" rmax="277.808746"/>
-         <cone name="cermirror1cone" aunit="deg" lunit="cm" rmin1="73.385668" rmax1="147.372056" rmin2="86.861945" rmax2="174.434924" z="50.500000" startphi="84.000000" deltaphi="12.000000"/>
+         <cone name="cermirror1cone" aunit="deg" lunit="cm" rmin1="73.385668" rmax1="147.372056" rmin2="86.861945" rmax2="174.434924" z="101.000000" startphi="84.000000" deltaphi="12.000000"/>
          <intersection name="cermirror1">
 			<first ref="cermirror1sphere"/>
 			<second ref="cermirror1cone"/>
 			<position unit="cm" name="mirror1intpos" x="0.000000" y="-243.089240" z="247.033223" />
 		        <rotation unit="deg" name="mirror1introt" x="7.000000" y="0.000000" z="0.000000" /> 
 		  </intersection>
-         <sphere name="cermirror2sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="185.927274" rmax="186.227274"/>
-         <cone name="cermirror2cone" aunit="deg" lunit="cm" rmin1="120.113014" rmax1="148.444269" rmin2="183.962564" rmax2="227.354117" z="50.500000" startphi="84.000000" deltaphi="12.000000"/>
+         <sphere name="cermirror2sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="157.985221" rmax="158.285221"/>
+         <cone name="cermirror2cone" aunit="deg" lunit="cm" rmin1="120.113014" rmax1="148.444269" rmin2="183.962564" rmax2="227.354117" z="101.000000" startphi="84.000000" deltaphi="12.000000"/>
          <intersection name="cermirror2">
 			<first ref="cermirror2sphere"/>
 			<second ref="cermirror2cone"/>
-			<position unit="cm" name="mirror2intpos" x="0.000000" y="-224.376528" z="158.923922" />
+			<position unit="cm" name="mirror2intpos" x="0.000000" y="-202.908607" z="114.713632" />
 		        <rotation unit="deg" name="mirror2introt" x="-0.000000" y="0.000000" z="0.000000" /> 
 		  </intersection>
    <opticalsurface name="MirrorSurf" model="unified" finish="polished" type="dielectric_metal" value="1.0"/>
@@ -2481,7 +2481,7 @@
                 </physvol>
                 <physvol name="physcermirror2_00">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_00" x="0.000000" y="224.376528" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_00" x="0.000000" y="202.908607" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_00" x="0.000000" y="0.000000" z="0.000000"/>
                 </physvol>
                 <physvol>
@@ -2591,7 +2591,7 @@
                 </physvol>
                 <physvol name="physcermirror2_01">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_01" x="46.650503" y="219.473363" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_01" x="42.187072" y="198.474567" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_01" x="0.000000" y="0.000000" z="0.209440"/>
                 </physvol>
                 <physvol>
@@ -2701,7 +2701,7 @@
                 </physvol>
                 <physvol name="physcermirror2_02">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_02" x="91.262156" y="204.978158" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_02" x="82.530366" y="185.366236" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_02" x="0.000000" y="0.000000" z="0.418879"/>
                 </physvol>
                 <physvol>
@@ -2811,7 +2811,7 @@
                 </physvol>
                 <physvol name="physcermirror2_03">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_03" x="131.885214" y="181.524424" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_03" x="119.266687" y="164.156511" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_03" x="0.000000" y="0.000000" z="0.628319"/>
                 </physvol>
                 <physvol>
@@ -2921,7 +2921,7 @@
                 </physvol>
                 <physvol name="physcermirror2_04">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_04" x="166.744256" y="150.137202" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_04" x="150.790481" y="135.772359" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_04" x="0.000000" y="0.000000" z="0.837758"/>
                 </physvol>
                 <physvol>
@@ -3031,7 +3031,7 @@
                 </physvol>
                 <physvol name="physcermirror2_05">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_05" x="194.315773" y="112.188264" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_05" x="175.724008" y="101.454303" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_05" x="0.000000" y="0.000000" z="1.047198"/>
                 </physvol>
                 <physvol>
@@ -3141,7 +3141,7 @@
                 </physvol>
                 <physvol name="physcermirror2_06">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_06" x="213.394759" y="69.336160" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_06" x="192.977553" y="62.702208" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_06" x="0.000000" y="0.000000" z="1.256637"/>
                 </physvol>
                 <physvol>
@@ -3251,7 +3251,7 @@
                 </physvol>
                 <physvol name="physcermirror2_07">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_07" x="223.147370" y="23.453734" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_07" x="201.797052" y="21.209725" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_07" x="0.000000" y="0.000000" z="1.466077"/>
                 </physvol>
                 <physvol>
@@ -3361,7 +3361,7 @@
                 </physvol>
                 <physvol name="physcermirror2_08">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_08" x="223.147370" y="-23.453734" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_08" x="201.797052" y="-21.209725" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_08" x="0.000000" y="0.000000" z="1.675516"/>
                 </physvol>
                 <physvol>
@@ -3471,7 +3471,7 @@
                 </physvol>
                 <physvol name="physcermirror2_09">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_09" x="213.394759" y="-69.336160" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_09" x="192.977553" y="-62.702208" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_09" x="0.000000" y="0.000000" z="1.884956"/>
                 </physvol>
                 <physvol>
@@ -3581,7 +3581,7 @@
                 </physvol>
                 <physvol name="physcermirror2_10">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_10" x="194.315773" y="-112.188264" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_10" x="175.724008" y="-101.454303" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_10" x="0.000000" y="0.000000" z="2.094395"/>
                 </physvol>
                 <physvol>
@@ -3691,7 +3691,7 @@
                 </physvol>
                 <physvol name="physcermirror2_11">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_11" x="166.744256" y="-150.137202" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_11" x="150.790481" y="-135.772359" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_11" x="0.000000" y="0.000000" z="2.303835"/>
                 </physvol>
                 <physvol>
@@ -3801,7 +3801,7 @@
                 </physvol>
                 <physvol name="physcermirror2_12">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_12" x="131.885214" y="-181.524424" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_12" x="119.266687" y="-164.156511" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_12" x="0.000000" y="0.000000" z="2.513274"/>
                 </physvol>
                 <physvol>
@@ -3911,7 +3911,7 @@
                 </physvol>
                 <physvol name="physcermirror2_13">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_13" x="91.262156" y="-204.978158" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_13" x="82.530366" y="-185.366236" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_13" x="0.000000" y="0.000000" z="2.722714"/>
                 </physvol>
                 <physvol>
@@ -4021,7 +4021,7 @@
                 </physvol>
                 <physvol name="physcermirror2_14">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_14" x="46.650503" y="-219.473363" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_14" x="42.187072" y="-198.474567" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_14" x="0.000000" y="0.000000" z="2.932153"/>
                 </physvol>
                 <physvol>
@@ -4131,7 +4131,7 @@
                 </physvol>
                 <physvol name="physcermirror2_15">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_15" x="0.000000" y="-224.376528" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_15" x="0.000000" y="-202.908607" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_15" x="0.000000" y="0.000000" z="3.141593"/>
                 </physvol>
                 <physvol>
@@ -4241,7 +4241,7 @@
                 </physvol>
                 <physvol name="physcermirror2_16">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_16" x="-46.650503" y="-219.473363" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_16" x="-42.187072" y="-198.474567" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_16" x="0.000000" y="0.000000" z="3.351032"/>
                 </physvol>
                 <physvol>
@@ -4351,7 +4351,7 @@
                 </physvol>
                 <physvol name="physcermirror2_17">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_17" x="-91.262156" y="-204.978158" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_17" x="-82.530366" y="-185.366236" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_17" x="0.000000" y="0.000000" z="3.560472"/>
                 </physvol>
                 <physvol>
@@ -4461,7 +4461,7 @@
                 </physvol>
                 <physvol name="physcermirror2_18">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_18" x="-131.885214" y="-181.524424" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_18" x="-119.266687" y="-164.156511" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_18" x="0.000000" y="0.000000" z="3.769911"/>
                 </physvol>
                 <physvol>
@@ -4571,7 +4571,7 @@
                 </physvol>
                 <physvol name="physcermirror2_19">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_19" x="-166.744256" y="-150.137202" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_19" x="-150.790481" y="-135.772359" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_19" x="0.000000" y="0.000000" z="3.979351"/>
                 </physvol>
                 <physvol>
@@ -4681,7 +4681,7 @@
                 </physvol>
                 <physvol name="physcermirror2_20">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_20" x="-194.315773" y="-112.188264" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_20" x="-175.724008" y="-101.454303" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_20" x="0.000000" y="0.000000" z="4.188790"/>
                 </physvol>
                 <physvol>
@@ -4791,7 +4791,7 @@
                 </physvol>
                 <physvol name="physcermirror2_21">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_21" x="-213.394759" y="-69.336160" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_21" x="-192.977553" y="-62.702208" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_21" x="0.000000" y="0.000000" z="4.398230"/>
                 </physvol>
                 <physvol>
@@ -4901,7 +4901,7 @@
                 </physvol>
                 <physvol name="physcermirror2_22">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_22" x="-223.147370" y="-23.453734" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_22" x="-201.797052" y="-21.209725" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_22" x="0.000000" y="0.000000" z="4.607669"/>
                 </physvol>
                 <physvol>
@@ -5011,7 +5011,7 @@
                 </physvol>
                 <physvol name="physcermirror2_23">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_23" x="-223.147370" y="23.453734" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_23" x="-201.797052" y="21.209725" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_23" x="0.000000" y="0.000000" z="4.817109"/>
                 </physvol>
                 <physvol>
@@ -5121,7 +5121,7 @@
                 </physvol>
                 <physvol name="physcermirror2_24">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_24" x="-213.394759" y="69.336160" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_24" x="-192.977553" y="62.702208" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_24" x="0.000000" y="0.000000" z="5.026548"/>
                 </physvol>
                 <physvol>
@@ -5231,7 +5231,7 @@
                 </physvol>
                 <physvol name="physcermirror2_25">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_25" x="-194.315773" y="112.188264" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_25" x="-175.724008" y="101.454303" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_25" x="0.000000" y="0.000000" z="5.235988"/>
                 </physvol>
                 <physvol>
@@ -5341,7 +5341,7 @@
                 </physvol>
                 <physvol name="physcermirror2_26">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_26" x="-166.744256" y="150.137202" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_26" x="-150.790481" y="135.772359" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_26" x="0.000000" y="0.000000" z="5.445427"/>
                 </physvol>
                 <physvol>
@@ -5451,7 +5451,7 @@
                 </physvol>
                 <physvol name="physcermirror2_27">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_27" x="-131.885214" y="181.524424" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_27" x="-119.266687" y="164.156511" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_27" x="0.000000" y="0.000000" z="5.654867"/>
                 </physvol>
                 <physvol>
@@ -5561,7 +5561,7 @@
                 </physvol>
                 <physvol name="physcermirror2_28">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_28" x="-91.262156" y="204.978158" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_28" x="-82.530366" y="185.366236" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_28" x="0.000000" y="0.000000" z="5.864306"/>
                 </physvol>
                 <physvol>
@@ -5671,7 +5671,7 @@
                 </physvol>
                 <physvol name="physcermirror2_29">
 		      <volumeref ref="logiccermirror2"/>
-		      <position unit="cm" name="mirror2pos_29" x="-46.650503" y="219.473363" z="-155.423922"/>
+		      <position unit="cm" name="mirror2pos_29" x="-42.187072" y="198.474567" z="-111.213632"/>
 		      <rotation unit="rad" name="mirror2rot_29" x="0.000000" y="0.000000" z="6.073746"/>
                 </physvol>
 	</volume>
