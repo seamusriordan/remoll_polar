@@ -14,7 +14,7 @@ class remollSteppingAction : public G4UserSteppingAction
     virtual void UserSteppingAction(const G4Step*);
 
     void SetEnableKryptonite(G4bool k){ fEnableKryptonite = k; }
-    void SetMinimumEnergyCut(G4double energycut){ Energy_cut = energycut;}
+    void SetMinimumEnergyCut(G4double energycut){ fEnergy_cut = energycut;}
 
   private:
     G4bool drawFlag;
@@ -22,7 +22,7 @@ class remollSteppingAction : public G4UserSteppingAction
     G4bool fEnableKryptonite;
     G4double fKryptoniteThresh;
     
-    G4double Energy_cut;
+    G4double fEnergy_cut;
   public:
     inline void SetDrawFlag(G4bool val)
     { drawFlag = val; };

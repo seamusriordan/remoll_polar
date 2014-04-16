@@ -103,14 +103,6 @@ int main(int argc, char** argv){
     G4PhysListFactory factory;
     G4String physName = "";
     remollPhysicsList *phys = new remollPhysicsList();
-    /*
-    G4VModularPhysicsList* physlist;
-    //Physics List is hard coded to QGSP_BERT
-    physlist = factory.GetReferencePhysList("QGSP_BERT");
-    physlist->SetVerboseLevel(verbose);
-    runManager->SetUserInitialization(physlist);
-    G4HadronicProcessStore::Instance()->SetVerbose(2);
-    */
     
     // Physics List updated via the macro.  Rakitha Mon Dec 30 00:25:54 EST 2013
     rmmess->SetPhysList(phys);
@@ -118,34 +110,6 @@ int main(int argc, char** argv){
     //use this option to increase the verbose level for hadronic process information
     //G4HadronicProcessStore::Instance()->SetVerbose(2);
     
-
-    /*    
-    // Physics List name defined via environment variable : currently disabled - rakitha Thu Oct  3 09:09:16 EDT 2013
-    char* path = getenv("PHYSLIST");
-    if (path) { 
-      physName = G4String(path); 
-      G4cout << "Physics list environment variable found  " << physName << G4endl;
-    } else { //No Physics List name defined via environment variable, use the default one
-      physName = "FTFP_BERT";
-      G4cout << "Physics list environment variable not found. Using " << physName << " as physics list."<< G4endl;
-    }
-
-    // reference PhysicsList via its name
-    G4VModularPhysicsList* physlist;
-    if(factory.IsReferencePhysList(physName)) {
-      G4cout << "Setting physics list to " << physName << G4endl;
-      physlist = factory.GetReferencePhysList(physName);
-    } else {
-      G4cout << "Invalid physics list " << physName << " Now using FTFP_BERT " << G4endl;
-      physlist = factory.GetReferencePhysList("FTFP_BERT");
-    }
-
-    physlist->SetVerboseLevel(verbose);
-    runManager->SetUserInitialization(physlist);
-    */
-
-    // FIXME:  Add optical physics to messenger toggle
-//    physlist->RegisterPhysics( new remollOpticalPhysics() );
 
     //-------------------------------
     // UserAction classes

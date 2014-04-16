@@ -13,7 +13,7 @@ remollSteppingAction::remollSteppingAction()
 ///  new remollSteppingActionMessenger(this);
 
     fEnableKryptonite = true;
-    Energy_cut = 0.1*MeV;
+    fEnergy_cut = 0.0*MeV;
 
     fKryptoniteThresh = 5.0*g/cm3;
 }
@@ -30,7 +30,7 @@ void remollSteppingAction::UserSteppingAction(const G4Step *aStep) {
 	fTrack->SetTrackStatus(fStopAndKill);
     }
     //For killing trcks below a certain energy : rakitha Tue Oct 29 17:05:07 EDT 2013
-    if(fTrack->GetKineticEnergy() < Energy_cut )
+    if(fTrack->GetKineticEnergy() < fEnergy_cut && fTrack->GetParticleDefinition()->GetParticleName() != "OpticalPhoton" )
       fTrack->SetTrackStatus(fStopAndKill);
 }
 

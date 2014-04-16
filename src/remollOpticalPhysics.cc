@@ -71,9 +71,10 @@ void remollOpticalPhysics::ConstructProcess()
 
   if (AbsorptionOn) pManager->AddDiscreteProcess(theAbsorptionProcess);
 
-  //pManager->AddDiscreteProcess(theRayleighScattering);
-  //pManager->AddDiscreteProcess(theMieHGScatteringProcess);
+  pManager->AddDiscreteProcess(theRayleighScattering);
+  pManager->AddDiscreteProcess(theMieHGScatteringProcess);
 
+  printf("ADDING BOUNDARY PROCESS\n");
   pManager->AddDiscreteProcess(theBoundaryProcess);
 
   theWLSProcess->UseTimeProfile("delta");
