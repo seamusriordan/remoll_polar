@@ -487,7 +487,7 @@ print """         <intersection name="cermirror1">
 			<second ref="cermirror1cone"/>
 			<position unit="cm" name="mirror1intpos" x="%f" y="%f" z="%f" />
 		        <rotation unit="deg" name="mirror1introt" x="%f" y="%f" z="%f" /> 
-		  </intersection>""" % (PosV1_cone.X()-PosV1_temp.X(), PosV1_cone.Y()-PosV1_temp.Y(), PosV1_cone.Z()-PosV1_temp.Z(), -mirrAng1, 0.0, 0.0 )
+		  </intersection>""" % (PosV1_cone.X()-PosV1_temp.X(), PosV1_cone.Y()-PosV1_temp.Y(), PosV1_cone.Z()-PosV1_temp.Z(),  mirrAng1, 0.0, 0.0 )
 
 		  
 print """         <sphere name="cermirror2sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="%f" rmax="%f"/>""" % (mirror2R, mirror2R + T_M2 )
@@ -497,7 +497,7 @@ print """         <intersection name="cermirror2">
 			<second ref="cermirror2cone"/>
 			<position unit="cm" name="mirror2intpos" x="%f" y="%f" z="%f" />
 		        <rotation unit="deg" name="mirror2introt" x="%f" y="%f" z="%f" /> 
-		  </intersection>""" % (PosV2_cone.X()-PosV2_temp.X(), PosV2_cone.Y()-PosV2_temp.Y(), PosV2_cone.Z()-PosV2_temp.Z(), -mirrAng2, 0.0, 0.0 )
+		  </intersection>""" % (PosV2_cone.X()-PosV2_temp.X(), PosV2_cone.Y()-PosV2_temp.Y(), PosV2_cone.Z()-PosV2_temp.Z(),  mirrAng2, 0.0, 0.0 )
 
 
 print """   <opticalsurface name="MirrorSurf" model="unified" finish="polished" type="dielectric_metal" value="1.0"/>"""

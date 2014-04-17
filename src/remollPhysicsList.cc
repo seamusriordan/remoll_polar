@@ -120,7 +120,6 @@ void remollPhysicsList::ConstructProcess()
     }
     //Optical Physics
     if (OpticalPhysics){
-        printf("CONSTRUCTING OPTICAL PROCESS\n");
         opPhysicsList->ConstructProcess();
     }
 }

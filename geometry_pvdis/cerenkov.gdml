@@ -164,7 +164,7 @@
 			<first ref="cermirror1sphere"/>
 			<second ref="cermirror1cone"/>
 			<position unit="cm" name="mirror1intpos" x="0.000000" y="-243.089240" z="247.033223" />
-		        <rotation unit="deg" name="mirror1introt" x="7.000000" y="0.000000" z="0.000000" /> 
+		        <rotation unit="deg" name="mirror1introt" x="-7.000000" y="0.000000" z="0.000000" /> 
 		  </intersection>
          <sphere name="cermirror2sphere" aunit="deg" startphi="0" deltaphi="360" starttheta="0" deltatheta="90" lunit="cm" rmin="157.985221" rmax="158.285221"/>
          <cone name="cermirror2cone" aunit="deg" lunit="cm" rmin1="120.113014" rmax1="148.444269" rmin2="183.962564" rmax2="227.354117" z="101.000000" startphi="84.000000" deltaphi="12.000000"/>
@@ -172,7 +172,7 @@
 			<first ref="cermirror2sphere"/>
 			<second ref="cermirror2cone"/>
 			<position unit="cm" name="mirror2intpos" x="0.000000" y="-202.908607" z="114.713632" />
-		        <rotation unit="deg" name="mirror2introt" x="-0.000000" y="0.000000" z="0.000000" /> 
+		        <rotation unit="deg" name="mirror2introt" x="0.000000" y="0.000000" z="0.000000" /> 
 		  </intersection>
    <opticalsurface name="MirrorSurf" model="unified" finish="polished" type="dielectric_metal" value="1.0"/>
         </solids>
