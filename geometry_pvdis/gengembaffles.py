@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-frontgemdet1no = 1000
-frontgemdet2no = 2000
+frontgemdet1no = 10000
+frontgemdet2no = 20000
 
 #bafmat = "Kryptonite"
 bafmat = "Lead"
