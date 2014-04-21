@@ -8,6 +8,10 @@
 	<constant name="entwinthick" value="0.0125"/>
 	<constant name="extwinthick" value="0.0125"/>
 
+	<!-- <constant name="height_cylwall" value="1777.0"/> -->
+	<constant name="height_cylwall" value="900.0"/>
+	<constant name="cDet_1_radius" value="800.0"/>
+
 	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
 	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
 	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
@@ -21,6 +25,9 @@
 	<position name="beampipe_z4" x="0.0" y="0.0" z="45+232.5*2+extwinthick" unit="cm"/>
 	<position name="beampipe_z5" x="0.0" y="0.0" z="40" unit="cm"/>
 
+	<position unit="cm" name="cDet_1_pos"       x="0" y="0"     z="targetz"/>
+
+	<rotation name="scRot_1" unit="deg" x="90" y="0" z="0"/>
 	<rotation name="identity"/>
     </define>
 
@@ -44,6 +51,10 @@
 	<material Z="13" name="Aluminum" state="solid">
 	    <D unit="g/cm3" value="2.70"/>
 	    <atom unit="g/mole" value="26.98"/>
+	</material>
+	<material Z="82" name="Kryptonite" state="solid">
+	  <D unit="g/cm3" value="11.350"/>
+	  <atom unit="g/mole" value="207.2"/>
 	</material>
 
     </materials>
@@ -95,6 +106,10 @@
 	<cone aunit="deg" deltaphi="360" lunit="cm" name="beampipe2"   rmin1="1.4" rmax1="1.5" rmin2="28.9" rmax2="29.0" startphi="0" z="232.5*2"/>
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe2win" rmax="29.0" rmin="0.0" startphi="0" z="entwinthick*2"/>
 
+	<!--Cylindrical detector volume for radiation studies -->
+	<tube aunit="deg"  startphi="0" deltaphi="360" lunit="cm" name="cDet_solid_1" rmax="cDet_1_radius+1." rmin="cDet_1_radius" z="height_cylwall"/>
+
+
 	<!-- Encompassing logical volume -->
 
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="smallvol" rmax="0.01" rmin="0.0" startphi="0" z="50"/>
@@ -136,6 +151,13 @@
 	    <first ref="tbunion4"/>
 	    <second ref="beampipe2win"/>
 	    <positionref ref="beampipe_z4"/>
+	</union>
+	
+	<union name ="tbunion6">
+	    <first ref="tbunion5"/>
+	    <second ref="cDet_solid_1"/>
+	    <positionref ref="target_z0"/>
+	    <rotationref ref="scRot_1"/>
 	</union>
 
     </solids>
@@ -190,12 +212,22 @@
 	    <auxiliary auxtype="Color" auxvalue="gray"/> 
 	</volume>
 
+	<volume name="cDet_1">
+	  <materialref ref="Vacuum"/>
+	  <solidref ref="cDet_solid_1"/>
+	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
+	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
+	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8001"/>
+	</volume>
+
 	<!---  Place volumes -->
 
 	<volume name="logicTarget">
 	    <materialref ref="Vacuum"/>
 	    <!--	    <solidref ref="targetMother"/> -->
-	    <solidref ref="tbunion5"/>
+	    <!-- <solidref ref="tbunion5"/> -->
+	    <solidref ref="tbunion6"/>
 	    <auxiliary auxtype="Target" auxvalue="Mother"/> 
 
 	    <physvol>
@@ -236,6 +268,12 @@
 	    <physvol>
 		<volumeref ref="logicExtPipeWindow"/>
 		<positionref ref="beampipe_z4"/>
+	    </physvol>
+
+	     <physvol>
+		<volumeref ref="cDet_1"/>
+		<positionref ref="target_z0"/>
+		<rotationref ref="scRot_1"/>
 	    </physvol>
 
 	</volume>
