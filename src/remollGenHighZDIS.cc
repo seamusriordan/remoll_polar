@@ -1,5 +1,4 @@
-#include "remollGenDIS.hh"
-
+#include "remollGenHighZDIS.hh"
 #include "CLHEP/Random/RandFlat.h"
 
 #include "remollEvent.hh"
@@ -19,36 +18,40 @@ Implementation of CTEQ6 access is not the best way as CTEQ6 variables are define
  */
 #include "cteq/cteqpdf.h"
 
-cteq_pdf_t *__dis_pdf;
+cteq_pdf_t *__dis_pdf2;
 
 // Use CTEQ6 parameterization
 //
-void initcteqpdf(){
-         __dis_pdf = cteq_pdf_alloc_id(400); 
+void initcteqpdf2(){
+         __dis_pdf2 = cteq_pdf_alloc_id(400); 
 }
 
-void freecteqpdf(){
-         cteq_pdf_free(__dis_pdf); 
+void freecteqpdf2(){
+         cteq_pdf_free(__dis_pdf2); 
 }
 
 ////////////////////////////////////////////////////////
 
-remollGenDIS::remollGenDIS(){
-    fTh_min =     5.0*deg;
-    fTh_max =     60.0*deg;
+remollGenHighZDIS::remollGenHighZDIS(){
+  fTh_min =     5.0*deg;
+  fTh_max =     60.0*deg;
 
-    fApplyMultScatt = true;
+  fApplyMultScatt = true;
 
-    // init DIS cteq pdf
-    initcteqpdf();
+  // init DIS cteq pdf
+  initcteqpdf2();  
 }
 
-remollGenDIS::~remollGenDIS(){
-    freecteqpdf();
+remollGenHighZDIS::~remollGenHighZDIS(){
+  freecteqpdf2(); 
 }
 
-void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
-    // Generate inelastic event
+
+
+void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
+  // update the A_PV for High Z (Lead or Iron for us). The cross section computations are same as in remollGenDIS class.
+
+     // Generate inelastic event
 
     double beamE = vert->GetBeamE();//generic beam energy uncorrected for rad-loss remollBeamTarget::GetBeamTarget()->fBeamE; //rakitha - Wed Nov 20 16:56:30 EST 2013
     double mp    = proton_mass_c2;
@@ -93,9 +96,8 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double Ynum = 2.0*x*(1.0-y/2.0);
     double Yden = 2.0*x*y + 4.0*x*(1.0-y-x*y*mp/(2.0*numax))/y;
-    double Y = Ynum/Yden;
+    //double Y = Ynum/Yden;//not used  here
 
-    double eta_gZ = GF*Q2*MZ*MZ/(alpha*2.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
 
     double evQ2 = Q2/(GeV*GeV);
     // Force a mimimum evolution
@@ -103,15 +105,15 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 	evQ2 = 1.0;
     }
 
-    double qu =    cteq_pdf_evolvepdf(__dis_pdf, 1, x, sqrt(evQ2) );
-    double qd =    cteq_pdf_evolvepdf(__dis_pdf, 2, x, sqrt(evQ2) );
-    double qubar = cteq_pdf_evolvepdf(__dis_pdf, -1, x, sqrt(evQ2) );
-    double qdbar = cteq_pdf_evolvepdf(__dis_pdf, -2, x, sqrt(evQ2) );
+    double qu =    cteq_pdf_evolvepdf(__dis_pdf2, 1, x, sqrt(evQ2) );
+    double qd =    cteq_pdf_evolvepdf(__dis_pdf2, 2, x, sqrt(evQ2) );
+    double qubar = cteq_pdf_evolvepdf(__dis_pdf2, -1, x, sqrt(evQ2) );
+    double qdbar = cteq_pdf_evolvepdf(__dis_pdf2, -2, x, sqrt(evQ2) );
 
     double quv = qu-qubar;
     double qdv = qd-qdbar;
 
-    double qs = cteq_pdf_evolvepdf(__dis_pdf, 3, x, sqrt(evQ2) );
+    double qs = cteq_pdf_evolvepdf(__dis_pdf2, 3, x, sqrt(evQ2) );
 
 
     double F2p = x*( e_u*e_u*quv + e_d*e_d*qdv );
@@ -120,8 +122,8 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double F1gZp = e_u*gV_u*quv + e_d*gV_d*qdv;
     double F1gZn = e_u*gV_u*qdv + e_d*gV_d*quv;
 
-    double F3gZp = 2.0*(e_u*gA_u*quv + e_d*gA_d*qdv);
-    double F3gZn = 2.0*(e_u*gA_u*qdv + e_d*gA_d*quv);
+    //double F3gZp = 2.0*(e_u*gA_u*quv + e_d*gA_d*qdv);//not used  here
+    //double F3gZn = 2.0*(e_u*gA_u*qdv + e_d*gA_d*quv);//not used  here
 
     // Sea quarks, 2 is to account for quarks and antiquarks
     F2p  += x*(2.0*e_u*e_u*qubar + 2.0*e_d*e_d*(qdbar + qs));
@@ -143,35 +145,38 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double sigmap_dOmega_dE = sigmap_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
     double sigman_dOmega_dE = sigman_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
 
-    Double_t vert_A=vert->GetMaterial()->GetA()*mole/g;
-    Double_t vert_Z=vert->GetMaterial()->GetZ();
 
-
-    double pcont = sigmap_dOmega_dE*vert_Z;
+    double pcont = sigmap_dOmega_dE*vert->GetMaterial()->GetZ();
 	//  Effective neutron number...  I don't like it either  SPR 2/14/2013
-    double ncont = sigman_dOmega_dE*(vert_A - vert_Z);
+    double ncont = sigman_dOmega_dE*(vert->GetMaterial()->GetA()*mole/g - vert->GetMaterial()->GetZ());
 
     double sigmatot = pcont + ncont;
 
     double V = (fPh_max - fPh_min)*(cos(fTh_min) - cos(fTh_max))*(efmax-efmin);
 
     evt->SetEffCrossSection(sigmatot*V);
-
-    G4double APVp = eta_gZ*(gA*F1gZp + Y*gV*F3gZp)/F1p;
-    G4double APVn = eta_gZ*(gA*F1gZn + Y*gV*F3gZn)/F1n;
-
     G4double APV = 0.0;
+    /*
+    multiplicative factor of asymmetry from I.C. Cloet, PRL 109, 182301 (2012) needs to be implemented here. In remollGenDIS class this factor is multiplied by 2 : Rakitha Mon Apr 28 09:43:13 EDT 2014
+     */
+    G4double eta_gZ = GF*Q2*MZ*MZ/(alpha*4.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
 
-    if( (pcont + ncont > 0.0) && (vert_Z<10) ){//cut of Z is arbitrary and only used to separate H, He from Pb or Fe
-	APV = (APVp*pcont + APVn*ncont)/(pcont+ncont);
-    }
+    /*
+      The Bjorken limit asymmetry from I.C. Cloet, PRL 109, 182301 (2012) needs to be implemented here
+    */
+    //weak mixing angle at Z-pole
+    Double_t sin2_theta_w_Z = 0.2312; //weak mixing angle at E=Z-pole (\hat{s^2}_Z) from PDG 2012
 
-    
+    /*
+      For now the only the isoscalar result for the asymmetry is implemented here. Full results with nuclear medium results will be implemented Rakitha Mon Apr 28 09:43:13 EDT 2014
+     */
+    APV = eta_gZ * (9/5 - 4*sin2_theta_w_Z);
+
     evt->SetAsymmetry(APV);
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	                     G4ThreeVector(ef*sin(th)*cos(ph), ef*sin(th)*sin(ph), ef*cos(th) ), 
 			     "e-" );
 
-    return;
+    return; 
 }

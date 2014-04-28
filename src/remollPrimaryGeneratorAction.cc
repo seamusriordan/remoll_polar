@@ -18,6 +18,7 @@
 #include "remollGenPion.hh"
 #include "remollGenBeam.hh"
 #include "remollGenDIS.hh"
+#include "remollGenHighZDIS.hh"
 #include "remollGenFlat.hh"
 
 remollPrimaryGeneratorAction::remollPrimaryGeneratorAction() {
@@ -75,6 +76,10 @@ void remollPrimaryGeneratorAction::SetGenerator(G4String genname) {
 
     if( genname == "dis" ){
 	fEventGen = new remollGenDIS();
+    }
+    
+    if( genname == "highzdis" ){
+	fEventGen = new remollGenHighZDIS();
     }
 
     if( genname == "flat" ){
