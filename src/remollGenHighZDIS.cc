@@ -96,7 +96,7 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double Ynum = 2.0*x*(1.0-y/2.0);
     double Yden = 2.0*x*y + 4.0*x*(1.0-y-x*y*mp/(2.0*numax))/y;
-    //double Y = Ynum/Yden;//not used  here
+    double Y = Ynum/Yden;
 
 
     double evQ2 = Q2/(GeV*GeV);
@@ -122,8 +122,8 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double F1gZp = e_u*gV_u*quv + e_d*gV_d*qdv;
     double F1gZn = e_u*gV_u*qdv + e_d*gV_d*quv;
 
-    //double F3gZp = 2.0*(e_u*gA_u*quv + e_d*gA_d*qdv);//not used  here
-    //double F3gZn = 2.0*(e_u*gA_u*qdv + e_d*gA_d*quv);//not used  here
+    double F3gZp = 2.0*(e_u*gA_u*quv + e_d*gA_d*qdv);
+    double F3gZn = 2.0*(e_u*gA_u*qdv + e_d*gA_d*quv);
 
     // Sea quarks, 2 is to account for quarks and antiquarks
     F2p  += x*(2.0*e_u*e_u*qubar + 2.0*e_d*e_d*(qdbar + qs));
@@ -145,10 +145,12 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double sigmap_dOmega_dE = sigmap_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
     double sigman_dOmega_dE = sigman_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
 
+    double vert_A=vert->GetMaterial()->GetA()*mole/g;
+    double vert_Z=vert->GetMaterial()->GetZ();
 
-    double pcont = sigmap_dOmega_dE*vert->GetMaterial()->GetZ();
+    double pcont = sigmap_dOmega_dE*vert_Z;
 	//  Effective neutron number...  I don't like it either  SPR 2/14/2013
-    double ncont = sigman_dOmega_dE*(vert->GetMaterial()->GetA()*mole/g - vert->GetMaterial()->GetZ());
+    double ncont = sigman_dOmega_dE*(vert_A - vert_Z);
 
     double sigmatot = pcont + ncont;
 
@@ -168,9 +170,20 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     Double_t sin2_theta_w_Z = 0.2312; //weak mixing angle at E=Z-pole (\hat{s^2}_Z) from PDG 2012
 
     /*
-      For now the only the isoscalar result for the asymmetry is implemented here. Full results with nuclear medium results will be implemented Rakitha Mon Apr 28 09:43:13 EDT 2014
+      For now the only the isoscalar result for the asymmetry is implemented here. Full results with nuclear medium corrections will be implemented Rakitha Mon Apr 28 09:43:13 EDT 2014
      */
-    APV = eta_gZ * (9/5 - 4*sin2_theta_w_Z);
+    //APV = eta_gZ * (9/5 - 4*sin2_theta_w_Z);//isoscalar implementation commented out see below for naive computation
+
+    /*
+      Naive implementation of the asymmetry ignoring nuclear medium corrections
+    */
+    G4double APVp = eta_gZ*(gA*F1gZp + Y*gV*F3gZp)/F1p;
+    G4double APVn = eta_gZ*(gA*F1gZn + Y*gV*F3gZn)/F1n;
+
+    if( (pcont + ncont > 0.0) ){
+      APV = (APVp*pcont + APVn*ncont)/(pcont+ncont);
+    }
+
 
     evt->SetAsymmetry(APV);
 

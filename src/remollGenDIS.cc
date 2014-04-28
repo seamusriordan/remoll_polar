@@ -143,8 +143,8 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double sigmap_dOmega_dE = sigmap_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
     double sigman_dOmega_dE = sigman_dxdy*ef*hbarc*hbarc/(2.0*pi*mp*nu);
 
-    Double_t vert_A=vert->GetMaterial()->GetA()*mole/g;
-    Double_t vert_Z=vert->GetMaterial()->GetZ();
+    double vert_A=vert->GetMaterial()->GetA()*mole/g;
+    double vert_Z=vert->GetMaterial()->GetZ();
 
 
     double pcont = sigmap_dOmega_dE*vert_Z;
@@ -162,7 +162,7 @@ void remollGenDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     G4double APV = 0.0;
 
-    if( (pcont + ncont > 0.0) && (vert_Z<10) ){//cut of Z is arbitrary and only used to separate H, He from Pb or Fe
+    if( (pcont + ncont > 0.0) ){
 	APV = (APVp*pcont + APVn*ncont)/(pcont+ncont);
     }
 
