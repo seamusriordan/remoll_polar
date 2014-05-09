@@ -3,6 +3,7 @@
     <!-- Target and beamline -->
 
     <define>
+      <!--default target location is 10.0, set the target at +30 cm and -10 cm -->
 	<constant name="targetz" value="10.0"/>
 	<!-- <constant name="targetz" value="0.0"/> -->
 	<constant name="fLeadTargetLength" value="1.29"/>
