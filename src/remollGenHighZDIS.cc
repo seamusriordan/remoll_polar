@@ -128,10 +128,10 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     // Sea quarks, 2 is to account for quarks and antiquarks
     F2p  += x*(2.0*e_u*e_u*qubar + 2.0*e_d*e_d*(qdbar + qs));
-    F2n  += x*(2.0*e_u*e_u*qubar + 2.0*e_d*e_d*(qdbar + qs));
+    F2n  += x*(2.0*e_u*e_u*qdbar + 2.0*e_d*e_d*(qubar + qs));
 
     F1gZp += 2.0*e_u*gV_u*qubar + 2.0*e_d*gV_d*(qdbar+qs);
-    F1gZn += 2.0*e_u*gV_u*qubar + 2.0*e_d*gV_d*(qdbar+qs);
+    F1gZn += 2.0*e_u*gV_u*qdbar + 2.0*e_d*gV_d*(qubar+qs);
 
     // Sea quarks cancel for F3gZ
 
