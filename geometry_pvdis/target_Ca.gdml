@@ -43,7 +43,7 @@
 	</material>
 
 	<material Z="20" name="targetmat" state="solid">
-	    <D unit="g/cm3" value="1.55"/>
+	    <D unit="g/cm3" value="1.84"/>
 	    <atom unit="g/mole" value="47.95"/>
 	</material>
 
