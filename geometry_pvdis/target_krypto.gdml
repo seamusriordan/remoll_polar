@@ -4,6 +4,7 @@
 
     <define>
 	<constant name="targetz" value="10.0"/>
+	<constant name="targetHalfLength" value="20.0"/>
 	<!-- <constant name="targetz" value="0.0"/> -->
 	<constant name="entwinthick" value="0.0125"/>
 	<constant name="extwinthick" value="0.0125"/>
@@ -57,8 +58,8 @@
 	<!-- Target volumes -->
 	<tube aunit="deg" deltaphi="360" lunit="m" name="targetMother" rmax="1" rmin="0" startphi="0" z="20"/>
 
-	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube" rmax="1.918" rmin="0" startphi="0" z="20*2"/>
-	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCryo" rmax="1.9" rmin="0" startphi="0" z="19.982*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube" rmax="1.918" rmin="0" startphi="0" z="targetHalfLength*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCryo" rmax="1.9" rmin="0" startphi="0" z="(targetHalfLength-0.018)*2"/>
 
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCham" rmax="5" rmin="0" startphi="0" z="25*2"/>
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetHollow1" rmax="4.95" rmin="0" startphi="0" z="24.95*2"/>
