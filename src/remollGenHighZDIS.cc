@@ -6,10 +6,10 @@
 #include "G4Material.hh"
 
 #include "remolltypes.hh"
-/*
+
 // not required any more rakitha - Wed Nov 20 16:56:30 EST 2013
 #include "remollBeamTarget.hh"
-*/
+
 
 
 ////////////////////////////////////////////////////////
@@ -53,10 +53,11 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
      // Generate inelastic event
 
-    double beamE = vert->GetBeamE();//generic beam energy uncorrected for rad-loss remollBeamTarget::GetBeamTarget()->fBeamE; //rakitha - Wed Nov 20 16:56:30 EST 2013
-
+    double beamE = vert->GetBeamE();
+    //beamE = remollBeamTarget::GetBeamTarget()->fBeamE;//generic beam energy uncorrected for rad-loss remollBeamTarget::GetBeamTarget()->fBeamE; //rakitha - Wed Nov 20 16:56:30 EST 2013
     //Add 5 MeV to test the coulomb correction from the nucleus due to electron entering the coulomb potential
     //beamE += 5*MeV;
+
 
     double mp    = proton_mass_c2;
 
