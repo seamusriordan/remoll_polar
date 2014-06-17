@@ -49,7 +49,7 @@
 	    <materialref ref="Air"/>
 	    <solidref ref="Worldbox"/>
 
-
+<!--Beam pipes are Kryptonite -->
 	    <physvol>
 		<file name="geometry_pvdis/target_krypto.gdml"/>
 		<positionref ref="origin"/>
@@ -62,13 +62,19 @@
 		<rotationref ref="identity"/>
 	    </physvol>
 
-<!--
+	    <physvol> 
+		<file name="geometry_pvdis/cerenkov.gdml"/> 
+		<positionref ref="cerpos"/>  
+		<rotationref ref="identity"/>
+	    </physvol>
+
+
 	    <physvol>
 		<file name="geometry_pvdis/ecal.gdml"/> 
 		<positionref ref="ecalpos"/>
 		<rotationref ref="identity"/>
 	    </physvol>
--->
+
 
              <physvol>
 		<file name="geometry_pvdis/gembaffles_babarmore1_krypto.gdml"/>
