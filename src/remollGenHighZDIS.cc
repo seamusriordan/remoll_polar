@@ -54,6 +54,10 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
      // Generate inelastic event
 
     double beamE = vert->GetBeamE();//generic beam energy uncorrected for rad-loss remollBeamTarget::GetBeamTarget()->fBeamE; //rakitha - Wed Nov 20 16:56:30 EST 2013
+
+    //Add 5 MeV to test the coulomb correction from the nucleus due to electron entering the coulomb potential
+    //beamE += 5*MeV;
+
     double mp    = proton_mass_c2;
 
     double th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
@@ -75,6 +79,7 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     }
 
     double ef = CLHEP::RandFlat::shoot(efmin, efmax);
+
 
 
     if( vert->GetMaterial()->GetNumberOfElements() != 1 ){
@@ -161,7 +166,7 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
     /*
     multiplicative factor of asymmetry from I.C. Cloet, PRL 109, 182301 (2012) needs to be implemented here. In remollGenDIS class this factor is multiplied by 2 : Rakitha Mon Apr 28 09:43:13 EDT 2014
      */
-    G4double eta_gZ = GF*Q2*MZ*MZ/(alpha*4.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
+    G4double eta_gZ = GF*Q2*MZ*MZ/(alpha*2.0*sqrt(2.0)*pi)/(Q2+MZ*MZ);
 
     /*
       The Bjorken limit asymmetry from I.C. Cloet, PRL 109, 182301 (2012) needs to be implemented here
@@ -187,6 +192,8 @@ void remollGenHighZDIS::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     evt->SetAsymmetry(APV);
 
+    //subtract 5 MeV from outgoing electron after vertex interaction to test the coulomb correction from the nucleus due to scattered electron leaving the coulomb potential
+    //ef -= 5*MeV;
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	                     G4ThreeVector(ef*sin(th)*cos(ph), ef*sin(th)*sin(ph), ef*cos(th) ), 
 			     "e-" );
