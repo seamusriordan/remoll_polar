@@ -40,6 +40,7 @@
 #include "G4VisAttributes.hh"
 #include "G4Colour.hh"
 
+#include "G4UnitsTable.hh"
 #include <vector>
 
 #define __DET_STRLEN 200
@@ -242,7 +243,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
     G4bool neednewdet;
 
-    for( iter  = auxmap->begin(); iter != auxmap->end(); iter++) { //this loop over logical volumes where auxtype=sensdet not over the phyvols where logical volumes are placed : rakitha Wed Sep 25 17:57:31 EDT 2013
+    for( iter  = auxmap->begin(); iter != auxmap->end(); iter++) { //this loop over only logical volumes where auxtype=sensdet but not over the phyvols where logical volumes are placed : rakitha Wed Sep 25 17:57:31 EDT 2013
 	G4LogicalVolume* myvol = (*iter).first;
 	//      G4cout << "Volume " << myvol->GetName() << G4endl;
 
@@ -262,6 +263,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 			    G4cerr << "Volume " << myvol->GetName() << " given " << det_no << " but __MAX_DETS is " << __MAX_DETS << G4endl;
 			    exit(1);
 			}
+			
 
 			if( useddetnums[det_no] ){
 			    neednewdet = false;
@@ -310,11 +312,8 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 		    } else {
 			thisdet = new remollGenericDetector(detectorname, det_no);
 		    }
-		    /*
-		    G4cout << "  Creating sensitive detector " << det_type
-			<< " for volume " << myvol->GetName() << " det id " << det_no
-			<<  G4endl << G4endl;
-			*/
+
+		    
 		    SDman->AddNewDetector(thisdet);
 		} else {
 		    thisdet = SDman->FindSensitiveDetector(detectorname);
@@ -417,7 +416,8 @@ void remollDetectorConstruction::DumpGeometricalTree(G4VPhysicalVolume* aVolume,
   G4cout << aVolume->GetName() << "[" << aVolume->GetCopyNo() << "] "
          << aVolume->GetLogicalVolume()->GetName() << " "
          << aVolume->GetLogicalVolume()->GetNoDaughters() << " "
-         << aVolume->GetLogicalVolume()->GetMaterial()->GetName();
+         << aVolume->GetLogicalVolume()->GetMaterial()->GetName() << " "
+	 << G4BestUnit(aVolume->GetLogicalVolume()->GetMass(true),"Mass");
   if(aVolume->GetLogicalVolume()->GetSensitiveDetector())
   {
     G4cout << " " << aVolume->GetLogicalVolume()->GetSensitiveDetector()

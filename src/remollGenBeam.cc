@@ -31,8 +31,11 @@ void remollGenBeam::SamplePhysics(remollVertex *vert, remollEvent *evt){
     evt->fBeamE = beamE;
     evt->fBeamMomentum = evt->fBeamMomentum.unit()*sqrt(beamE*beamE - electron_mass_c2*electron_mass_c2);;
 
+    //G4cout << "Beam energy corrected " << evt->fBeamMomentum  << " uncorrected " << fBeamTarg->fBeamE << G4endl;
     // Override target sampling z
     evt->fVertexPos.setZ( fZpos );
+    //evt->fVertexPos.setX( 0 );
+    //evt->fVertexPos.setY( 0 );
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	    evt->fBeamMomentum, 
