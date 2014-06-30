@@ -116,13 +116,11 @@ static Double_t wiser_tf3(Double_t *x, Double_t *par){
 protected:  
   Double_t wiser_sigma(Double_t Ebeam, Double_t pf, Double_t thf, Double_t rad_len, Int_t type);
   Double_t wiser_total_sigma(Double_t Ebeam, Double_t intrad, Double_t extrad, Int_t type);
-
+  Pion_t fPionType;
   
 private:
   void SamplePhysics(remollVertex *, remollEvent *);
   
-  
-  Pion_t fPionType;
 };
 
 #endif//__REMOLLGENPION_HH 

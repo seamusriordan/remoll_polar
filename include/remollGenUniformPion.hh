@@ -22,7 +22,7 @@ private:
   void SamplePhysics(remollVertex *, remollEvent *);
   
   
-  Pion_t fPionType;
+  //Pion_t fPionType;
   Bool_t fHaveTotalXs;
   Double_t fTotal0Xs;
   Double_t fTotal1Xs;
