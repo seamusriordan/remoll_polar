@@ -16,6 +16,7 @@
 #include "remollGenpElastic.hh"
 #include "remollGenpInelastic.hh"
 #include "remollGenPion.hh"
+#include "remollGenUniformPion.hh"
 #include "remollGenBeam.hh"
 #include "remollGenDIS.hh"
 #include "remollGenHighZDIS.hh"
@@ -68,6 +69,10 @@ void remollPrimaryGeneratorAction::SetGenerator(G4String genname) {
 
     if( genname == "pion" ){
 	fEventGen = new remollGenPion();
+    }
+
+    if( genname == "uniformpion" ){
+	fEventGen = new remollGenUniformPion();
     }
 
     if( genname == "beam" ){
