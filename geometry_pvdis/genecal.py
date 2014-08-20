@@ -3,6 +3,7 @@ from math import sin,cos,sqrt,fabs, pi
 
 preshowerdetno = 80000
 showerdetno = 90000
+ecalcycplanedetno = 70000
 
 # ECal Paramters
 # This defines a preshower and shower
@@ -33,8 +34,9 @@ leadingscint = 2
 numsides = 6
 nscintlayer  = 194
 
+deltaz_plane = 0.1
 blockdepth = (absorbthick+scintthick+gapthick)*nscintlayer - gapthick + leadingscint
-motherdepth = blockdepth + leadinglead
+motherdepth = blockdepth + leadinglead + deltaz_plane*2
 
 # lab coordinate z of center of mother volume
 # This needs to agree with main gdml coordinate
@@ -123,6 +125,23 @@ print """        <materials>
 	<solids>"""
 
 print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%f" rmax="%f" z="%f"/>"""% (rmin, rmax, motherdepth)
+print """	      <tube name="ecalcycdet_solid_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmax-0.1, motherdepth-0.05)
+print """	      <tube name="ecalcycdet_solid_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmax-0.2, motherdepth-0.1)
+print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmin, motherdepth)
+print """  <subtraction name ="ecalcycdet_solid_4">
+      <first ref="ecalcycdet_solid_1"/>
+      <second ref="ecalcycdet_solid_2"/>
+      <positionref ref="ecal_origin"/>
+      <rotationref ref="identity"/>
+  </subtraction> """ 
+
+print """  <subtraction name ="ecalcycdet_solid">
+      <first ref="ecalcycdet_solid_4"/>
+      <second ref="ecalcycdet_solid_3"/>
+      <positionref ref="ecal_origin"/>
+      <rotationref ref="identity"/>
+  </subtraction> """ 
+
 print """	      <polyhedra name="ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
    	          <zplane rmin="0" rmax="%f" z="%f"/>
    	          <zplane rmin="0" rmax="%f" z="%f"/>
@@ -148,6 +167,13 @@ print """        </solids>
 
 	<structure>
 """
+print """	         <volume name="ecalcycdet_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="ecalcycdet_solid"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
+	        </volume>""" % (ecalcycplanedetno)  # assign 70000 to plane cyclindrical detector
 
 print """	         <volume name="logicecalleadinglead">
 		      <materialref ref="%s"/> 
@@ -217,9 +243,14 @@ print """
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>"""
 
 print """	      <physvol>
+                      <volumeref ref="ecalcycdet_logic"/>
+		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="0"/>
+	        </physvol>""" 
+
+print """	      <physvol>
                       <volumeref ref="logicecalleadinglead"/>
 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%f"/>
-	        </physvol>""" % (-motherdepth/2 + leadinglead/2)
+	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
 
 # number of x and y steps to consider
 xspace = blockside*2
