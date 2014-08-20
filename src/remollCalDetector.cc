@@ -40,7 +40,9 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     G4StepPoint *prestep = step->GetPreStepPoint();
     G4Track     *track   = step->GetTrack();
 
-    G4double edep = step->GetTotalEnergyDeposit();
+    //For Scintillator, we need the ionization energy deposit. This can be obtained by subtracting non-ionization energy : Rakitha Fri Aug 15 10:20:13 EDT 2014
+    //for some discussion : http://hypernews.slac.stanford.edu/HyperNews/geant4/get/eventtrackmanage/1043/1/1.html 
+    G4double edep = step->GetTotalEnergyDeposit() - step->GetNonIonizingEnergyDeposit();
     G4double globaltime_firsthit = 0;//step->GetPreStepPoint()->GetGlobalTime();
     G4double globaltime = step->GetPreStepPoint()->GetGlobalTime();
     
@@ -71,7 +73,7 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     G4cout << "tr_ypos " << tr_ypos<< G4endl;
     G4cout << "tr_zpos " << tr_zpos<< G4endl;
    G4cout << "*************************** "<< G4endl;
-    }
+    } 
     */   
     
 
@@ -145,24 +147,24 @@ void remollCalDetector::EndOfEvent(G4HCofThisEvent*HCE) {
 
     return;
 }
-
+ 
 ///////////////////////////////////////////////////////////////////////
 
     /*  FIXME:   These need to be settable constants */
 static const G4int    nScintlayer = 194; // 20 X0 for 0.5mm Pbs
 static const G4double AbsorbThick = 0.5 * mm; // Sampling ratio = 0.253017(EM) 0.285811(MIP) 0.34+-0.04(H)
 static const G4double ScintThick = 1.5 * mm;
-static const G4double Shower_blockWidth = 2.0 * cm; // nX
-static const G4double Shower_blockHeight = 2.0 * cm; // nY
+static const G4double Shower_blockWidth = 2.0 * cm; // nX //?????? Rakitha Mon Jun 23 16:27:24 EDT 2014
+static const G4double Shower_blockHeight = 2.0 * cm; // nY //?????? Rakitha Mon Jun 23 16:27:24 EDT 2014
 static const G4double layerSep = 0.24 * mm + AbsorbThick + ScintThick;
 static const G4double leading_Pb = 0.5137 * cm * 2; // 2 X0
 static const G4double leading_Scint = 2  * cm;
 static const G4double backend_Scint = 1.5 * mm;
 static const G4double ShashlikBlockDepth = (nScintlayer - 2) * layerSep
-        + leading_Pb + leading_Scint + backend_Scint;
+        + leading_Pb + leading_Scint + backend_Scint;//?????? Rakitha Mon Jun 23 16:27:24 EDT 2014
 static const G4double OverallShiftZ = 0 + ShashlikBlockDepth / 2;
-static const G4int nX = 80;
-static const G4int nY = 30;
+static const G4int nX = 80;//?????? Rakitha Mon Jun 23 16:27:24 EDT 2014
+static const G4int nY = 30;//?????? Rakitha Mon Jun 23 16:27:24 EDT 2014
 
 G4double remollCalDetector::Edep2Photon(const G4double edep, const G4ThreeVector hitpos) {
 

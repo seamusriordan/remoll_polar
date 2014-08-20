@@ -14,16 +14,20 @@ zback  = zfront + 2.0*dz
 rmin = 118.0
 rmax = 261.0
 
+#6.25 cm a side gives 101.49 cm area per block
 blockside = 6.25
 
 nlayer  = 23
 nsector = 30
 
+#absorber thickness is 0.009.X_0 for shower blocks
 absorbthick = 0.05
 scintthick  = 0.15
 gapthick = 0.024
 
-leadinglead  = 0.05137*2
+#absorber thickness is 2.X_0 for pre-shower blocks (default value used so far 0.05137*2 : rakitha Wed Aug 20 10:03:04 EDT 2014)
+#for lead X_0 = 5.612 mm
+leadinglead  = 1.122
 leadingscint = 2
 
 numsides = 6
