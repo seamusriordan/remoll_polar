@@ -9,7 +9,7 @@ remollCalDetector::remollCalDetector( G4String name, G4int detnum ) : G4VSensiti
 
 
     sprintf(colname, "calsum_%d", detnum);
-    collectionName.insert(G4String(colname));
+    collectionName.insert(G4String(colname)); 
 
     fHCID = -1;
     fSCID = -1;
@@ -20,7 +20,7 @@ remollCalDetector::~remollCalDetector(){
 
 void remollCalDetector::Initialize(G4HCofThisEvent *){
 
-    fSumColl = new remollCalDetectorSumCollection ( SensitiveDetectorName, collectionName[1] );
+    fSumColl = new remollCalDetectorSumCollection ( SensitiveDetectorName, collectionName[0] );
 
     fSumMap.clear();
 }
