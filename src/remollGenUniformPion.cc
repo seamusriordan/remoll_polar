@@ -31,15 +31,15 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     break;
   case kPiMinus:
     piontypestr = G4String("pi-");
-    mass = 0.1396; // mass in GeV
+    mass = 0.1396*GeV; // mass in GeV
     break;
   case kPi0:
     piontypestr = G4String("pi0");
-    mass = 0.1350; // mass in GeV
+    mass = 0.1350*GeV; // mass in GeV
     break;    
   default:
     piontypestr = G4String("pi-");
-    mass = 0.1396; // mass in GeV
+    mass = 0.1396*GeV; // mass in GeV
     break;
   }
   // Use radiated beam vertex
@@ -62,6 +62,12 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   // Use radiated beam vertex
   beamE   = vert->GetBeamE();
 
+  if (beamE < 2*mass){//to make sure radiated energy not to go below maximum pf at the cross section scan below (beamE > 0.156 GeV)
+    beamE += 2*mass;
+    //G4cout<<"DEBUG line  "<<beamE/GeV<<" "<<mass/GeV<<G4endl;
+  }
+
+  /*
   //For pion generation we don't set fE_min and fE_max so for now true_emax = beamE : rakitha Wed Sep 25 10:43:57 EDT 2013  
   double true_emax = 0.0;
   if( fE_max < 0.0 || fE_max > beamE ){
@@ -69,6 +75,7 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   } else {
     true_emax = fE_max;
   }
+  */
   
 
   double totalxs = 0.0;	  
@@ -87,8 +94,8 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   for(int i = 0; i < npidx; i++ ){
       for(int j = 0; j < nthidx; j++ ){
 	// Scan around 2 GeV
-	pf = 0.1*((double) i)*beamE/npidx + mass;  // These are guesses, but they work for E down to 0.3 GeV
-	th = (10.0*((double) j)/nthidx/beamE)*pi/180;
+	pf = (0.1*((double) i)*(beamE/MeV)/npidx + mass/MeV);  // These are guesses, but they work for E down to 0.3 GeV
+	th = (10.0*((double) j)/nthidx/(beamE/MeV))*pi/180;
 	assert( pf > 0.0 );
 	assert( pf < beamE );
 	weight_tot = 0.0;
@@ -124,8 +131,8 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   double testval = 0.0;
 
    do { 
-     //th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
-     th = acos(CLHEP::RandFlat::shoot(-1.0,1.0));//since total cross section is computed for 4.pi range (ph range is 2.pi and th range is 2 rad)
+     th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
+     //th = acos(CLHEP::RandFlat::shoot(-1.0,1.0));//since total cross section is computed for 4.pi range (ph range is 2.pi and th range is 2 rad)
      ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
      pf = CLHEP::RandFlat::shoot(0., beamE);
 
