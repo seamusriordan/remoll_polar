@@ -23,6 +23,7 @@ remollGenericDetector::remollGenericDetector( G4String name, G4int detnum ) : G4
     // and only primaries when the cross in, basically separate out
     // solids from gasses and liquids
     fDontRecordThresh = 1.0*g/cm3;
+    //fDontRecordThresh = 0.0*g/cm3;//for testing by rakitha Mon Apr 21 14:49:08 EDT 2014
 }
 
 remollGenericDetector::~remollGenericDetector(){
@@ -65,6 +66,7 @@ G4bool remollGenericDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
       ){
 	badhit = false;
     }
+
 
 
     //  Make pointer to new hit if it's a valid track

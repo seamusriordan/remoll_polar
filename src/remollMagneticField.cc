@@ -514,6 +514,8 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     Bfield[1] = Bcart.y()*fFieldScale;
     Bfield[2] = Bcart.z()*fFieldScale;
 
+    //G4cout<< "fFieldScale " << fFieldScale << G4endl;
+
     return;
 } 
 

@@ -67,10 +67,10 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 	  ////  CalDetector Sum ////////////////////////////////////
 	  if( remollCalDetectorSumCollection *thiscast = 
 		  dynamic_cast<remollCalDetectorSumCollection *>(thiscol)){
-	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
-		  fIO->AddCalDetectorSum(
-			  (remollCalDetectorSum *) thiscast->GetHit(hidx) );
-	      }
+	    for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
+	      fIO->AddCalDetectorSum(
+				     (remollCalDetectorSum *) thiscast->GetHit(hidx) );
+	    }
 	  }
 
 

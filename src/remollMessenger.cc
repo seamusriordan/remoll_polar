@@ -233,6 +233,7 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 
 	scaleval = atof(scalestr.data());
 	fField->SetFieldScale( scalefile, scaleval );
+	//fField->SetFieldScale(scaleval );
     }
 
     if( cmd == fieldCurrCmd ){

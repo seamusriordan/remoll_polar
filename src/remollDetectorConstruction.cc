@@ -69,7 +69,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     }
     fGDMLParser = new G4GDMLParser();
     fGDMLParser->Clear();
-    fGDMLParser->SetOverlapCheck(false);
+    fGDMLParser->SetOverlapCheck(false);//true
 
     fprintf(stdout, "Reading %s\n", fDetFileName.data());
 
@@ -385,6 +385,10 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 
     G4cout << G4endl << "###### Leaving remollDetectorConstruction::Construct() " << G4endl << G4endl;
 
+    // Print materials defined.
+    //G4cout << G4endl << "==========The Actual materials defined are : =====" << G4endl << G4endl;
+    //G4cout << *(G4Material::GetMaterialTable()) << G4endl;
+    //G4cout << G4endl << "==========End of materials table==================" << G4endl << G4endl;
 
     
 

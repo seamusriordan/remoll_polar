@@ -124,10 +124,10 @@ print """        <materials>
 	
 	<solids>"""
 
-print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%f" rmax="%f" z="%f"/>"""% (rmin, rmax, motherdepth)
-print """	      <tube name="ecalcycdet_solid_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmax-0.1, motherdepth-0.05)
-print """	      <tube name="ecalcycdet_solid_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmax-0.2, motherdepth-0.1)
-print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%f" z="%f"/>"""% (rmin, motherdepth)
+print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, motherdepth)
+print """	      <tube name="ecalcycdet_solid_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.1, motherdepth-0.05)
+print """	      <tube name="ecalcycdet_solid_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.2, motherdepth-0.1)
+print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmin, motherdepth)
 print """  <subtraction name ="ecalcycdet_solid_4">
       <first ref="ecalcycdet_solid_1"/>
       <second ref="ecalcycdet_solid_2"/>
@@ -143,25 +143,25 @@ print """  <subtraction name ="ecalcycdet_solid">
   </subtraction> """ 
 
 print """	      <polyhedra name="ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-	      </polyhedra>""" % (numsides,  blockside/sqrt(3.0), -blockdepth/2, blockside/sqrt(3.0),  blockdepth/2 )
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -blockdepth/2, blockside*sqrt(3.0)/2,  blockdepth/2 )
 
-print """	      <tube name="ecalleadinglead" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%f" rmax="%f" z="%f"/>"""% (rmin, rmax, leadinglead)
+print """	      <tube name="ecalleadinglead" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, leadinglead)
 
 print """	      <polyhedra name="ecalleadscint" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-	      </polyhedra>""" % (numsides,  blockside/sqrt(3.0), -leadingscint/2, blockside/sqrt(3.0),  leadingscint/2)
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -leadingscint/2, blockside*sqrt(3.0)/2,  leadingscint/2)
 
 print """	      <polyhedra name="ecalgap" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-	      </polyhedra>""" % (numsides,  blockside/sqrt(3.0), -gapthick/2, blockside/sqrt(3.0),  gapthick/2)
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -gapthick/2, blockside*sqrt(3.0)/2,  gapthick/2)
 print """	      <polyhedra name="ecalblockscint" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-   	          <zplane rmin="0" rmax="%f" z="%f"/>
-	      </polyhedra>""" % (numsides,  blockside/sqrt(3.0), -scintthick/2, blockside/sqrt(3.0),  scintthick/2)
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -scintthick/2, blockside*sqrt(3.0)/2,  scintthick/2)
 
 print """        </solids>
 
@@ -218,18 +218,18 @@ print """	         <volume name="logicecalblock">
 		      """ % (ecalmat)
 print """	              <physvol>
 			     <volumeref ref="logicecalleadscint" />
-			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%f"/>
+			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
                         </physvol>""" % (-blockdepth/2 + leadingscint/2)
 
 for i in range(nscintlayer):
     thiszoff = -blockdepth/2 + leadingscint + (i+1)*absorbthick + i*(scintthick + gapthick)
     print """	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_%d" unit="cm" x="0.0" y="0.0" z="%f"/>
+			     <position name="ecalblockscintpos_%d" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
                         </physvol>""" %  (i, 0.5*scintthick + thiszoff)
     print """	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_%d" unit="cm" x="0.0" y="0.0" z="%f"/>
+			     <position name="ecalgappos_%d" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
                         </physvol>""" %  (i,0.5*gapthick + scintthick + thiszoff)
 
 print """	        </volume>""" # logicecalblock
@@ -249,12 +249,13 @@ print """	      <physvol>
 
 print """	      <physvol>
                       <volumeref ref="logicecalleadinglead"/>
-		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%f"/>
+		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%3.4f"/>
 	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
 
 # number of x and y steps to consider
-xspace = blockside*2
-yspace = 2.0*blockside/sqrt(3.0)
+xspace = blockside*3
+yspace = blockside*sqrt(3.0)
+
 
 nx = int(2.0*rmax/xspace) + 1
 ny = int(2.0*rmax/yspace) + 1
@@ -266,15 +267,16 @@ for i in range(nx):
 	if checkhexpoints( thisx, thisy, blockside ):
 	    print """             <physvol>
 		  <volumeref ref="logicecalblock"/>
-		  <position name="ecalblockpos_%d_%d_%d" unit="cm" x="%f" y ="%f" z="%f"/>
+		  <position name="ecalblockpos_%d_%d_%d" unit="cm" x="%3.2f" y ="%3.2f" z="%3.2f"/>
 	    </physvol>""" % (i, j, 0, thisx, thisy, motherdepth/2-blockdepth/2)
+#add 0.5 xspace and 0.5 yspace offsets and repeat above
+	thisx = -rmax + i*xspace+ blockside*1.5
+        thisy = -rmax + j*yspace + blockside*sqrt(3.0)/2
 
-	thisx = -rmax + i*xspace+ blockside
-	thisy = -rmax + j*yspace + blockside/sqrt(3.0)
 	if checkhexpoints( thisx, thisy, blockside ):
 	    print """             <physvol>
 		  <volumeref ref="logicecalblock"/>
-		  <position  name="ecalblockpos_%d_%d_%d " unit="cm" x="%f" y ="%f" z="%f"/>
+		  <position  name="ecalblockpos_%d_%d_%d " unit="cm" x="%3.2f" y ="%3.2f" z="%3.2f"/>
 	    </physvol>""" % (i, j, 1, thisx, thisy, motherdepth/2-blockdepth/2)
 
 print """      </volume>
