@@ -5,6 +5,7 @@
     <define>
 	<constant name="targetz" value="10.0"/>
 	<!-- <constant name="targetz" value="0.0"/> -->
+	<!--Proposal spec for the target lenght is 40 cm (20 cm half length) -->
 	<constant name="targetHalfLength" value="20.0"/>
 	<constant name="entwinthick" value="0.0125"/>
 	<constant name="extwinthick" value="0.0125"/>
@@ -14,6 +15,7 @@
 	<constant name="cDet_1_radius" value="800.0"/>
 
 	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
+	<position name="target_z1" x="0.0" y="0.0" z="targetz + 24" unit="cm"/>
 	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
 	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
 	<position name="target_v1" x="0.0" y="0.0" z="-24.975" unit="cm"/>
@@ -66,6 +68,7 @@
 	<tube aunit="deg" deltaphi="360" lunit="m" name="targetMother" rmax="1" rmin="0" startphi="0" z="20"/>
 
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube" rmax="1.918" rmin="0" startphi="0" z="targetHalfLength*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube2" rmax="100" rmin="0" startphi="0" z="25*2"/>
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCryo" rmax="1.9" rmin="0" startphi="0" z="(targetHalfLength-0.018)*2"/>
 
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCham" rmax="5" rmin="0" startphi="0" z="25*2"/>
@@ -109,7 +112,14 @@
 
 	<!--Cylindrical detector volume for radiation studies -->
 	<tube aunit="deg"  startphi="0" deltaphi="360" lunit="cm" name="cDet_solid_1" rmax="cDet_1_radius+1." rmin="cDet_1_radius" z="height_cylwall"/>
+	<!--subtract the target chamber from the cDet_solid_2 and set rmin to go inside the target chamber -->
+	<tube aunit="deg"  startphi="0" deltaphi="360" lunit="cm" name="cDet_solid_2_1" rmax="70" rmin="3" z="0.1"/>
 
+	<subtraction name ="cDet_solid_2">
+	    <first ref="cDet_solid_2_1"/>
+	    <second ref="targetCham0"/>
+	    <positionref ref="target_v0"/>
+	</subtraction>
 
 	<!-- Encompassing logical volume -->
 
@@ -120,7 +130,7 @@
 
 	<union name ="tbunion0">
 	    <first ref="smallvol"/>  <!-- This is just a base to fix the union on  -->
-	    <second ref="targetTube"/>
+	    <second ref="targetTube2"/>
 	    <positionref ref="target_z0"/>
 	</union>
 
@@ -222,6 +232,15 @@
 	  <auxiliary auxtype="DetNo" auxvalue="8001"/>
 	</volume>
 
+	<volume name="cDet_2">
+	  <materialref ref="Vacuum"/>
+	  <solidref ref="cDet_solid_2"/>
+	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
+	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
+	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8002"/>
+	</volume>
+
 	<!---  Place volumes -->
 
 	<volume name="logicTarget">
@@ -276,6 +295,11 @@
 		<positionref ref="target_z0"/>
 		<rotationref ref="scRot_1"/>
 	    </physvol>
+	     <physvol>
+		<volumeref ref="cDet_2"/>
+		<positionref ref="target_z1"/>
+	    </physvol>
+
 
 	</volume>
 
