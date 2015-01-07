@@ -12,8 +12,13 @@ zfront = 335.0
 dz     = 25
 zback  = zfront + 2.0*dz
 
-rmin = 118.0
-rmax = 261.0
+#ECAL radius I used upto Wed Jan  7 13:21:40 EST 2015
+#rmin = 118.0
+#rmax = 261.0
+
+#ECAL radius used in gemc
+rmin = 110.0
+rmax = 265.0
 
 #6.25 cm a side gives 101.49 cm area per block
 blockside = 6.25
@@ -132,7 +137,7 @@ print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaph
 
 #create 30 photon blocker solids
 for i in range(30):
-    print """	      <tube name="ecalphotblock_solid_%d" aunit="deg" startphi="%f" deltaphi="2.5" lunit="cm" rmin="118" rmax="208" z="5"/>"""% (i+1, (i*12+2.2))
+    print """	      <tube name="ecalphotblock_solid_%d" aunit="deg" startphi="%f" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>"""% (i+1, (i*12+2.2))
 
 
 print """  <subtraction name ="ecalcycdet_solid_4">
