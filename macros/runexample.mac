@@ -1,7 +1,15 @@
 #  Example file
 
+
+
+##### Replace
+
 # This must be called before initialize
 /remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+
+
+
+##### Chose the correct physics list
 
 #Adding physics list must be called before initialze command
 #supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
@@ -11,12 +19,22 @@
 #Hadronic only physics list options currently only support QGSP_BERT 
 #/remoll/setphysicslist QGSP_BERT_HO
 
+
+##### This should probably be true
+
 #Enable optical photons and processes (true or false)
 /remoll/optical false
+
+
+
+##### Run Initializer
 
 # This must be explicitly called
 /run/initialize
 
+
+
+##### Replace
 
 # add field map
 /remoll/addfield CLEO_rm.dat
@@ -24,6 +42,9 @@
 #/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
 /remoll/scalefield CLEO_rm.dat -1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
+
+
+
 
 # Raster and initial angle stuff
 # Raster is on by default with 5x5mm

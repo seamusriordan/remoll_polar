@@ -1,7 +1,7 @@
 /*!
-  remoll - 12 GeV Moller Simluation
+  remoll_polar - Mainz P2 moller polarimeter simulation
 
-  Seamus Riordan, et al.
+  Seamus Riordan, Cameron Clarke, et al.
   riordan@jlab.org
 
 */
@@ -23,7 +23,7 @@
 #include "remollIO.hh"
 #include "remollMessenger.hh"
 
-//  Standard physics list
+//  Standard physics list // is this ideal for doing moller scattering?
 #include "QGSP_BERT.hh"
 #include "G4PhysListFactory.hh"
 #include "G4HadronicProcessStore.hh"
