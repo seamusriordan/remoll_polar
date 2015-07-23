@@ -1,0 +1,11 @@
+coil length (mm): 5913553.000000
+coil axial length (mm): 200.000000
+coil radius (mm): 50.000000
+coil current (A): 74.000000
+x_min (mm): 0.000000
+x_max (mm): 49.000000
+delta_x (mm): 2.000000
+z_min (mm): 0.000000
+z_max (mm): 400.000000
+delta_z (mm): 2.000000
+number of integral evaluation points per m along coil: 1000.000000
