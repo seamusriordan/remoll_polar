@@ -11,6 +11,10 @@
 #include <vector>
 #include "G4ThreeVector.hh"
 
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
+
 class G4ParticleDefinition;
 
 class remollEvent {

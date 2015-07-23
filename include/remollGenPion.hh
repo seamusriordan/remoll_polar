@@ -10,7 +10,6 @@
 */
 
 #include "remollVEventGen.hh"
-#define pi 3.14159
 #define me 0.511E-3 //electron restmass (GeV)
 #define alpha 0.007299
 

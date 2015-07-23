@@ -12,6 +12,10 @@
 #include "remollBeamTarget.hh"
 #include "remollMultScatt.hh"
 
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 #include <math.h>
 
 #define __MAX_MAT 100

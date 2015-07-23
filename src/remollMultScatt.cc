@@ -8,6 +8,10 @@
 #include <time.h>
 #include <stdlib.h>
 
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 #include "Randomize.hh"
 
 remollMultScatt::remollMultScatt() {

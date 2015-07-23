@@ -7,6 +7,10 @@
 #include "G4VisAttributes.hh"
 #include "G4SteppingManager.hh"
 
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 remollSteppingAction::remollSteppingAction()
 :drawFlag(false)
 {

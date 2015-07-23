@@ -43,6 +43,10 @@
 #include "G4UnitsTable.hh"
 #include <vector>
 
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 #define __DET_STRLEN 200
 #define __MAX_DETS 100000
 

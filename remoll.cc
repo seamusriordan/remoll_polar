@@ -17,7 +17,6 @@
 #include "remollOpticalPhysics.hh"
 #include "remollPhysicsList.hh"
 
-#include "G4StepLimiterBuilder.hh"
 
 #include "remollDetectorConstruction.hh"
 
@@ -25,7 +24,7 @@
 #include "remollMessenger.hh"
 
 //  Standard physics list
-#include "LHEP.hh"
+#include "QGSP_BERT.hh"
 #include "G4PhysListFactory.hh"
 #include "G4HadronicProcessStore.hh"
 #include "G4RunManager.hh"

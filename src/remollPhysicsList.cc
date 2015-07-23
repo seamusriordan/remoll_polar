@@ -11,32 +11,15 @@
 #include "G4HadronElasticPhysics.hh"
 #include "G4HadronElasticPhysicsXS.hh"
 #include "G4HadronElasticPhysicsHP.hh"
-#include "G4HadronElasticPhysicsLHEP.hh"
-#include "G4HadronQElasticPhysics.hh"
 #include "G4ChargeExchangePhysics.hh"
 #include "G4NeutronTrackingCut.hh"
 #include "G4NeutronCrossSectionXS.hh"
-#include "G4QStoppingPhysics.hh"
-#include "G4LHEPStoppingPhysics.hh"
 #include "G4IonBinaryCascadePhysics.hh"
 #include "G4IonPhysics.hh"
 #include "G4EmExtraPhysics.hh"
 #include "G4EmProcessOptions.hh"
 
-#include "HadronPhysicsFTFP_BERT.hh"
-#include "HadronPhysicsFTF_BIC.hh"
-#include "HadronPhysicsLHEP.hh"
-#include "HadronPhysicsLHEP_EMV.hh"
 #include "G4HadronInelasticQBBC.hh"
-#include "HadronPhysicsQGSC_BERT.hh"
-#include "HadronPhysicsQGSP.hh"
-#include "HadronPhysicsQGSP_BERT.hh"
-#include "HadronPhysicsQGSP_BERT_HP.hh"
-#include "HadronPhysicsQGSP_BIC.hh"
-#include "HadronPhysicsQGSP_BIC_HP.hh"
-#include "HadronPhysicsQGSP_FTFP_BERT.hh"
-#include "HadronPhysicsQGS_BIC.hh"
-
 
 #include "G4IonPhysics.hh"
 
@@ -155,102 +138,13 @@ void remollPhysicsList::AddPhysicsList(const G4String& name)
         delete emPhysicsList;
         emPhysicsList = new G4EmStandardPhysics(verboseLevel);
 
-    } else if (name == "FTFP_BERT_EMV") {
 
-        AddPhysicsList("emstandard_opt1");
-        AddPhysicsList("FTFP_BERT");
-
-    } else if (name == "FTFP_BERT_EMX") {
-
-        AddPhysicsList("emstandard_opt2");
-        AddPhysicsList("FTFP_BERT");
-
-    } else if (name == "FTFP_BERT") {
-        SetBuilderList1();
-        hadronPhys.push_back( new HadronPhysicsFTFP_BERT());
-
-    } else if (name == "FTF_BIC") {
-
-        SetBuilderList0();
-        hadronPhys.push_back( new HadronPhysicsFTF_BIC());
-        hadronPhys.push_back( new G4NeutronCrossSectionXS(verboseLevel));
-
-    } else if (name == "LHEP") {
-
-        SetBuilderList2();
-        hadronPhys.push_back( new HadronPhysicsLHEP());
-
-    } else if (name == "LHEP_EMV") {
-
-        AddPhysicsList("emstandard_opt1");
-        SetBuilderList2(true);
-        hadronPhys.push_back( new HadronPhysicsLHEP_EMV());
-
+ 
     } else if (name == "QBBC") {
 
         AddPhysicsList("emstandard_opt2");
         SetBuilderList3();
         hadronPhys.push_back( new G4HadronInelasticQBBC());
-
-    } else if (name == "QGSC_BERT") {
-
-        SetBuilderList4();
-        hadronPhys.push_back( new HadronPhysicsQGSC_BERT());
-
-    } else if (name == "QGSP") {
-
-        SetBuilderList1();
-        hadronPhys.push_back( new HadronPhysicsQGSP());
-
-    } else if (name == "QGSP_BERT") {
-
-        SetBuilderList1();
-        hadronPhys.push_back( new HadronPhysicsQGSP_BERT());
-
-    } else if (name == "QGSP_FTFP_BERT") {
-
-        SetBuilderList1();
-        hadronPhys.push_back( new HadronPhysicsQGSP_FTFP_BERT());
-
-    } else if (name == "QGSP_BERT_EMV") {
-        if (verboseLevel>0) {
-            G4cout << "Debug remollPhysicsList::AddPhysicsList - Setting physics list to QGSP_BERT_EMV " << G4endl;
-        }
-        AddPhysicsList("emstandard_opt1");
-        AddPhysicsList("QGSP_BERT");
-
-    } else if (name == "QGSP_BERT_EMX") {
-
-        AddPhysicsList("emstandard_opt2");
-        AddPhysicsList("QGSP_BERT");
-
-    } else if (name == "QGSP_BERT_HP") {
-
-        SetBuilderList1(true);
-        hadronPhys.push_back( new HadronPhysicsQGSP_BERT_HP());
-
-
-    } else if (name == "QGSP_BIC") {
-
-        SetBuilderList0();
-        hadronPhys.push_back( new HadronPhysicsQGSP_BIC());
-
-    } else if (name == "QGSP_BIC_EMY") {
-
-        AddPhysicsList("emstandard_opt3");
-        SetBuilderList0();
-        hadronPhys.push_back( new HadronPhysicsQGSP_BIC());
-
-    } else if (name == "QGS_BIC") {
-
-        SetBuilderList0();
-        hadronPhys.push_back( new HadronPhysicsQGS_BIC());
-        hadronPhys.push_back( new G4NeutronCrossSectionXS(verboseLevel));
-
-    } else if (name == "QGSP_BIC_HP") {
-
-        SetBuilderList0(true);
-        hadronPhys.push_back( new HadronPhysicsQGSP_BIC_HP());
 
     } else if (name == "QGSP_BERT_HO") {//add only hadronic processes
         if (verboseLevel>0) {
@@ -277,7 +171,6 @@ void remollPhysicsList::SetBuilderList0(G4bool flagHP)
     } else {
         hadronPhys.push_back( new G4HadronElasticPhysics(verboseLevel) );
     }
-    hadronPhys.push_back( new G4QStoppingPhysics(verboseLevel));
     hadronPhys.push_back( new G4IonBinaryCascadePhysics(verboseLevel));
     hadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
 }
@@ -292,7 +185,6 @@ void remollPhysicsList::SetBuilderList1(G4bool flagHP)
     } else {
         hadronPhys.push_back( new G4HadronElasticPhysics(verboseLevel) );
     }
-    hadronPhys.push_back( new G4QStoppingPhysics(verboseLevel));
     hadronPhys.push_back( new G4IonPhysics(verboseLevel));
     hadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
 }
@@ -302,8 +194,6 @@ void remollPhysicsList::SetBuilderList1(G4bool flagHP)
 void remollPhysicsList::SetBuilderList2(G4bool addStopping)
 {
     hadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
-    hadronPhys.push_back( new G4HadronElasticPhysicsLHEP(verboseLevel));
-    if(addStopping) { hadronPhys.push_back( new G4QStoppingPhysics(verboseLevel)); }
     hadronPhys.push_back( new G4IonPhysics(verboseLevel));
 }
 
@@ -313,7 +203,6 @@ void remollPhysicsList::SetBuilderList3()
 {
     hadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
     RegisterPhysics( new G4HadronElasticPhysicsXS(verboseLevel) );
-    hadronPhys.push_back( new G4QStoppingPhysics(verboseLevel));
     hadronPhys.push_back( new G4IonBinaryCascadePhysics(verboseLevel));
     hadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
 }
@@ -323,8 +212,6 @@ void remollPhysicsList::SetBuilderList3()
 void remollPhysicsList::SetBuilderList4()
 {
     hadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
-    hadronPhys.push_back( new G4HadronQElasticPhysics(verboseLevel));
-    hadronPhys.push_back( new G4QStoppingPhysics(verboseLevel));
     hadronPhys.push_back( new G4IonPhysics(verboseLevel));
     hadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
 }
@@ -383,13 +270,13 @@ void remollPhysicsList::SetCutForProton(G4double cut)
 
 void remollPhysicsList::List()
 {
-    G4cout << "### PhysicsLists available: FTFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC"
+    G4cout << "### PhysicsLists available:  "
         << G4endl;
-    G4cout << "                            LHEP LHEP_EMV QBBC QGS_BIC QGSP"
+    G4cout << "                            QBBC QGSP"
         << G4endl; 
-    G4cout << "                            QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY"
+    G4cout << "                            QGSP_BERT QGSP_BERT_EMV"
         << G4endl; 
-    G4cout << "                            QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP" 
+    G4cout << "                            QGSP_BERT_EMX QGSP_BERT_HP " 
         << G4endl; 
 }
 

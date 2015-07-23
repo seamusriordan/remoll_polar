@@ -1,6 +1,10 @@
 #include "remollCalDetector.hh"
 #include "G4SDManager.hh"
 
+
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 remollCalDetector::remollCalDetector( G4String name, G4int detnum ) : G4VSensitiveDetector(name){
     char colname[255];
 

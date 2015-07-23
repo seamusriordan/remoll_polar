@@ -6,6 +6,9 @@
 #include "G4String.hh"
 #include "G4ThreeVector.hh"
 #include "remollVertex.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 
 /*!
    Generic base class for event generators
