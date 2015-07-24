@@ -1,7 +1,11 @@
 #include "remollDetectorConstruction.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4PhysicalConstants.hh"
+#include "remollBeamTarget.hh"
+#include "remollIO.hh"
 
+#include "G4TransportationManager.hh"
+#include "G4FieldManager.hh"
 #include "remollGenericDetector.hh"
 #include "G4SDManager.hh"
 
@@ -13,7 +17,7 @@
 #include "G4LogicalSkinSurface.hh"
 #include "G4Box.hh"
 #include "G4Tubs.hh"
-#include "G4PhysicalVolume.hh"
+#include "G4VPhysicalVolume.hh"
 #include "G4LogicalVolume.hh"
 #include "G4RotationMatrix.hh"
 #include "G4ThreeVector.hh"
@@ -29,29 +33,39 @@ remollDetectorConstruction::remollDetectorConstruction()
 	meas_loc_x = 0.*cm;
 	meas_loc_y = 50.*cm;
 	meas_loc_z = 100.*cm;
+	
+
+	fIO = NULL;
+
+	CreateGlobalMagneticField();
+	
+
 }
 
 remollDetectorConstruction::~remollDetectorConstruction(){;}
 
 G4VPhysicalVolume* remollDetectorConstruction::Construct()
 {
+	
+	remollBeamTarget *beamtarg = remollBeamTarget::GetBeamTarget();
+	beamtarg->Reset();
 	/////
 	// Material Definitions
 	
 	G4double a, z, density;
 	G4int nelements;
 
-	G4Element* H = new G4Element("Hydrogen", "H", z=1 , a = 1.00794*g/mol);
+	G4Element* H = new G4Element("Hydrogen", "H", z=1 , a = 1.00794*g/mole);
 	G4Material* TargetGas = new G4Material("TargetGas", density=1.29*mg/cm3, nelements=1);
 	TargetGas->AddElement(H, 1);
 
-	G4Element* N = new G4Element("Nitrogen", "N", z=7, a=14.01*g/mol);
-	G4Element* O = new G4Element("Oxygen", "O", z=8, a=16.00*g/mol);
+	G4Element* N = new G4Element("Nitrogen", "N", z=7, a=14.01*g/mole);
+	G4Element* O = new G4Element("Oxygen", "O", z=8, a=16.00*g/mole);
 	G4Material* Air = new G4Material("Air", density=1.29*mg/cm3, nelements=2);
 	Air->AddElement(N, 70.*perCent);
 	Air->AddElement(O, 30.*perCent);
 
-	G4Element* Al = new G4Element("Aluminum", "Al", z=13, a=26.98*g/mol);
+	G4Element* Al = new G4Element("Aluminum", "Al", z=13, a=26.98*g/mole);
 	G4Material* Aluminum = new G4Material("TargetWall", density=2.703*g/cm3, nelements=1);
 	Aluminum->AddElement(Al, 1);
 
@@ -98,8 +112,10 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	
 	world_log->SetVisAttributes(G4VisAttributes::Invisible);
 	
-	G4PhysicalVolume* world_phys
-		= new G4PVPlacement(0.,G4ThreeVector(0.,0.,0.),world_log,"World",0,false,0);
+
+	G4VPhysicalVolume* world_phys
+		= new G4PVPlacement(NULL,G4ThreeVector(0.,0.,0.),world_log,"World",0,false,0);
+	beamtarg->SetMotherVolume(world_phys);
 	
 	/////
 	// Detector system intialization
@@ -124,17 +140,18 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	remollGenericDetector* targSD 
 		= new remollGenericDetector("TargetSD",1);
 
-	SDman->AddNewDetector(targSD);
+	//SDman->AddNewDetector(targSD);
 	targ_log->SetSensitiveDetector(targSD);
 
 	G4RotationMatrix* rotTarg
 		= new G4RotationMatrix;
 	rotTarg->rotateZ(0.*deg);
 
-	G4PhysicalVolume* targ_phys
+	G4VPhysicalVolume* targ_phys
 		= new G4PVPlacement(rotTarg,G4ThreeVector(0.,0.,0.),targ_log,"Target",
 			det_log,false,0);
 
+	beamtarg->AddVolume(targ_phys);
 	
 	/////
 	// External container blocking some mollers from exiting the target cell
@@ -142,7 +159,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	// for no particular reason
 	
 	G4Tubs* container_cyl 
-		= new G4Tubs("Container",container_inner_r,container_outer_r,container_z,starging_angle,spanning_angle);
+		= new G4Tubs("Container",container_inner_r,container_outer_r,container_z,starting_angle,spanning_angle);
 
 	G4LogicalVolume* container_log 
 		= new G4LogicalVolume(container_cyl,Aluminum,"Container",0,0,0);
@@ -150,14 +167,14 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	remollGenericDetector* containerSD
 		= new remollGenericDetector("ContainerSD",2);
 
-	SDman->AddNewDetector(containerSD);
+	//SDman->AddNewDetector(containerSD);
 	container_log->SetSensitiveDetector(containerSD);
 	
 	G4RotationMatrix* rotContainer
 		= new G4RotationMatrix;
 	rotContainer->rotateZ(0.*deg);
 
-	G4PhysicalVolume* container_phys
+	G4VPhysicalVolume* container_phys
 		= new G4PVPlacement(rotContainer,G4ThreeVector(0.,0.,0.),container_log,"Container",
 			det_log,false,0);
 
@@ -174,14 +191,14 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	remollGenericDetector* up_measSD
 		= new remollGenericDetector("UpMeasurerSD",3);
 
-	SDman->AddNewDetector(up_measSD);
+	//SDman->AddNewDetector(up_measSD);
 	up_meas_log->SetSensitiveDetector(up_measSD);
 
 	G4RotationMatrix* rotUM
 		= new G4RotationMatrix;
 	rotUM->rotateZ(0.*deg);
 
-	G4PhysicalVolume* up_meas_phys
+	G4VPhysicalVolume* up_meas_phys
 		= new G4PVPlacement(rotUM,G4ThreeVector(meas_loc_x,meas_loc_y,meas_loc_z),up_meas_log,"UpMeasurer",
 			det_log,false,0);
 
@@ -196,17 +213,19 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	remollGenericDetector* down_measSD
 		= new remollGenericDetector("DownMeasurerSD",4);
 
-	SDman->AddNewDetector(down_measSD);
+	//SDman->AddNewDetector(down_measSD);
 	down_meas_log->SetSensitiveDetector(down_measSD);
 
 	G4RotationMatrix* rotDM
 		= new G4RotationMatrix;
 	rotDM->rotateZ(180.*deg);
 
-	G4PhysicalVolume* down_meas_phys
+	G4VPhysicalVolume* down_meas_phys
 		= new G4PVPlacement(rotDM,G4ThreeVector(meas_loc_x,-meas_loc_y,meas_loc_z),down_meas_log,"DownMeasurer",
 			det_log,false,0);
 
+
+	// Make a flat plane detector and register with SDman.
 
 	/////
 	// Place the detector volume
@@ -215,7 +234,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 		= new G4RotationMatrix;
 	detrot->rotateZ(0.*deg);
 
-	G4PhysicalVolume* det_phys
+	G4VPhysicalVolume* det_phys
 		= new G4PVPlacement(detrot,G4ThreeVector(0.,0.,0.),det_log,"detector_phys",
 			world_log,false,0);
 
@@ -225,15 +244,15 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	
 	return world_phys;
 }
-
-G4int remollDetectorConstruction::UpdateCopyNo(G4PhysicalVolume* aVolume,G4int index){
+/*
+G4int remollDetectorConstruction::UpdateCopyNo(G4VPhysicalVolume* aVolume,G4int index){
 	aVolume->SetCopyNo(index);
 	index++;
-	for(int i=0i<aVolume->GetLogicalVolume()->GetNoDaughters();i++){
-		index = UpdateCopyNo(aVolume->GetLogicalVolume()-GetDaughter(i),index);
+	for(int i=0;i<aVolume->GetLogicalVolume()->GetNoDaughters();i++){
+		index = UpdateCopyNo(aVolume->GetLogicalVolume()->GetDaughter(i),index);
 	}
-	return index
-};
+	return index;
+}
 
 
 void remollDetectorConstruction::DumpGeometricalTree(G4VPhysicalVolume* aVolume,G4int depth)
@@ -254,17 +273,17 @@ void remollDetectorConstruction::DumpGeometricalTree(G4VPhysicalVolume* aVolume,
 	for(int i=0;i<aVolume->GetLogicalVolume()->GetNoDaughters();i++)
 	{ DumpGeometricalTree(aVolume->GetLogicalVolume()->GetDaughter(i),depth+1); }
 }
-
+*/
 void remollDetectorConstruction::CreateGlobalMagneticField() {
 	fGlobalField = new remollGlobalField();
 
-	fGlobalFieldManager = G4TransportationManager::GetTransportationManager()=>GetFieldManager();
+	fGlobalFieldManager = G4TransportationManager::GetTransportationManager()->GetFieldManager();
 	fGlobalFieldManager->SetDetectorField(fGlobalField);
 	fGlobalFieldManager->CreateChordFinder(fGlobalField);
 
 	return;
 }
 
-void remollDetectorConstruction::SetDetectorGeomFile(const G4String &str)
+void remollDetectorConstruction::SetDetectorGeomFile(const G4String &str){
 	fDetFileName = str;
 }

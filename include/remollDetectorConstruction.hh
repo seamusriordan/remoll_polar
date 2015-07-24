@@ -11,7 +11,7 @@ class G4Tubs;
 class G4LogicalVolume;
 class G4VPhysicalVolume;
 class G4VSensitiveDetector;
-
+class G4FieldManager;
 
 class remollDetectorConstruction : public G4VUserDetectorConstruction
 {
@@ -39,8 +39,8 @@ class remollDetectorConstruction : public G4VUserDetectorConstruction
 
 		remollIO *fIO;
 
-		void DumpGeometricalTree(G4VPhysicalVolume* aVolume,G4int depth=0);
-		G4int UpdateCopyNo(G4VPhysicalVolume* aVolume,G4int index=0);
+		//void DumpGeometricalTree(G4VPhysicalVolume* aVolume,G4int depth=0);
+		//G4int UpdateCopyNo(G4VPhysicalVolume* aVolume,G4int index=0);
 
 };
 #endif

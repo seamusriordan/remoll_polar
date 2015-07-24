@@ -107,6 +107,7 @@ set(REMOLL_SCRIPTS
     macros/runexample.mac
     macros/gui.mac
     macros/vis.mac
+    macros/magtest.mac
     rootlogon.C
     geometry_pvdis/genecal.py
     geometry_pvdis/ecal_orig.gdml

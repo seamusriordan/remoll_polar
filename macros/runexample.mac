@@ -1,16 +1,5 @@
 #  Example file
 
-
-
-##### Replace
-
-# This must be called before initialize
-/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
-
-
-
-##### Chose the correct physics list
-
 #Adding physics list must be called before initialze command
 #supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
 /remoll/setphysicslist QGSP_BERT_EMV
@@ -19,8 +8,6 @@
 #Hadronic only physics list options currently only support QGSP_BERT 
 #/remoll/setphysicslist QGSP_BERT_HO
 
-
-##### This should probably be true
 
 #Enable optical photons and processes (true or false)
 /remoll/optical false
@@ -34,7 +21,7 @@
 
 
 
-##### Replace
+##### Replace with mine
 
 # add field map
 /remoll/addfield CLEO_rm.dat
@@ -48,18 +35,18 @@
 
 # Raster and initial angle stuff
 # Raster is on by default with 5x5mm
-#/remoll/rasx 5 mm
-#/remoll/rasy 5 mm
-#/remoll/beam_x0 0 mm
-#/remoll/beam_y0 0 mm
+/remoll/rasx 0 mm
+/remoll/rasy 0 mm
+/remoll/beam_x0 0 mm
+/remoll/beam_y0 0 mm
 # initial angle
-#/remoll/beam_th0 500 mrad
-#/remoll/beam_ph0 0 mrad
+/remoll/beam_th0 0 mrad
+/remoll/beam_ph0 0 mrad
 # gaussian spread widths
-#/remoll/beam_dth 0 mrad
-#/remoll/beam_dph 0 mrad
+/remoll/beam_dth 0 mrad
+/remoll/beam_dph 0 mrad
 
-#/remoll/gen flat  # flat generator
+/remoll/gen moller  # flat generator
 #/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
 
 
@@ -70,22 +57,22 @@
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
 #/remoll/gen pion  
-/remoll/gen uniformpion  
-/remoll/piontype pi-
+#/remoll/gen uniformpion  
+#/remoll/piontype pi-
 #/remoll/piontype pi0 
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
-/remoll/thmin 10.0 deg
+/remoll/thmin 30.0 deg
 #/remoll/thmin 10.0 deg
-/remoll/thmax 50.0 deg
+/remoll/thmax 150.0 deg
 #/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
 /remoll/phmax 180.0 deg
-#/remoll/emin  0 GeV
-#/remoll/emax 11.0 GeV
+#/remoll/emin  140 MeV
+#/remoll/emax 11.0 MeV
 
-/remoll/beamene 11.0 GeV
+/remoll/beamene 140.0 MeV
 /remoll/beamcurr 50 microampere
 
 
@@ -112,5 +99,5 @@
 #/remoll/filename remollout.root
 #/remoll/filename remoll_dis_out_test3.root
 #/remoll/filename remoll_test_pion.root
-/remoll/filename remoll_test_uniformpion.root
+/remoll/filename p2moller_magneticfield.root
 /run/beamOn 100000
