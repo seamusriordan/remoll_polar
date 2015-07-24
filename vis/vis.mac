@@ -3,7 +3,7 @@
 #
 /vis/scene/create
 
-
+/run/initialize
 #
 # Declare that the world volume should be added to the scene
 #
