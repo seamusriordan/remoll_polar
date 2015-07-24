@@ -1,0 +1,103 @@
+#  Example file
+
+#Adding physics list must be called before initialze command
+#supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
+/remoll/setphysicslist QGSP_BERT_EMV
+#EM only physics list options (emstandard_opt0 emstandard_opt1 emstandard_opt2 emstandard_opt3)
+#/remoll/setphysicslist emstandard_opt1
+#Hadronic only physics list options currently only support QGSP_BERT 
+#/remoll/setphysicslist QGSP_BERT_HO
+
+
+#Enable optical photons and processes (true or false)
+/remoll/optical false
+
+
+
+##### Run Initializer
+
+# This must be explicitly called
+/run/initialize
+
+
+
+##### Replace with mine
+
+# add field map
+/remoll/addfield CLEO_rm.dat
+# change field map paramters
+#/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
+/remoll/scalefield CLEO_rm.dat -1.0
+#/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
+
+
+
+
+# Raster and initial angle stuff
+# Raster is on by default with 5x5mm
+/remoll/rasx 0 mm
+/remoll/rasy 0 mm
+/remoll/beam_x0 0 mm
+/remoll/beam_y0 0 mm
+# initial angle
+/remoll/beam_th0 0 mrad
+/remoll/beam_ph0 0 mrad
+# gaussian spread widths
+/remoll/beam_dth 0 mrad
+/remoll/beam_dph 0 mrad
+
+/remoll/gen moller  # flat generator
+#/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
+
+
+#/remoll/gen beam
+#/remoll/gen elastic 
+#/remoll/thmin 0.1 deg
+#/remoll/thmax 2.0 deg
+#/remoll/emin 80.0 MeV
+#/remoll/gen inelastic # Christy/Bosted
+#/remoll/gen pion  
+#/remoll/gen uniformpion  
+#/remoll/piontype pi-
+#/remoll/piontype pi0 
+#/remoll/gen dis
+
+#/remoll/gen flat  # flat generator
+/remoll/thmin 30.0 deg
+#/remoll/thmin 10.0 deg
+/remoll/thmax 150.0 deg
+#/remoll/thmax 180.0 deg
+/remoll/phmin -180.0 deg
+/remoll/phmax 180.0 deg
+#/remoll/emin  140 MeV
+#/remoll/emax 11.0 MeV
+
+/remoll/beamene 140.0 MeV
+/remoll/beamcurr 50 microampere
+
+
+# Make interactions with heavy materials
+# pure absorbers or not (on by default)
+# Materials explicity called Kryptonite 
+# are always kryptonite
+/remoll/likekryptonite false
+
+#Below the this energy, the tracks are killed
+#/remoll/minEnergyCut 1 MeV
+
+# Specify random number seed
+#/remoll/seed 123456
+
+# no gamma interaction
+#/process/inactivate phot
+#/process/inactivate compt
+#/process/inactivate conv
+
+
+
+#  output filename
+#/remoll/filename remollout.root
+#/remoll/filename remoll_dis_out_test3.root
+#/remoll/filename remoll_test_pion.root
+/remoll/filename p2moller_magneticfield.root
+/run/beamOn 100000
