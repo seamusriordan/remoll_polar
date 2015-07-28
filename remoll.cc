@@ -57,6 +57,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+using namespace std;
+
 int main(int argc, char** argv){
 
     // Initialize the CLHEP random engine used by
@@ -102,13 +104,13 @@ int main(int argc, char** argv){
     G4PhysListFactory factory;
     G4String physName = "";
     remollPhysicsList *phys = new remollPhysicsList();
-    
+   
+
     // Physics List updated via the macro.  Rakitha Mon Dec 30 00:25:54 EST 2013
     rmmess->SetPhysList(phys);
     runManager->SetUserInitialization(phys);
     //use this option to increase the verbose level for hadronic process information
     //G4HadronicProcessStore::Instance()->SetVerbose(2);
-    
 
     //-------------------------------
     // UserAction classes
@@ -191,13 +193,17 @@ int main(int argc, char** argv){
 #endif
 
 	session->SessionStart();
+cout<<"good 4"<<endl;
 	delete session;
     }
     else           // Batch mode - not using the GUI
     {
+cout<<"good batch"<<endl;
 #ifdef G4VIS_USE
 	visManager->SetVerboseLevel("quiet");
 #endif
+
+cout<<"good 6"<<endl;
 	//these line will execute a macro without the GUI
 	//in GEANT4 a macro is executed when it is passed to the command, /control/execute
 	G4String command = "/control/execute ";
@@ -208,11 +214,13 @@ int main(int argc, char** argv){
 	 * */
 	rundata->SetMacroFile(argv[1]);
 
+cout<<"good 7"<<endl;
 
 	UI->ApplyCommand(command+fileName);
 	remollRun::GetRun()->GetData()->Print();
     }
 
+cout<<"good 8"<<endl;
     //if one used the GUI then delete it
 #ifdef G4VIS_USE
     delete visManager;

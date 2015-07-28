@@ -101,7 +101,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	meas_x = 3*cm;
 	meas_y = 3*meas_x;
 	meas_z = meas_x/3;
-	readplane_r = 20.*targ_r;
+	readplane_r = 5.*targ_r;
 	readplane_z_pos = targ_z + 1.0*cm;
 
 	/////
@@ -160,7 +160,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	// External container blocking some mollers from exiting the target cell
 	// therefore, hitting det == 2 should be a veto parameter, made of Al for now
 	// for no particular reason
-	
+/*	
 	G4Tubs* container_cyl 
 		= new G4Tubs("Container",container_inner_r,container_outer_r,container_z,starting_angle,spanning_angle);
 
@@ -226,7 +226,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4VPhysicalVolume* down_meas_phys
 		= new G4PVPlacement(rotDM,G4ThreeVector(meas_loc_x,-meas_loc_y,meas_loc_z),down_meas_log,"DownMeasurer",
 			det_log,false,0);
-
+*/
 
 	// Make a flat plane detector and register with SDman.
 
@@ -249,9 +249,6 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4VPhysicalVolume* readplane_phys
 		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos),readplane_log,"ReadPlane",
 			det_log,false,0);
-
-	beamtarg->AddVolume(readplane_phys);
-	
 
 	/////
 	// Place the detector volume
