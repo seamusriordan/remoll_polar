@@ -88,11 +88,11 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4double readplane_r, readplane_z_pos;
 	
 	world_r = 500.*cm;
-	world_z = 1000.*cm;
+	world_z = 2000.*cm;
 	starting_angle = 0.*deg;
 	spanning_angle = 360.*deg;
 	det_r = 250.*cm;
-	det_z = 500.*cm;
+	det_z = 2000.*cm;
 	targ_r = 1.*cm;
 	targ_z = 10.*cm;
 	container_inner_r = targ_r;
@@ -101,8 +101,8 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	meas_x = 3*cm;
 	meas_y = 3*meas_x;
 	meas_z = meas_x/3;
-	readplane_r = 5.*targ_r;
-	readplane_z_pos = targ_z + 1.0*cm;
+	readplane_r = 100.*targ_r;
+	readplane_z_pos = 40.0*cm;
 
 	/////
 	// World
@@ -160,7 +160,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	// External container blocking some mollers from exiting the target cell
 	// therefore, hitting det == 2 should be a veto parameter, made of Al for now
 	// for no particular reason
-/*	
+	
 	G4Tubs* container_cyl 
 		= new G4Tubs("Container",container_inner_r,container_outer_r,container_z,starting_angle,spanning_angle);
 
@@ -180,7 +180,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4VPhysicalVolume* container_phys
 		= new G4PVPlacement(rotContainer,G4ThreeVector(0.,0.,0.),container_log,"Container",
 			det_log,false,0);
-
+/*
 	
 	/////
 	// Measurement device (just sensitive regions used to find coincident particles)
@@ -240,7 +240,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 		= new remollGenericDetector("ReadPlaneSD",5);
 
 	SDman->AddNewDetector(readplaneSD);
-	targ_log->SetSensitiveDetector(readplaneSD);
+	readplane_log->SetSensitiveDetector(readplaneSD);
 
 	G4RotationMatrix* rotRead
 		= new G4RotationMatrix;
@@ -249,6 +249,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4VPhysicalVolume* readplane_phys
 		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos),readplane_log,"ReadPlane",
 			det_log,false,0);
+
 
 	/////
 	// Place the detector volume
