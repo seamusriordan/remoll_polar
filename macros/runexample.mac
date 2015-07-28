@@ -24,10 +24,10 @@
 ##### Replace with mine
 
 # add field map
-/remoll/addfield CLEO_rm.dat
+/remoll/addfield Map.dat
 # change field map paramters
 #/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
-/remoll/scalefield CLEO_rm.dat -1.0
+/remoll/scalefield Map.dat -1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
 
 
@@ -100,4 +100,4 @@
 #/remoll/filename remoll_dis_out_test3.root
 #/remoll/filename remoll_test_pion.root
 /remoll/filename p2moller_magneticfield.root
-/run/beamOn 100000
+/run/beamOn 100

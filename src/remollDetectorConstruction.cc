@@ -231,7 +231,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	// Make a flat plane detector and register with SDman.
 
 	G4Tubs* readplane_cyl 
-		= new G4Tubs("ReadPlane",0.,readplane_r,1.0*cm,starting_angle,spanning_angle);
+		= new G4Tubs("ReadPlane",0.,readplane_r,0.1*cm,starting_angle,spanning_angle);
 	
 	G4LogicalVolume* readplane_log
 		= new G4LogicalVolume(readplane_cyl,Aluminum,"ReadPlane",0,0,0);

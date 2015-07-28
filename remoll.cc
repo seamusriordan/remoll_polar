@@ -23,7 +23,7 @@
 #include "remollIO.hh"
 #include "remollMessenger.hh"
 
-//  Standard physics list // is this ideal for doing moller scattering?
+//  Standard physics list 
 #include "QGSP_BERT.hh"
 #include "G4PhysListFactory.hh"
 #include "G4HadronicProcessStore.hh"
