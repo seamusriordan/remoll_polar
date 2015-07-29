@@ -45,9 +45,9 @@ void symmapdisplay() {
 	cBz->SetPhi(-13.44828);
 	cBz->SetFrameBorderMode(0);
    
-	TH2F *hBphi = new TH2F("hBphi","Phi field component",400,-400,400,24,-1,50);
-	TH2F *hBr = new TH2F("hBr","R field component",400,-400,400,24,-1,50);
-	TH2F *hBz = new TH2F("hBz","Z field component",400,-400,400,24,-1,50);
+	TH2F *hBphi = new TH2F("hBphi","Phi field component",401,-401,400,24,-1,50);
+	TH2F *hBr = new TH2F("hBr","R field component",401,-401,400,24,-1,50);
+	TH2F *hBz = new TH2F("hBz","Z field component",401,-401,400,24,-1,50);
 
 
 	// Fill the histograms
@@ -70,7 +70,7 @@ void symmapdisplay() {
 	//               R       Phi     Z       B_r     B_phi   B_z
 	while( infile >> par1 >> par2 >> par3 >> par4 >> par5 >> par6 ){
 		par1=(par1*500.0);
-		par3=(par3*499.9)+201.;
+		par3=(par3*500.0)+201.8;
 		if (par1==25){
 			par4=0;
 			par5=0;
