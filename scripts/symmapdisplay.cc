@@ -4,7 +4,7 @@
 #include <sstream>
 using namespace std;
 
-void mapdisplay() {
+void symmapdisplay() {
 	
 	// Graphics initialization
 	//
@@ -45,9 +45,9 @@ void mapdisplay() {
 	cBz->SetPhi(-13.44828);
 	cBz->SetFrameBorderMode(0);
    
-	TH2F *hBphi = new TH2F("hBphi","Phi field component",201,-1,401,25,-1,50);
-	TH2F *hBr = new TH2F("hBr","R field component",201,-1,401,25,-1,50);
-	TH2F *hBz = new TH2F("hBz","Z field component",201,-1,401,25,-1,50);
+	TH2F *hBphi = new TH2F("hBphi","Phi field component",401,-401,401,25,-1,50);
+	TH2F *hBr = new TH2F("hBr","R field component",401,-401,401,25,-1,50);
+	TH2F *hBz = new TH2F("hBz","Z field component",401,-401,401,25,-1,50);
 
 
 	// Fill the histograms
@@ -70,7 +70,7 @@ void mapdisplay() {
 	//               R       Phi     Z       B_r     B_phi   B_z
 	while( infile >> par1 >> par2 >> par3 >> par4 >> par5 >> par6 ){
 		par1=(par1*500.);
-		par3=(par3*500.);
+		par3=(par3*500.)+200;
 		if (par1==25){
 			par4=0;
 			par5=0;
@@ -131,7 +131,7 @@ void mapdisplay() {
 	cBz->Modified();
 	cBz->cd();
 	cBz->SetSelected(cBz);
-	cBz->Print(".Map.pdf","pdf");
+	cBz->Print(".symMap.pdf","pdf");
 
 	cBr->cd();
 	hBr->SetLineColor(ci);
@@ -156,7 +156,7 @@ void mapdisplay() {
 	cBr->Modified();
 	cBr->cd();
 	cBr->SetSelected(cBr);
-	cBr->Print(".Map.pdf","pdf");
+	cBr->Print(".symMap.pdf","pdf");
 
 	cBphi->cd();
 	hBphi->SetLineColor(ci);
@@ -181,7 +181,7 @@ void mapdisplay() {
 	cBphi->Modified();
 	cBphi->cd();
 	cBphi->SetSelected(cBphi);
-	cBphi->Print(".Map.pdf","pdf");
+	cBphi->Print(".symMap.pdf","pdf");
 	
 	return 0;
 }
