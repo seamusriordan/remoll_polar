@@ -33,7 +33,7 @@ void symmapdisplay() {
 	cBr->SetPhi(-15.51724);
 	cBr->SetFrameBorderMode(0);
    	
-	TCanvas *cBz = new TCanvas("cBz", "",491,189,700,502);
+	TCanvas *cBz = new TCanvas("cBz", "",401,189,700,502);
 	cBz->SetHighLightColor(2);
 	cBz->Range(-0.8697405,-0.9634467,0.8697405,0.9634467);
 	TView *view = TView::CreateView(1);
@@ -45,9 +45,9 @@ void symmapdisplay() {
 	cBz->SetPhi(-13.44828);
 	cBz->SetFrameBorderMode(0);
    
-	TH2F *hBphi = new TH2F("hBphi","Phi field component",401,-401,401,25,-1,50);
-	TH2F *hBr = new TH2F("hBr","R field component",401,-401,401,25,-1,50);
-	TH2F *hBz = new TH2F("hBz","Z field component",401,-401,401,25,-1,50);
+	TH2F *hBphi = new TH2F("hBphi","Phi field component",400,-400,400,24,-1,50);
+	TH2F *hBr = new TH2F("hBr","R field component",400,-400,400,24,-1,50);
+	TH2F *hBz = new TH2F("hBz","Z field component",400,-400,400,24,-1,50);
 
 
 	// Fill the histograms
@@ -69,8 +69,8 @@ void symmapdisplay() {
 	infile >> junk1;
 	//               R       Phi     Z       B_r     B_phi   B_z
 	while( infile >> par1 >> par2 >> par3 >> par4 >> par5 >> par6 ){
-		par1=(par1*500.);
-		par3=(par3*500.)+200;
+		par1=(par1*500.0);
+		par3=(par3*499.9)+201.;
 		if (par1==25){
 			par4=0;
 			par5=0;

@@ -34,8 +34,8 @@ int main() {
 		data[indR][indZ]=buff.str();	
 		datal[indR][indZ]=buffl.str();
 		if (indnegZ != 0) {
-			datal[indR][indnegZ]=negbuffl.str();
 			data[indR][indnegZ]=negbuff.str();	
+			datal[indR][indnegZ]=negbuffl.str();
 		}
 	}
 	outfile<<"26\t0.00\t0.05"<<endl;
