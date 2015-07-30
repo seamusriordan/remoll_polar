@@ -93,6 +93,7 @@ void remollIO::InitializeTree(){
 
     // GenericDetectorHit
     fTree->Branch("hit.n",    &fNGenDetHit,     "hit.n/I");
+    fTree->Branch("hit.bore",    &fHitBore,     "hit.bore/O");
     fTree->Branch("hit.det",  &fGenDetHit_det,  "hit.det[hit.n]/I");
     fTree->Branch("hit.vid",  &fGenDetHit_id,   "hit.vid[hit.n]/I");
 

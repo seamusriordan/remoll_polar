@@ -65,7 +65,8 @@ class remollIO {
     public:
 	void SetEventData(remollEvent *);
     private:
-        Int_t fEv_num;
+	
+	Int_t fEv_num;
 	Int_t fNEvPart;
 
 	Double_t fEvRate;
@@ -104,7 +105,12 @@ class remollIO {
 	//  GenericDetectorHit
     public:
 	void AddGenericDetectorHit(remollGenericDetectorHit *);
+	void SetHitBore(Bool_t hit){fHitBore = hit;}
+	
     private:
+        Bool_t fHitBore;
+	
+	
 	Int_t fNGenDetHit;
 	Int_t fGenDetHit_det[__IO_MAXHIT];
 	Int_t fGenDetHit_id[__IO_MAXHIT];
