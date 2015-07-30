@@ -31,6 +31,6 @@ const double e_d = -1.0/3.0;
 const double gDefaultBeamE   = 11.0*GeV;
 const double gDefaultBeamPol = 0.85;
 const double gDefaultBeamCur = 50e-6*ampere;
-
+const int gBoreDetNum = 5;
 
 #endif//__REMOLLGLOBS_HH

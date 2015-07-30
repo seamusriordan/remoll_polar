@@ -98,4 +98,4 @@
 #/remoll/filename remoll_dis_out_test3.root
 #/remoll/filename remoll_test_pion.root
 /remoll/filename p2moller_magneticfield.root
-/run/beamOn 10000
+/run/beamOn 100000

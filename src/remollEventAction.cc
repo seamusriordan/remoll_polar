@@ -13,7 +13,7 @@
 #include "G4SDManager.hh"
 #include "G4UImanager.hh"
 #include "G4ios.hh"
-
+#include "remollglobs.hh"
 #include "remollIO.hh"
 
 
@@ -39,6 +39,8 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
   G4HCofThisEvent *HCE = evt->GetHCofThisEvent();
 
   G4VHitsCollection *thiscol;
+  Bool_t hitBore = false;
+
 
   // Traverse all hit collections, sort by output type
   for( int hcidx = 0; hcidx < HCE->GetCapacity(); hcidx++ ){
@@ -52,6 +54,11 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
 		  fIO->AddGenericDetectorHit(
 			  (remollGenericDetectorHit *) thiscast->GetHit(hidx) );
+                  if (((remollGenericDetectorHit *) thiscast->GetHit(hidx))->fDetID == gBoreDetNum 
+				  && ((remollGenericDetectorHit *) thiscast->GetHit(hidx))->fmTrID == 0) {
+			  // This is an exclusive cut, if either particle hits the magnet bore then this boolean is turned to true in reference to the event, rather than the individual particles (one may not hit the magnet bore but it still gets the boolean switched due to the other particle's bad path).
+	                  hitBore=true;
+	          }	  
 	      }
 	  }
 	  
@@ -76,6 +83,8 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 
       }
   }
+
+  fIO->SetHitBore(hitBore);
 
   // Fill tree and reset buffers
   fIO->FillTree();

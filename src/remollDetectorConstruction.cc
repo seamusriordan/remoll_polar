@@ -25,7 +25,7 @@
 #include "G4PVPlacement.hh"
 #include "G4OpticalSurface.hh"
 #include "G4VisAttributes.hh"
-
+#include "remollglobs.hh"
 
 
 remollDetectorConstruction::remollDetectorConstruction()
@@ -237,7 +237,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 		= new G4LogicalVolume(readplane_cyl,Aluminum,"ReadPlane",0,0,0);
 
 	remollGenericDetector* readplaneSD 
-		= new remollGenericDetector("ReadPlaneSD",5);
+		= new remollGenericDetector("ReadPlaneSD",gBoreDetNum);
 
 	SDman->AddNewDetector(readplaneSD);
 	readplane_log->SetSensitiveDetector(readplaneSD);
