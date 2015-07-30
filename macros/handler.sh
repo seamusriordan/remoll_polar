@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-location=$HOME/gitdir/qsim/build/output/
+location=$HOME/gitdir/remoll_polar/build/output/
 cd $location
 
 for i in `seq 1 50`;

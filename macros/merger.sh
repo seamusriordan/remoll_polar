@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-dir=$HOME/gitdir/qsim/build/output/
+dir=$HOME/gitdir/remoll_polar/build/output/
 i=2
 while [ $i -le 50 ];
 do

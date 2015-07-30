@@ -108,6 +108,9 @@ set(REMOLL_SCRIPTS
     macros/gui.mac
     macros/vis.mac
     macros/magtest.mac
+    macros/handler.sh
+    macros/merger.sh
+    macros/runscript.sh
     rootlogon.C
     geometry_pvdis/genecal.py
     geometry_pvdis/ecal_orig.gdml
