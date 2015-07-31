@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 dir=$HOME/gitdir/remoll_polar/build/output/
-i=2
+i=1
 while [ $i -le 50 ];
 do
 	hadd $dir/result.root $dir/out$i/p2moller_magneticfield.root $dir/Result.root

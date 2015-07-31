@@ -33,6 +33,7 @@ bm.d[xyz]	Beam interaction direction, lab frame
 
 hit data
 hit.n		Number of hits for the event
+hit.bore	True if either particle hits the solenoid magnet bore
 hit.det		Detector number
 hit.vid		Volume ID number (not yet implemented)
 hit.pid		Geant4 particle type

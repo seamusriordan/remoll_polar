@@ -3,7 +3,7 @@
 location=$HOME/gitdir/remoll_polar/build/output/
 cd $location
 
-for i in `seq 1 50`;
+for i in `seq 1 16`;
 do
 	name="out$i"
 	mkdir $name
