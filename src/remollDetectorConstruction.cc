@@ -56,7 +56,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4int nelements;
 
 	G4Element* H = new G4Element("Hydrogen", "H", z=1 , a = 1.00794*g/mole);
-	G4Material* TargetGas = new G4Material("TargetGas", density=1.29*mg/cm3, nelements=1);
+	G4Material* TargetGas = new G4Material("TargetGas", density=5e-9*g/cm3, nelements=1);
 	TargetGas->AddElement(H, 1);
 
 	G4Element* N = new G4Element("Nitrogen", "N", z=7, a=14.01*g/mole);
@@ -95,9 +95,9 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	det_z = 2000.*cm;
 	targ_r = 1.*cm;
 	targ_z = 10.*cm;
-	container_inner_r = targ_r;
-	container_outer_r = container_inner_r + 1.*cm;
-	container_z = targ_z;
+	container_inner_r = 1.0*targ_r;
+	container_outer_r = 50.0*cm;;
+	container_z = 1.0*targ_z;
 	meas_x = 3*cm;
 	meas_y = 3*meas_x;
 	meas_z = meas_x/3;
@@ -168,7 +168,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 		= new G4LogicalVolume(container_cyl,Aluminum,"Container",0,0,0);
 
 	remollGenericDetector* containerSD
-		= new remollGenericDetector("ContainerSD",2);
+		= new remollGenericDetector("ContainerSD",gBoreDetNum);
 
 	SDman->AddNewDetector(containerSD);
 	container_log->SetSensitiveDetector(containerSD);
@@ -237,7 +237,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 		= new G4LogicalVolume(readplane_cyl,Aluminum,"ReadPlane",0,0,0);
 
 	remollGenericDetector* readplaneSD 
-		= new remollGenericDetector("ReadPlaneSD",gBoreDetNum);
+		= new remollGenericDetector("ReadPlaneSD",5);
 
 	SDman->AddNewDetector(readplaneSD);
 	readplane_log->SetSensitiveDetector(readplaneSD);
