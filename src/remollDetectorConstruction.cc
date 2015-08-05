@@ -102,7 +102,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	meas_y = 3*meas_x;
 	meas_z = meas_x/3;
 	readplane_r = 100.*targ_r;
-	readplane_z_pos = 40.0*cm;
+	readplane_z_pos = 40.0*cm;//40.0*cm;
 
 	/////
 	// World

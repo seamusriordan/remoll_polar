@@ -29,8 +29,8 @@ int main() {
 		int indnegZ = -1*(int)par2+401;
 		buffl<<fixed<<par1/1000<<"\t-180.0\t"<<par2/1000<<scientific<<"\t"<<par3<<"\t"<<par4<<"\t"<<par5;
 		buff<<fixed<<par1/1000<<"\t180.0\t"<<par2/1000<<scientific<<"\t"<<par3<<"\t"<<par4<<"\t"<<par5;
-		negbuffl<<fixed<<par1/1000<<"\t-180.0\t"<<-1.*par2/1000<<scientific<<"\t"<<-1.*par3<<"\t"<<par4<<"\t"<<par5;
-		negbuff<<fixed<<par1/1000<<"\t180.0\t"<<-1.*par2/1000<<scientific<<"\t"<<-1.*par3<<"\t"<<par4<<"\t"<<par5;
+		negbuffl<<fixed<<par1/1000<<"\t-180.0\t"<<-1.*par2/1000<<scientific<<"\t"<<-1.*par3<<"\t"<<1.*par4<<"\t"<<par5;
+		negbuff<<fixed<<par1/1000<<"\t180.0\t"<<-1.*par2/1000<<scientific<<"\t"<<-1.*par3<<"\t"<<1.*par4<<"\t"<<par5;
 		data[indR][indZ]=buff.str();	
 		datal[indR][indZ]=buffl.str();
 		if (indnegZ != 0) {
