@@ -398,20 +398,20 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     z   = Point[2] - fZoffset;
 
     if( std::isnan(phi) || std::isinf(phi) ||
-	    std::isnan(r) || std::isinf(r) ||
-	    std::isnan(z) || std::isinf(z) ){
+            std::isnan(r) || std::isinf(r) ||
+            std::isnan(z) || std::isinf(z) ){
 
-	G4cerr << __FILE__ << " line " << __LINE__ << ": ERROR bad conversion to cylindrical coordinates" << G4endl;
-	G4cerr << "Point  ( " << Point[0]/m << ", " << Point[1]/m << ", " << Point[2]/m << " ) m" << G4endl;
+        G4cerr << __FILE__ << " line " << __LINE__ << ": ERROR bad conversion to cylindrical coordinates" << G4endl;
+        G4cerr << "Point  ( " << Point[0]/m << ", " << Point[1]/m << ", " << Point[2]/m << " ) m" << G4endl;
 
-	exit(1);
+        exit(1);
     }
-	
+
 
     // Get xtant number and fraction into xtant
     dphi = 
-	phi - fPhiLow >= 0.0 ? modf( (phi - fPhiLow)/fxtantSize, &dxtant ) : 
-	modf( ( (2.0*pi + phi) - fPhiLow)/fxtantSize, &dxtant ); // Wrap around
+        phi - fPhiLow >= 0.0 ? modf( (phi - fPhiLow)/fxtantSize, &dxtant ) : 
+        modf( ( (2.0*pi + phi) - fPhiLow)/fxtantSize, &dxtant ); // Wrap around
 
     xtant = (G4int) dxtant;
 
@@ -421,104 +421,140 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     if( lphi >  pi ){ lphi -= 2.0*pi; }
 
     if( !( xtant >= 0 && xtant < fNxtant ) ){
-	G4cerr << "Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl << "  xtant calculation failed. xtant " <<  xtant << " ( " << dxtant << " )  found where " << fNxtant << " is specified.  phi = " << phi/deg << " deg" << G4endl;
-	exit(1);
+        G4cerr << "Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl << "  xtant calculation failed. xtant " <<  xtant << " ( " << dxtant << " )  found where " << fNxtant << " is specified.  phi = " << phi/deg << " deg" << G4endl;
+        exit(1);
     }
 
     // Check that the point is within the defined region
     // before interpolation.  If it is outside, the field is zero
 
+    bool useinterp = true;
+
     if( r >= fMax[kR] || r < fMin[kR] ||
-	    z    >= fMax[kZ]   || z    < fMin[kZ] ) {
+            z    >= fMax[kZ]   || z    < fMin[kZ] ) {
 
-	Bfield[0] = 0.0;
-	Bfield[1] = 0.0;
-	Bfield[2] = 0.0;
+        Bfield[0] = 0.0;
+        Bfield[1] = 0.0;
+        Bfield[2] = 0.0;
 
-	return;
+        useinterp = false;
+
     }
 
-    // Check if in dead phi area
-    bool deadphi = false;
+    if( useinterp ){
+        // Check if in dead phi area
+        bool deadphi = false;
 
-    if( lphi >= fFileMax[kPhi] || lphi < fFileMin[kPhi] ){
-	printf("Dead phi!\n");
-	deadphi = true;
+        if( lphi >= fFileMax[kPhi] || lphi < fFileMin[kPhi] ){
+            printf("Dead phi!\n");
+            deadphi = true;
+        }
+
+        // Ensure we're going to get our grid indices correct
+        assert( fMin[kR]   <= r    &&    r < fMax[kR] );
+        //    assert( fFileMin[kPhi] <= lphi && lphi < fFileMax[kPhi] );
+        assert( fMin[kZ]   <= z    &&    z < fMax[kZ] );
+
+        int cidx;
+
+
+        // Get interoplation variables
+        // the N-1 here is fencepost problem
+        x[kR]   = modf( ( r - fMin[kR] )*(fN[kR]-1)/( fMax[kR] - fMin[kR] ),            &(didx[kR])   );
+
+        if( !deadphi ){
+            x[kPhi] = modf( ( lphi - fFileMin[kPhi] )*(fN[kPhi]-1)/( fFileMax[kPhi] - fFileMin[kPhi] ), &(didx[kPhi]) );
+        } else {
+            x[kPhi] = modf( ( lphi - fFileMax[kPhi] )/( fxtantSize - (fFileMax[kPhi] - fFileMin[kPhi]) ), &(didx[kPhi]) );
+            didx[kPhi] = 0.0;
+        }
+
+        x[kZ]   = modf( ( z - fMin[kZ] )*(fN[kZ]-1)/( fMax[kZ] - fMin[kZ] ),            &(didx[kZ])   );
+
+        // Cast these to integers for indexing and check
+        for( cidx = 0; cidx < __NDIM; cidx++ ){ idx[cidx] = (G4int) didx[cidx]; }
+
+        assert( 0 <= idx[kR]   && idx[kR]   < fN[kR] );
+        assert( 0 <= idx[kPhi] && idx[kPhi] < fN[kPhi] );
+        assert( 0 <= idx[kZ]   && idx[kZ]   < fN[kZ] );
+
+        // Interpolate
+        for( cidx = 0; cidx < __NDIM; cidx++ ){ idx[cidx] = (G4int) didx[cidx]; }
+
+        G4double Bint[__NDIM];
+        G4double c00, c10, c01, c11, c0, c1;
+
+        for( cidx = 0; cidx < __NDIM; cidx++ ){ 
+
+            if( !deadphi ){
+                c00 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
+                c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]]*x[kR];
+                c01 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
+                c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]+1]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]+1]*x[kR];
+            } else {
+                // Interpolate for dead phi areas
+                c00 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]]*x[kR];
+                c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
+                c01 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]+1]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]+1]*x[kR];
+                c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
+                    + fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
+            }
+
+            c0  = c00*(1.0-x[kPhi]) + c10*x[kPhi];
+            c1  = c01*(1.0-x[kPhi]) + c11*x[kPhi];
+
+            Bint[cidx] = c0*(1.0-x[kZ])+c1*x[kZ];
+        }
+
+        G4ThreeVector Bcart = G4ThreeVector(Bint[kR], Bint[kPhi], Bint[kZ]);
+        Bcart.rotateZ(lphi + fPhiMapOffset);      // this changes coordinates from Br, Bphi to Bx, By
+        // Now we are cartesian, which is what we need to feed Geant4 (yay)
+
+        Bcart.rotateZ(xtant*fxtantSize);  // rotate into our xtant
+        Bfield[0] = Bcart.x()*fFieldScale;
+        Bfield[1] = Bcart.y()*fFieldScale;
+        Bfield[2] = Bcart.z()*fFieldScale;
     }
-
-    // Ensure we're going to get our grid indices correct
-    assert( fMin[kR]   <= r    &&    r < fMax[kR] );
-//    assert( fFileMin[kPhi] <= lphi && lphi < fFileMax[kPhi] );
-    assert( fMin[kZ]   <= z    &&    z < fMax[kZ] );
-
-    int cidx;
-
-
-    // Get interoplation variables
-    // the N-1 here is fencepost problem
-    x[kR]   = modf( ( r - fMin[kR] )*(fN[kR]-1)/( fMax[kR] - fMin[kR] ),            &(didx[kR])   );
-
-    if( !deadphi ){
-	x[kPhi] = modf( ( lphi - fFileMin[kPhi] )*(fN[kPhi]-1)/( fFileMax[kPhi] - fFileMin[kPhi] ), &(didx[kPhi]) );
-    } else {
-	x[kPhi] = modf( ( lphi - fFileMax[kPhi] )/( fxtantSize - (fFileMax[kPhi] - fFileMin[kPhi]) ), &(didx[kPhi]) );
-	didx[kPhi] = 0.0;
-    }
-
-    x[kZ]   = modf( ( z - fMin[kZ] )*(fN[kZ]-1)/( fMax[kZ] - fMin[kZ] ),            &(didx[kZ])   );
-
-    // Cast these to integers for indexing and check
-    for( cidx = 0; cidx < __NDIM; cidx++ ){ idx[cidx] = (G4int) didx[cidx]; }
-
-    assert( 0 <= idx[kR]   && idx[kR]   < fN[kR] );
-    assert( 0 <= idx[kPhi] && idx[kPhi] < fN[kPhi] );
-    assert( 0 <= idx[kZ]   && idx[kZ]   < fN[kZ] );
-
-    // Interpolate
-    for( cidx = 0; cidx < __NDIM; cidx++ ){ idx[cidx] = (G4int) didx[cidx]; }
-
-    G4double Bint[__NDIM];
-    G4double c00, c10, c01, c11, c0, c1;
-
-    for( cidx = 0; cidx < __NDIM; cidx++ ){ 
-
-	if( !deadphi ){
-	    c00 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
-	    c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]]*x[kR];
-	    c01 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
-	    c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]+1][idx[kZ]+1]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]+1][idx[kZ]+1]*x[kR];
-	} else {
-	    // Interpolate for dead phi areas
-	    c00 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]]*x[kR];
-	    c10 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]]*x[kR];
-	    c01 = fBFieldData[cidx][idx[kR]][fN[kPhi]-1][idx[kZ]+1]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][fN[kPhi]-1][idx[kZ]+1]*x[kR];
-	    c11 = fBFieldData[cidx][idx[kR]][idx[kPhi]][idx[kZ]+1]*(1.0-x[kR])
-		+ fBFieldData[cidx][idx[kR]+1][idx[kPhi]][idx[kZ]+1]*x[kR];
-	}
-
-	c0  = c00*(1.0-x[kPhi]) + c10*x[kPhi];
-	c1  = c01*(1.0-x[kPhi]) + c11*x[kPhi];
-
-	Bint[cidx] = c0*(1.0-x[kZ])+c1*x[kZ];
-    }
-
-    G4ThreeVector Bcart = G4ThreeVector(Bint[kR], Bint[kPhi], Bint[kZ]);
-    Bcart.rotateZ(lphi + fPhiMapOffset);      // this changes coordinates from Br, Bphi to Bx, By
-    // Now we are cartesian, which is what we need to feed Geant4 (yay)
-
-    Bcart.rotateZ(xtant*fxtantSize);  // rotate into our xtant
-    Bfield[0] = Bcart.x()*fFieldScale;
-    Bfield[1] = Bcart.y()*fFieldScale;
-    Bfield[2] = Bcart.z()*fFieldScale;
 
     //G4cout<< "fFieldScale " << fFieldScale << G4endl;
+
+
+    //  Quad and Dipole fields by hand
+
+
+    if( fabs(Point[2] - 55*cm) < 15*cm ) {
+        // Add quad field, focus in x
+
+        double B1    = 0.186*tesla;
+        double q1app = 10*cm;
+
+        Bfield[0] += (B1/q1app)*Point[1];
+        Bfield[1] += (B1/q1app)*Point[0];
+    }
+
+    // Dipole
+
+
+    if( fabs(Point[2] - 105*cm) < 5*cm ) {
+        // Add dipole field, bend positive x for negative particles
+        // bend of 45 deg over 10cm for 70 MeV
+        //
+        double Bdip = 1.65*tesla;
+
+        if( Point[0] > 0 ){
+            Bfield[1] -= Bdip;
+        } else {
+            Bfield[1] += Bdip;
+        }
+
+    }
 
     return;
 } 
