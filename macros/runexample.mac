@@ -47,6 +47,8 @@
 /remoll/beam_dph 0 mrad
 
 #/remoll/gen moller  # flat generator
+
+/remoll/gen flat  # flat generator
 /remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
 
 
@@ -54,7 +56,8 @@
 #/remoll/gen elastic 
 #/remoll/thmin 0.1 deg
 #/remoll/thmax 2.0 deg
-#/remoll/emin 80.0 MeV
+/remoll/emin 0.0 MeV
+/remoll/emax 140.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
 #/remoll/gen pion  
 #/remoll/gen uniformpion  
@@ -62,7 +65,6 @@
 #/remoll/piontype pi0 
 #/remoll/gen dis
 
-#/remoll/gen flat  # flat generator
 /remoll/thmin 0.0 deg
 #/remoll/thmin 10.0 deg
 /remoll/thmax 25.0 deg
