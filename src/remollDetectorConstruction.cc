@@ -94,7 +94,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	det_r = 250.*cm;
 	det_z = 2000.*cm;
 	targ_r = 1.*cm;
-	targ_z = 10.*cm;
+	targ_z = 1.*um;
 	container_inner_r = 1.0*targ_r;
 	container_outer_r = 50.0*cm;;
 	container_z = 1.0*targ_z;

@@ -26,7 +26,7 @@ remollEventAction::~remollEventAction(){
 
 void remollEventAction::BeginOfEventAction(const G4Event*ev) {
     // Pretty ongoing status with flush
-    if( (ev->GetEventID() % 1000) == 0 ){
+    if( (ev->GetEventID() % 100) == 0 ){
 	printf("Event %8d\r", ev->GetEventID() );
 	fflush(stdout);
     }

@@ -24,10 +24,10 @@
 ##### Replace with mine
 
 # add field map
-/remoll/addfield Map.dat
+/remoll/addfield dummy
 # change field map paramters
 #/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
-/remoll/scalefield Map.dat -1.0
+#/remoll/scalefield Map.dat -1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
 
 
@@ -46,8 +46,8 @@
 /remoll/beam_dth 0 mrad
 /remoll/beam_dph 0 mrad
 
-/remoll/gen moller  # flat generator
-#/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
+#/remoll/gen moller  # flat generator
+/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
 
 
 #/remoll/gen beam
@@ -63,16 +63,16 @@
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
-/remoll/thmin 30.0 deg
+/remoll/thmin 0.0 deg
 #/remoll/thmin 10.0 deg
-/remoll/thmax 150.0 deg
+/remoll/thmax 25.0 deg
 #/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
 /remoll/phmax 180.0 deg
 #/remoll/emin  140 MeV
 #/remoll/emax 11.0 MeV
 
-/remoll/beamene 140.0 MeV
+/remoll/beamene 70.0 MeV
 /remoll/beamcurr 50 microampere
 
 
@@ -99,5 +99,5 @@
 #/remoll/filename remollout.root
 #/remoll/filename remoll_dis_out_test3.root
 #/remoll/filename remoll_test_pion.root
-/remoll/filename p2moller_magneticfield.root
-/run/beamOn 100
+/remoll/filename p2moller_simpleroot.root
+/run/beamOn 1000

@@ -38,20 +38,13 @@ void remollGlobalField::AddNewField( G4String name ){
 
 	remollRunData *rd = remollRun::GetRun()->GetData();
 
-	TMD5 *md5 = TMD5::FileChecksum(name.data());
-
 	filedata_t fdata;
 
 	strcpy(fdata.filename, name.data());
-	strcpy(fdata.hashsum, md5->AsString() );
-
-	G4cout << "MD5 checksum " << md5->AsString() << G4endl;
-
-	delete md5;
+	strcpy(fdata.hashsum, "" );
 
 	struct stat fs;
-	stat(name.data(), &fs);
-	fdata.timestamp = TTimeStamp( fs.st_mtime );
+	fdata.timestamp = TTimeStamp(0);
 
 	fdata.timestamp.Print();
 
