@@ -1,3 +1,3 @@
 void rootlogon(){
-    gSystem->Load("./build/libremollroot.so");
+    gSystem->Load("libremollroot.so");
 }

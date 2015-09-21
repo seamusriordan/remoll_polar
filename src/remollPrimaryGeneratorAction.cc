@@ -87,7 +87,7 @@ void remollPrimaryGeneratorAction::SetGenerator(G4String genname) {
 	fEventGen = new remollGenHighZDIS();
     }
 
-    if( genname == "flat" ){
+    if( genname == "flattype" ){
 	fEventGen = new remollGenFlat();
     }
 
