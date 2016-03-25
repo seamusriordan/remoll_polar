@@ -87,7 +87,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4double meas_x, meas_y, meas_z;
 	G4double readplane_r, readplane_z_pos;
 	
-	world_r = 500.*cm;
+	world_r = 10*m;
 	world_z = 2000.*cm;
 	starting_angle = 0.*deg;
 	spanning_angle = 360.*deg;
@@ -101,7 +101,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	meas_x = 3*cm;
 	meas_y = 3*meas_x;
 	meas_z = meas_x/3;
-	readplane_r = 2*m;
+	readplane_r = 4*m;
 	readplane_z_pos = 40.0*cm;//40.0*cm;
 
 	/////
@@ -233,67 +233,67 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct()
 	G4Tubs* readplane_cyl 
 		= new G4Tubs("ReadPlane",0.,readplane_r,0.1*mm,starting_angle,spanning_angle);
 	
-	G4LogicalVolume* readplane1_log
+	G4LogicalVolume* readplane5_log
 		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane",0,0,0);
 
-	remollGenericDetector* readplaneSD1
-		= new remollGenericDetector("ReadPlaneSD_1",5);
+	remollGenericDetector* readplaneSD5
+		= new remollGenericDetector("ReadPlaneSD_5",5);
 
-	SDman->AddNewDetector(readplaneSD1);
-	readplane1_log->SetSensitiveDetector(readplaneSD1);
-
-
-	G4LogicalVolume* readplane2_log
-		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane2",0,0,0);
-	remollGenericDetector* readplaneSD2 
-		= new remollGenericDetector("ReadPlaneSD_2",6);
-	SDman->AddNewDetector(readplaneSD2);
-	readplane2_log->SetSensitiveDetector(readplaneSD2);
-
-	G4LogicalVolume* readplane3_log
-		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane3",0,0,0);
-	remollGenericDetector* readplaneSD3 
-		= new remollGenericDetector("ReadPlaneSD_3",7);
-	SDman->AddNewDetector(readplaneSD3);
-	readplane3_log->SetSensitiveDetector(readplaneSD3);
-
-	G4LogicalVolume* readplane4_log
-		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane4",0,0,0);
-	remollGenericDetector* readplaneSD4 
-		= new remollGenericDetector("ReadPlaneSD_4",8);
-	SDman->AddNewDetector(readplaneSD4);
-	readplane4_log->SetSensitiveDetector(readplaneSD4);
-
-	G4LogicalVolume* readplane5_log
-		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane5",0,0,0);
-	remollGenericDetector* readplaneSD5 
-		= new remollGenericDetector("ReadPlaneSD_5",9);
 	SDman->AddNewDetector(readplaneSD5);
 	readplane5_log->SetSensitiveDetector(readplaneSD5);
+
+
+	G4LogicalVolume* readplane6_log
+		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane6",0,0,0);
+	remollGenericDetector* readplaneSD6 
+		= new remollGenericDetector("ReadPlaneSD_6",6);
+	SDman->AddNewDetector(readplaneSD6);
+	readplane6_log->SetSensitiveDetector(readplaneSD6);
+
+	G4LogicalVolume* readplane7_log
+		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane7",0,0,0);
+	remollGenericDetector* readplaneSD7 
+		= new remollGenericDetector("ReadPlaneSD_7",7);
+	SDman->AddNewDetector(readplaneSD7);
+	readplane7_log->SetSensitiveDetector(readplaneSD7);
+
+	G4LogicalVolume* readplane8_log
+		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane8",0,0,0);
+	remollGenericDetector* readplaneSD8 
+		= new remollGenericDetector("ReadPlaneSD_8",8);
+	SDman->AddNewDetector(readplaneSD8);
+	readplane8_log->SetSensitiveDetector(readplaneSD8);
+
+	G4LogicalVolume* readplane9_log
+		= new G4LogicalVolume(readplane_cyl,Air,"ReadPlane9",0,0,0);
+	remollGenericDetector* readplaneSD9 
+		= new remollGenericDetector("ReadPlaneSD_9",9);
+	SDman->AddNewDetector(readplaneSD9);
+	readplane9_log->SetSensitiveDetector(readplaneSD9);
 
         ////////////////////////////////////////////////////////////
 	G4RotationMatrix* rotRead
 		= new G4RotationMatrix;
 	rotRead->rotateZ(0.*deg);
 
-	G4VPhysicalVolume* readplane_phys1
-		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos),readplane1_log,"ReadPlane1",
-			det_log,false,0);
-
-	G4VPhysicalVolume* readplane_phys2
-		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos+30*cm),readplane2_log,"ReadPlane2",
-			det_log,false,0);
-
-	G4VPhysicalVolume* readplane_phys3
-		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,100*cm),readplane3_log,"ReadPlane3",
-			det_log,false,0);
-
-	G4VPhysicalVolume* readplane_phys4
-		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,110*cm),readplane4_log,"ReadPlane4",
-			det_log,false,0);
-
 	G4VPhysicalVolume* readplane_phys5
-		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,110*cm+1*m/sqrt(2.0)),readplane5_log,"ReadPlane5",
+		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos),readplane5_log,"ReadPlane5",
+			det_log,false,0);
+
+	G4VPhysicalVolume* readplane_phys6
+		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,readplane_z_pos+30*cm),readplane6_log,"ReadPlane6",
+			det_log,false,0);
+
+	G4VPhysicalVolume* readplane_phys7
+		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,100*cm),readplane7_log,"ReadPlane7",
+			det_log,false,0);
+
+	G4VPhysicalVolume* readplane_phys8
+		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,110*cm),readplane8_log,"ReadPlane8",
+			det_log,false,0);
+
+	G4VPhysicalVolume* readplane_phys9
+		= new G4PVPlacement(rotRead,G4ThreeVector(0.,0.,110*cm+1*m/sqrt(2.0)),readplane9_log,"ReadPlane9",
 			det_log,false,0);
 
 	/////

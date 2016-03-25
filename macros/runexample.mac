@@ -50,6 +50,7 @@
 #/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
 
 
+
 #/remoll/gen beam
 #/remoll/gen elastic 
 #/remoll/thmin 0.1 deg
