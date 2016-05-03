@@ -20,10 +20,10 @@
 #define NINTERVAL 3
 
 remollGenpElastic::remollGenpElastic(){
-    fTh_min =      5.0*deg;
-    fTh_max =     60.0*deg;
+    fTh_min =      0.01*deg;
+    fTh_max =     20.0*deg;
 
-    fE_min = 80.0*MeV; // Absolute minimum of electron energy
+    fE_min = 5.0*MeV; // Absolute minimum of electron energy
                             // to generate
 
     fApplyMultScatt = true;
@@ -65,7 +65,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double bremcut = fBeamTarg->fEcut;
 
     // Approximation for Q2, just needs to be order of magnitude
-    double effQ2 = 2.0*beamE*beamE*(1.0-cos(0.5*deg));
+    double effQ2 = 2.0*beamE*beamE*(1.0-cos(5.0*deg));
 
     // About ~1.5%
     double int_bt = 0.75*(alpha/pi)*( log( effQ2/(electron_mass_c2*electron_mass_c2) ) - 1.0 );
@@ -94,12 +94,13 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
     double Evhi[NINTERVAL] = {
 	(beamE-bremcut)*2.0*GeV/(11.0*GeV-bremcut),
 	(beamE-bremcut)*9.0*GeV/(11.0*GeV-bremcut),
-	(beamE-bremcut)*(11.0*GeV-fE_min)/(11.0*GeV-bremcut),
+//	(beamE-bremcut)*(11.0*GeV-fE_min)/(11.0*GeV-bremcut),
+	beamE-fE_min
     };
 
     assert( Evhi[NINTERVAL-1]-Evlo[NINTERVAL-1] > 0.0 );
 
-    double Eprob[NINTERVAL]  = { 0.40, 0.20, 0.40 };
+    double Eprob[NINTERVAL]  = { 0.4, 0.2, 0.4 };
 
     double Enorm[NINTERVAL];
     // Interval normalization

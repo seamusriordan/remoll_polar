@@ -130,7 +130,9 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     if( fabs(Point[2] - 55*cm) < 15*cm ) {
         // Add quad field, focus in x
 
-        double B1    = 0.186*tesla;
+        //double B1    = 0.186*tesla;
+        double B1 = 0.163*tesla;
+//        double B1 = 0.000*tesla;
         double q1app = 10*cm;
 
         Bfield[0] += (B1/q1app)*Point[1];
@@ -147,10 +149,10 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
         //
         double Bdip = 1.65*tesla;
 
-        if( Point[0] > 0 ){
-            Bfield[1] -= Bdip;
+        if( Point[1] > 0 ){
+            Bfield[0] -= Bdip;
         } else {
-            Bfield[1] += Bdip;
+            Bfield[0] += Bdip;
         }
 
     }

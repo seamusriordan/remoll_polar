@@ -32,9 +32,7 @@ cd build
 cmake <path to remoll>
 make
 
-The field map can be found here:
-
-http://hallaweb.jlab.org/12GeV/SoLID/download/field/CLEO_rm.dat
+The field map can be found in the main directory Map.dat
 
 It just needs to be downloaded and for the example, present in the directory
 you are running in.  Otherwise, specify it in the macro as in the
