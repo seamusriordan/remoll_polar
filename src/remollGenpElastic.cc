@@ -20,7 +20,7 @@
 #define NINTERVAL 3
 
 remollGenpElastic::remollGenpElastic(){
-    fTh_min =      0.01*deg;
+    fTh_min =      1.0*deg;
     fTh_max =     20.0*deg;
 
     fE_min = 5.0*MeV; // Absolute minimum of electron energy
