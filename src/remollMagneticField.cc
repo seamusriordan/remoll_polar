@@ -525,40 +525,5 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
 
     //G4cout<< "fFieldScale " << fFieldScale << G4endl;
 
-
-    //  Quad and Dipole fields by hand
-
-
-    if( fabs(Point[2] - 55*cm) < 15*cm ) {
-        // Add quad field, focus in x
-
-        //double B1    = 0.186*tesla;
-        double B1 = 0.163*tesla;
-//        double B1 = 0.000*tesla;
-        double q1app = 10*cm;
-
-        Bfield[0] += (B1/q1app)*Point[1];
-        Bfield[1] += (B1/q1app)*Point[0];
-    }
-
-    // Dipole
-
-
-    if( fabs(Point[2] - 105*cm) < 5*cm ) {
-        // Add dipole field, bend positive x for negative particles
-        // bend of 45 deg over 10cm for 70 MeV
-        //
-        double Bdip = 1.65*tesla;
-
-        if( Point[1] > 0 ){
-            Bfield[0] -= Bdip;
-        } else {
-            Bfield[0] += Bdip;
-        }
-
-    }
-
     return;
-} 
-
-
+}

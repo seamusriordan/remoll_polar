@@ -37,10 +37,11 @@ class remollMagneticField : public G4MagneticField {
      */
 
     public:
-	remollMagneticField( G4String );
+	remollMagneticField(){};
+        remollMagneticField( G4String );
 	virtual ~remollMagneticField();
 
-	void GetFieldValue( const   G4double Point[4], G4double *Bfield ) const;  
+	virtual void GetFieldValue( const   G4double Point[4], G4double *Bfield ) const;  
 
 	void InitializeGrid();
 	void ReadFieldMap();
@@ -75,6 +76,7 @@ class remollMagneticField : public G4MagneticField {
 	G4double fFieldScale; // Scale overall field by this amount
 	G4double fMagCurrent0; // Scale overall field by this amount
 
+    protected:
 	G4bool fInit;
 };
 

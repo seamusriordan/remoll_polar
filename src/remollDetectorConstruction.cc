@@ -26,7 +26,8 @@
 #include "G4OpticalSurface.hh"
 #include "G4VisAttributes.hh"
 #include "remollglobs.hh"
-
+#include "remollDipoleField.hh"
+#include "remollQuadField.hh"
 
 remollDetectorConstruction::remollDetectorConstruction()
 {
@@ -345,8 +346,24 @@ void remollDetectorConstruction::DumpGeometricalTree(G4VPhysicalVolume* aVolume,
 */
 void remollDetectorConstruction::CreateGlobalMagneticField() {
 	fGlobalField = new remollGlobalField();
+        
+        //Create default quadrupole and dipole fields.        
+        remollQuadField *quad = new remollQuadField(G4ThreeVector(0.0,0.0,55*cm), G4ThreeVector(0.1*m, 0.1*m, 15*cm), 0.1*m, 0.163 *tesla);
+        //Points above y = 0 are negative, below y = 0 are positive
+        remollDipoleField *dipolePos = new remollDipoleField(G4ThreeVector(0.0, 0.3*m, 105*cm), G4ThreeVector(0.3*m,0.3*m,5*cm), 1.65 *tesla);
+        remollDipoleField *dipoleNeg = new remollDipoleField(G4ThreeVector(0.0, -0.3*m, 105*cm), G4ThreeVector(0.3*m,0.3*m,5*cm), -1.65 *tesla);
+        
+        //Add new fields to their respective arrays
+        fQuadFields[0] = quad;
+        fDipoleFields[0] = dipolePos;
+        fDipoleFields[1] = dipoleNeg;
 
-	fGlobalFieldManager = G4TransportationManager::GetTransportationManager()->GetFieldManager();
+        //Add new fields to be considered as part of the GlobalField
+        fGlobalField -> AddNewField(quad);
+        fGlobalField -> AddNewField(dipolePos);
+        fGlobalField -> AddNewField(dipoleNeg);
+	
+        fGlobalFieldManager = G4TransportationManager::GetTransportationManager()->GetFieldManager();
 	fGlobalFieldManager->SetDetectorField(fGlobalField);
 	fGlobalFieldManager->CreateChordFinder(fGlobalField);
 
@@ -355,4 +372,18 @@ void remollDetectorConstruction::CreateGlobalMagneticField() {
 
 void remollDetectorConstruction::SetDetectorGeomFile(const G4String &str){
 	fDetFileName = str;
+}
+
+remollQuadField* remollDetectorConstruction::getQuadByIndex(int i){
+   // if(i >= 0 && i < sizeof(fQuadFields) && fQuadFields[i]){
+        return fQuadFields[i];
+   // }
+   // G4cerr << "Cannot access quadrupole at index " << i << G4endl;
+}
+
+remollDipoleField* remollDetectorConstruction::getDipoleByIndex(int i){
+   // if(i >= 0 && i < sizeof(fDipoleFields) && fDipoleFields[i]){
+        return fDipoleFields[i];
+   // }
+   // G4cerr << "Cannot access dipole at index " << i << G4endl;
 }

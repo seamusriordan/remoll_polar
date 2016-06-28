@@ -62,6 +62,11 @@ class remollMessenger : public G4UImessenger {
 	G4UIcmdWithAString   *newfieldCmd;
 	G4UIcmdWithAString   *fieldScaleCmd;
 	G4UIcmdWithAString   *fieldCurrCmd;
+        G4UIcmdWithAnInteger        *indexCmd;
+        G4UIcmdWithADoubleAndUnit   *quadFieldCmd;
+        G4UIcmdWithADoubleAndUnit   *quadApCmd;
+        G4UIcmdWithADoubleAndUnit   *dipoleFieldCmd;
+
 	G4UIcmdWithAString   *genSelectCmd;
 
         G4UIcmdWithAString   *physListCmd;

@@ -17,6 +17,7 @@ class remollGlobalField : public G4MagneticField {
 	~remollGlobalField();
 
 	void AddNewField( G4String file );
+        void AddNewField(remollMagneticField *Bfield);
 	void SetFieldScale( G4String file, G4double scale  );
 	void SetMagnetCurrent( G4String file, G4double scale  );
 

@@ -17,6 +17,9 @@
 #include "remollRun.hh"
 #include "remollRunData.hh"
 #include "remollSteppingAction.hh"
+#include "remollMagneticField.hh"
+#include "remollQuadField.hh"
+#include "remollDipoleField.hh"
 
 #include "G4UImanager.hh"
 #include "G4RunManager.hh"
@@ -82,6 +85,22 @@ remollMessenger::remollMessenger(){
     fieldCurrCmd = new G4UIcmdWithAString("/remoll/magcurrent",this);
     fieldCurrCmd->SetGuidance("Scale magnetic field by current");
     fieldCurrCmd->SetParameterName("filename", false);
+    
+    indexCmd = new G4UIcmdWithAnInteger("/remoll/index", this);
+    indexCmd -> SetGuidance("Set index (to be passed to quad and dipole commands)");
+    indexCmd -> SetParameterName("index", false);
+
+    quadFieldCmd = new G4UIcmdWithADoubleAndUnit("/remoll/quadfield", this);
+    quadFieldCmd-> SetGuidance("Set quadrupole field");
+    quadFieldCmd-> SetParameterName("quadfield", false);
+
+    quadApCmd = new G4UIcmdWithADoubleAndUnit("/remoll/quadaperture", this);
+    quadApCmd-> SetGuidance("Set quadrupole aperture size");
+    quadApCmd-> SetParameterName("quadaperture", false);
+
+    dipoleFieldCmd = new G4UIcmdWithADoubleAndUnit("/remoll/dipolefield", this);
+    dipoleFieldCmd-> SetGuidance("Set dipole field");
+    dipoleFieldCmd-> SetParameterName("dipolefield", false);
 
     beamEneCmd = new G4UIcmdWithADoubleAndUnit("/remoll/beamene",this);
     beamEneCmd->SetGuidance("Beam energy");
@@ -257,6 +276,29 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 
 	scaleval = atof(scalestr.data());
 	fField->SetMagnetCurrent( scalefile, scaleval );
+    }
+
+    if(cmd == indexCmd){
+	G4int i = indexCmd->GetNewIntValue(newValue);
+        fdetcon -> SetIndex(i);
+    }
+
+    if( cmd == quadFieldCmd){
+        G4double Bquad = quadFieldCmd->GetNewDoubleValue(newValue);
+        int i = fdetcon -> getIndex();
+        fdetcon -> getQuadByIndex(i) -> SetField(Bquad);
+    }
+
+    if( cmd == quadApCmd){
+        G4double a = quadApCmd->GetNewDoubleValue(newValue);
+        int i = fdetcon -> getIndex();
+        fdetcon -> getQuadByIndex(i) -> SetAperture(a);
+    }
+
+    if( cmd == dipoleFieldCmd){
+        G4double Bdipole = dipoleFieldCmd->GetNewDoubleValue(newValue);
+        int i = fdetcon -> getIndex();
+        fdetcon -> getDipoleByIndex(i) -> SetField(Bdipole);
     }
 
 

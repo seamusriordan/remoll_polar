@@ -65,6 +65,18 @@ void remollGlobalField::AddNewField( G4String name ){
     return;
 }
 
+void remollGlobalField::AddNewField(remollMagneticField *Bfield){
+
+    if(!Bfield && Bfield ->IsInit()){
+        fFields.push_back(Bfield);
+    }
+    else {
+        G4cerr << "WARNING: field was not initialized." << G4endl;
+    }
+    return;
+
+}
+
 remollMagneticField *remollGlobalField::GetFieldByName(G4String name) {
     std::vector<remollMagneticField*>::iterator it = fFields.begin();
 
