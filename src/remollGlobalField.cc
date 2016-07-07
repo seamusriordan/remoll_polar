@@ -67,14 +67,13 @@ void remollGlobalField::AddNewField( G4String name ){
 
 void remollGlobalField::AddNewField(remollMagneticField *Bfield){
 
-    if(!Bfield && Bfield ->IsInit()){
+    if(Bfield && Bfield ->IsInit()){
         fFields.push_back(Bfield);
     }
     else {
         G4cerr << "WARNING: field was not initialized." << G4endl;
     }
     return;
-
 }
 
 remollMagneticField *remollGlobalField::GetFieldByName(G4String name) {
@@ -113,7 +112,6 @@ void remollGlobalField::GetFieldValue( const G4double p[], G4double *resB) const
     for( i = 0; i < __GLOBAL_NDIM; i++ ){
 	resB[i] = Bsum[i];
     }	
-
     return;
 }
 

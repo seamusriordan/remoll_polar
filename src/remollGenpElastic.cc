@@ -200,7 +200,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     double sampv = 1.0/CLHEP::RandFlat::shoot(icth_b, icth_a);
 
-    assert( -1.0 < sampv && sampv < 1.0 );
+    assert( -1.0 <= sampv && sampv <= 1.0 );
 
     double th = acos(1.0-sampv);
 

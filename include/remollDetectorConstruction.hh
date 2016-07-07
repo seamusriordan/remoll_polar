@@ -8,6 +8,8 @@
 #include "remollDipoleField.hh"
 #include <vector>
 
+#define __FIELDARRAYSIZE 10
+
 class remollIO;
 class G4Tubs;
 class G4LogicalVolume;
@@ -44,8 +46,8 @@ class remollDetectorConstruction : public G4VUserDetectorConstruction
 
 		G4FieldManager*		fGlobalFieldManager;
 		remollGlobalField* 	fGlobalField;
-		remollQuadField*        fQuadFields[10];
-                remollDipoleField*      fDipoleFields[10];
+		remollQuadField*        fQuadFields[__FIELDARRAYSIZE];
+                remollDipoleField*      fDipoleFields[__FIELDARRAYSIZE];
                 int                     index;
                 G4String 		fDetFileName;
                 
