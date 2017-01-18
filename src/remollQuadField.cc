@@ -1,5 +1,4 @@
 #include "remollQuadField.hh"
-#include "G4ThreeVector.hh"
 #include <math.h>
 
 remollQuadField::remollQuadField(G4ThreeVector orig, G4ThreeVector s, G4double ap, G4double B) {

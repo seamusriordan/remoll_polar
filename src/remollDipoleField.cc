@@ -1,5 +1,4 @@
 #include "remollDipoleField.hh"
-#include "G4ThreeVector.hh"
 #include <math.h>
 
 remollDipoleField::remollDipoleField(G4ThreeVector orig, G4ThreeVector s, G4double B){

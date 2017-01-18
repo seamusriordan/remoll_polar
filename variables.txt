@@ -11,6 +11,7 @@ rate		Weighting variable to give event rate in Hz
 event data - single variables
 ev.A		Process asymmetry
 ev.Am		Measured asymmetry (scaled by polarization)
+ev.AZZ          Measured asymmetry for z-z polarization
 ev.xs		Process cross section [ub]
 ev.Q2		Q2 [GeV^2]  (not available for all processes)
 ev.W2		Invariant mass squared [GeV^2] (not available for all processes)

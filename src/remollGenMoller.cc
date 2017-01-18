@@ -47,9 +47,11 @@ void remollGenMoller::SamplePhysics(remollVertex *vert, remollEvent *evt){
 	exit(1);
     }
 
+    G4double AZZ = - sin(thcom)*sin(thcom)*(7+cos(thcom)*cos(thcom))/pow(3+cos(thcom)*cos(thcom),2.0);
     G4double APV = electron_mass_c2*beamE*GF*4.0*sin(thcom)*sin(thcom)*QWe/(sqrt(2.0)*pi*alpha*pow(3.0+cos(thcom)*cos(thcom),2.0));
 
     evt->SetAsymmetry(APV);
+    evt->SetAsymmetryZZ(AZZ);
     evt->SetThCoM(thcom);
 
     //evt->SetQ2( 2.0*e_com*e_com*(1.0-cos(thcom)) );

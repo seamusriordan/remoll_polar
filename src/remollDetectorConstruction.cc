@@ -348,10 +348,10 @@ void remollDetectorConstruction::CreateGlobalMagneticField() {
 	fGlobalField = new remollGlobalField();
         
         //Create default quadrupole and dipole fields.        
-        remollQuadField *quad = new remollQuadField(G4ThreeVector(0.0,0.0,55*cm), G4ThreeVector(0.1*m, 0.1*m, 15*cm), 0.1*m, 0.163*tesla);
+        remollQuadField *quad = new remollQuadField(G4ThreeVector(0.0,0.0,55.0*cm), G4ThreeVector(0.1*m, 0.1*m, 15.0*cm), 0.1*m, 0.163*tesla);
         //Points above y = 0 are negative, below y = 0 are positive
-        remollDipoleField *dipoleNeg = new remollDipoleField(G4ThreeVector(0.0, 2*m, 105*cm), G4ThreeVector(2*m, 2*m, 5*cm), -1.65*tesla);
-        remollDipoleField *dipolePos = new remollDipoleField(G4ThreeVector(0.0, -2*m, 105*cm), G4ThreeVector(2*m, 2*m, 5*cm), 1.65*tesla);
+        remollDipoleField *dipoleNeg = new remollDipoleField(G4ThreeVector(0.0, 2.0*m, 105.0*cm), G4ThreeVector(2.0*m, 2.0*m, 5.0*cm), -1.65*tesla);
+        remollDipoleField *dipolePos = new remollDipoleField(G4ThreeVector(0.0, -2.0*m, 105.0*cm), G4ThreeVector(2.0*m, 2.0*m, 5.0*cm), 1.65*tesla);
         
         //Add new fields to their respective arrays
         fQuadFields[0] = quad;

@@ -180,6 +180,7 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
     if( beamE < electron_mass_c2 ){ 
 	evt->SetEffCrossSection(0.0);
 	evt->SetAsymmetry(0.0);
+        evt->SetAsymmetryZZ(0.0);
 	return; 
     }
 
@@ -263,8 +264,10 @@ void remollGenpElastic::SamplePhysics(remollVertex *vert, remollEvent *evt){
     G4double apvffden = eps*gep*gep  + tau*gmp*gmp;
 
     G4double APV = APV_base*(QWp - apvffnum/apvffden);
+    G4double AZZ = 0.0;
 
     evt->SetAsymmetry(APV);
+    evt->SetAsymmetryZZ(AZZ);
 
     evt->SetQ2( q2 );
     evt->SetW2( proton_mass_c2*proton_mass_c2 );

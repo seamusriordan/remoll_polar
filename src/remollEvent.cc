@@ -36,6 +36,7 @@ void remollEvent::Reset(){
     fRate  = 0.0/s;
     fEffXs = -1e9*nanobarn;
     fAsym  = -1e9;
+    fAsymZZ = 0.0;
 
     fQ2    = -1e9*GeV*GeV;
 
@@ -60,6 +61,7 @@ G4bool remollEvent::EventIsSane(){
 
     if( std::isnan(fEffXs) || std::isinf(fEffXs) || fEffXs < 0.0 ) return false;
     if( std::isnan(fAsym) || std::isinf(fAsym) || fAsym < -1.0 || fAsym > 1.0 ) return false;
+    if( std::isnan(fAsymZZ) || std::isinf(fAsymZZ) || fAsymZZ < -1.0 || fAsymZZ > 1.0 ) return false;
     if( std::isnan(fThCoM) || std::isinf(fThCoM) ) return false;
     if( std::isnan(fQ2) || std::isinf(fQ2) ) return false;
     if( std::isnan(fW2) || std::isinf(fW2) ) return false;
@@ -89,6 +91,7 @@ void remollEvent::Print(){
     G4cout << "Event " << this << " dump" << G4endl;
     G4cout << "\t" << fEffXs/nanobarn << " nb effective cross section " << G4endl;
     G4cout << "\t" << fAsym*1e6 << " ppm asymmetry" << G4endl;
+    G4cout << "\t" << fAsymZZ*1e6 << " ppm asymmetry_zz" << G4endl;
     G4cout << "\t" << "Q2 = " << fQ2/GeV/GeV << " GeV2" << G4endl;
     G4cout << "\t" << "W2 = " << fW2/GeV/GeV << " GeV2" << G4endl;
     G4cout << "\t" << "xbj = " << fXbj << G4endl;
